@@ -1,8 +1,8 @@
-package net.loos.tutorialmod;
+package net.loos.elementsmod;
 
 import net.fabricmc.api.ClientModInitializer;
 
-public class TutorialModClient implements ClientModInitializer {
+public class ElementsModClient implements ClientModInitializer {
     @Override
     public void onInitializeClient(){
 

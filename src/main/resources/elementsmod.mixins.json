@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "net.loos.tutorialmod.mixin",
+	"package": "net.loos.elementsmod.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
 		"ExampleMixin"

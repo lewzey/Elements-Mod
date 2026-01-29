@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "tutorialmod",
+	"id": "elementsmod",
 	"version": "${version}",
-	"name": "Tutorial Mod",
-	"description": "Tutorial Mod Louise is following",
+	"name": "Elements Mod",
+	"description": "A mod where the elements have a lot more uses!",
 	"authors": [
 		"Louise!"
 	],
@@ -12,21 +12,21 @@
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
 	"license": "MIT",
-	"icon": "assets/tutorialmod/icon.png",
+	"icon": "assets/elementsmod/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-			"net.loos.tutorialmod.TutorialMod"
+			"net.loos.elementsmod.ElementsMod"
 		],
 		"fabric-datagen": [
-			"net.loos.tutorialmod.TutorialModDataGenerator"
+			"net.loos.elementsmod.ElementsModDataGenerator"
 		],
 		"client": [
-			"net.loos.tutorialmod.TutorialModClient"
+			"net.loos.elementsmod.ElementsModClient"
 		]
 	},
 	"mixins": [
-		"tutorialmod.mixins.json"
+		"elementsmod.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.18.4",
