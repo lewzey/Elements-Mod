@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 200,
+  "experience": 0.3,
+  "group": "grass_gem",
+  "ingredient": {
+    "item": "elementsmod:grass_gem_ore"
+  },
+  "result": {
+    "id": "elementsmod:grass_gem"
+  }
+}
