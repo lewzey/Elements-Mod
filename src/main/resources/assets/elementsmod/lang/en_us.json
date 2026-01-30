@@ -6,5 +6,11 @@
   "block.elementsmod.grass_gem_ore": "Grass Gem Ore",
 
   "itemgroup.elements.grass_gem_items": "Grass Gem Items",
-  "itemgroup.elements.grass_gem_blocks": "Grass Gem Blocks"
+  "itemgroup.elements.grass_gem_blocks": "Grass Gem Blocks",
+
+
+
+
+  "item.elementsmod.air_bar": "Air Bar",
+  "item.elementsmod.air_ore": "Air Ore"
 }
