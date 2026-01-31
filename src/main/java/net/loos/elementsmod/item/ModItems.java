@@ -10,6 +10,11 @@ import net.minecraft.util.Identifier;
 
 public class ModItems {
 
+    //general
+    public static final Item ELEMENTS_MOD_ICON = registerItem("elements_mod_icon",new Item(new Item.Settings()));
+
+
+
     // GRASS
     public static final Item GRASS_GEM = registerItem("grass_gem",new Item(new Item.Settings()));
     public static final Item RAW_GRASS_GEM = registerItem("raw_grass_gem", new Item(new Item.Settings()));
@@ -32,6 +37,8 @@ public class ModItems {
         ElementsMod.LOGGER.info("Registering Mod Items for " + ElementsMod.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(entries -> {
+            entries.add(ELEMENTS_MOD_ICON);
+
             entries.add(GRASS_GEM);
             entries.add (RAW_GRASS_GEM);
 
