@@ -26,6 +26,10 @@ public class ModItemGroups {
                         entries.add(ModItems.AIR_ORE);
                         entries.add(ModBlocks.AIR_BLOCK);
                         entries.add(ModBlocks.AIR_ORE_BLOCK);
+                        entries.add(ModItems.HYDROCITE_GEM);
+                        entries.add(ModItems.HYDROCITE_SHARD);
+                        entries.add(ModBlocks.HYDROCITE_ORE);
+                        entries.add(ModBlocks.HYDROCITE_BLOCK);
                     }).build()
     );
     public static final ItemGroup GRASS_GEM_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,
