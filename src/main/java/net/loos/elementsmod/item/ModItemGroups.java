@@ -24,11 +24,11 @@ public class ModItemGroups {
                         entries.add(ModBlocks.GRASS_GEM_BLOCK);
 
 
-
-                        entries.add(ModItems.AIR_BAR);
-                        entries.add(ModItems.AIR_ORE);
-                        entries.add(ModBlocks.AIR_BLOCK);
-                        entries.add(ModBlocks.AIR_ORE_BLOCK);
+                        entries.add(ModItems.AETHERIUS);
+                        entries.add(ModItems.AERIS_CONCENTRATE);
+                        entries.add(ModItems.AERIS_VAPOR);
+                        entries.add(ModBlocks.AERIS_VAPOR_BLOCK);
+                        entries.add(ModBlocks.AERIS_BLOCK);
                     }).build()
     );
     public static final ItemGroup GRASS_GEM_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,

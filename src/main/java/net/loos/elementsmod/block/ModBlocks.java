@@ -26,19 +26,22 @@ public class ModBlocks {
 
 
     // air
-    public static final Block AIR_ORE_BLOCK = registerBlock("air_ore_block",
-            new Block(AbstractBlock.Settings.create()
-                    .strength(4f)
+    public static final Block AERIS_VAPOR_BLOCK = registerBlock("aeris_vapor_block",
+            new ExperienceDroppingBlock(
+                    UniformIntProvider.create(5,7),
+                    AbstractBlock.Settings.create()
+                    .strength(0.5f, 1200f)
                     .requiresTool()
-                    .sounds(BlockSoundGroup.ANVIL)
+                    .sounds(BlockSoundGroup.WOOL)
                     .nonOpaque()
                     .luminance(state ->5)));
 
-    public static final Block AIR_BLOCK = registerBlock("air_block",
+
+    public static final Block AERIS_BLOCK = registerBlock("aeris_block",
             new Block(AbstractBlock.Settings.create()
-                    .strength(4f)
+                    .strength(3f, 1200f)
                     .requiresTool()
-                    .sounds(BlockSoundGroup.ANVIL)
+                    .sounds(BlockSoundGroup.WOOL)
                     .luminance(state -> 10)));
 
 
@@ -58,8 +61,8 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(ModBlocks.GRASS_GEM_BLOCK);
             entries.add(ModBlocks.GRASS_GEM_ORE);
-            entries.add(ModBlocks.AIR_ORE_BLOCK);
-            entries.add(ModBlocks.AIR_BLOCK);
+            entries.add(ModBlocks.AERIS_VAPOR_BLOCK);
+            entries.add(ModBlocks.AERIS_BLOCK);
         });
     }
 }

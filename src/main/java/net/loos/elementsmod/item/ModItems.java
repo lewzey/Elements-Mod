@@ -2,6 +2,7 @@ package net.loos.elementsmod.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.loos.elementsmod.ElementsMod;
+import net.loos.elementsmod.item.custom.Aetherius;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
@@ -21,9 +22,10 @@ public class ModItems {
 
 
     // AIR
-    public static final Item AIR_BAR = registerItem("air_bar", new Item(new Item.Settings()));
-    public static final Item AIR_ORE = registerItem("air_ore", new Item(new Item.Settings()));
+    public static final Item AERIS_CONCENTRATE = registerItem("aeris_concentrate", new Item(new Item.Settings()));
+    public static final Item AERIS_VAPOR = registerItem("aeris_vapor", new Item(new Item.Settings()));
 
+    public static final Item AETHERIUS = registerItem("aetherius", new Aetherius(new Item.Settings()));
     //FIRE
 
 
@@ -40,11 +42,12 @@ public class ModItems {
             entries.add(ELEMENTS_MOD_ICON);
 
             entries.add(GRASS_GEM);
-            entries.add (RAW_GRASS_GEM);
+            entries.add(RAW_GRASS_GEM);
 
 
-            entries.add(AIR_BAR);
-            entries.add(AIR_ORE);
+            entries.add(AERIS_CONCENTRATE);
+            entries.add(AERIS_VAPOR);
+            entries.add(AETHERIUS);
         });
     }
 
