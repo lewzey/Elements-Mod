@@ -12,6 +12,22 @@ import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
 
+
+    public static final ItemGroup ELEMENT_MOD = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(ElementsMod.MOD_ID, "element_mod"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.GRASS_GEM))
+                    .displayName(Text.translatable("itemgroup.elements.element_mod_icon"))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModItems.GRASS_GEM);
+                        entries.add(ModItems.RAW_GRASS_GEM);
+                        entries.add(ModBlocks.GRASS_GEM_ORE);
+                        entries.add(ModBlocks.GRASS_GEM_BLOCK);
+                        entries.add(ModItems.AIR_BAR);
+                        entries.add(ModItems.AIR_ORE);
+                        entries.add(ModBlocks.AIR_BLOCK);
+                        entries.add(ModBlocks.AIR_ORE_BLOCK);
+                    }).build()
+    );
     public static final ItemGroup GRASS_GEM_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(ElementsMod.MOD_ID, "grass_gem_items"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.GRASS_GEM))

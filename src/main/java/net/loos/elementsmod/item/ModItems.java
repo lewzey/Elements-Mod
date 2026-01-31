@@ -23,6 +23,8 @@ public class ModItems {
 
 
     // WATER
+
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(ElementsMod.MOD_ID, name), item);
     }
