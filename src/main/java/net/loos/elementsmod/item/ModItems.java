@@ -23,7 +23,8 @@ public class ModItems {
 
 
     // WATER
-
+    public static final Item WATER_ORE = registerItem("water_ore", new Item(new Item.Settings()));
+    public static final Item WATER_SHARD = registerItem("water_shard", new Item(new Item.Settings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(ElementsMod.MOD_ID, name), item);
@@ -38,6 +39,9 @@ public class ModItems {
 
             entries.add(AIR_BAR);
             entries.add(AIR_ORE);
+
+            entries.add(WATER_ORE);
+            entries.add(WATER_SHARD);
         });
     }
 
