@@ -13,6 +13,8 @@ import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;import net.minecraft.util.math.intprovider.UniformIntProvider;
 
 public class ModBlocks {
+
+    // ground
     public static final Block GRASS_GEM_BLOCK = registerBlock("grass_gem_block",
             new Block(AbstractBlock.Settings.create().strength(4f).
                     requiresTool().sounds(BlockSoundGroup.STONE)));
@@ -21,6 +23,24 @@ public class ModBlocks {
             new ExperienceDroppingBlock(UniformIntProvider.create(2,5),
                     AbstractBlock.Settings.create().strength(3f).
                     requiresTool().sounds(BlockSoundGroup.ROOTED_DIRT)));
+
+
+    // air
+    public static final Block AIR_ORE_BLOCK = registerBlock("air_ore_block",
+            new Block(AbstractBlock.Settings.create()
+                    .strength(4f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.ANVIL)
+                    .nonOpaque()
+                    .luminance(state ->5)));
+
+    public static final Block AIR_BLOCK = registerBlock("air_block",
+            new Block(AbstractBlock.Settings.create()
+                    .strength(4f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.ANVIL)
+                    .luminance(state -> 10)));
+
 
 
 
@@ -38,6 +58,8 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(ModBlocks.GRASS_GEM_BLOCK);
             entries.add(ModBlocks.GRASS_GEM_ORE);
+            entries.add(ModBlocks.AIR_ORE_BLOCK);
+            entries.add(ModBlocks.AIR_BLOCK);
         });
     }
 }

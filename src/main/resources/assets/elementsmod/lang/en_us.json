@@ -12,5 +12,9 @@
 
 
   "item.elementsmod.air_bar": "Air Bar",
-  "item.elementsmod.air_ore": "Air Ore"
+  "item.elementsmod.air_ore": "Air Ore",
+
+
+  "block.elementsmod.air_ore_block": "Air Ore Block",
+  "block.elementsmod.air_block": "Air Block"
 }
