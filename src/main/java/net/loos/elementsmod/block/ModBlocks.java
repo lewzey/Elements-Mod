@@ -4,7 +4,9 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.loos.elementsmod.ElementsMod;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
-import net.minecraft.block.ExperienceDroppingBlock;import net.minecraft.item.BlockItem;
+import net.minecraft.block.ExperienceDroppingBlock;
+import net.minecraft.block.MapColor;
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
@@ -44,6 +46,23 @@ public class ModBlocks {
                     .sounds(BlockSoundGroup.WOOL)
                     .luminance(state -> 10)));
 
+    //Water
+    public static final Block HYDROCITE_BLOCK = registerBlock("hydrocite_block",
+            new Block(AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.AMETHYST_BLOCK)
+                    .mapColor(MapColor.LAPIS_BLUE)
+                    .strength(5f,1200f)
+                    .requiresTool()
+                    .luminance(state ->15)));
+    public static final Block HYDROCITE_ORE = registerBlock("hydrocite_ore",
+            new Block(AbstractBlock.Settings.create()
+                    .sounds(BlockSoundGroup.STONE)
+                    .mapColor(MapColor.LAPIS_BLUE)
+                    .strength(50f,1200f)
+                    .requiresTool()
+                    .luminance(state ->7)));
+
+
 
 
 
@@ -63,6 +82,8 @@ public class ModBlocks {
             entries.add(ModBlocks.GRASS_GEM_ORE);
             entries.add(ModBlocks.AERIS_VAPOR_BLOCK);
             entries.add(ModBlocks.AERIS_BLOCK);
+            entries.add(ModBlocks.HYDROCITE_BLOCK);
+            entries.add(ModBlocks.HYDROCITE_ORE);
         });
     }
 }

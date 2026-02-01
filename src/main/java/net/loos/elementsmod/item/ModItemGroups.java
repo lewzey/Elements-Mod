@@ -29,6 +29,11 @@ public class ModItemGroups {
                         entries.add(ModItems.AERIS_VAPOR);
                         entries.add(ModBlocks.AERIS_VAPOR_BLOCK);
                         entries.add(ModBlocks.AERIS_BLOCK);
+
+                        entries.add(ModItems.HYDROCITE_GEM);
+                        entries.add(ModItems.HYDROCITE_SHARD);
+                        entries.add(ModBlocks.HYDROCITE_ORE);
+                        entries.add(ModBlocks.HYDROCITE_BLOCK);
                     }).build()
     );
     public static final ItemGroup GRASS_GEM_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,

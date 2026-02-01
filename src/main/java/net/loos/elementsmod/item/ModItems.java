@@ -30,7 +30,8 @@ public class ModItems {
 
 
     // WATER
-
+    public static final Item HYDROCITE_GEM = registerItem("hydrocite_gem", new Item(new Item.Settings()));
+    public static final Item HYDROCITE_SHARD = registerItem("hydrocite_shard", new Item(new Item.Settings()));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(ElementsMod.MOD_ID, name), item);
@@ -48,6 +49,9 @@ public class ModItems {
             entries.add(AERIS_CONCENTRATE);
             entries.add(AERIS_VAPOR);
             entries.add(AETHERIUS);
+
+            entries.add(HYDROCITE_GEM);
+            entries.add(HYDROCITE_SHARD);
         });
     }
 
