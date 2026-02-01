@@ -1,7 +1,7 @@
 {
   "replace": false,
   "values": [
-    "elementsmod:hydrocite_block",
-    "elementsmod:hydrocite_ore"
+    "elementsmod:aeris_vapor_block",
+    "elementsmod:aeris_block"
   ]
 }

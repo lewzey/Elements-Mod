@@ -15,17 +15,21 @@ public class ModItemGroups {
 
     public static final ItemGroup ELEMENT_MOD = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(ElementsMod.MOD_ID, "element_mod"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.GRASS_GEM))
-                    .displayName(Text.translatable("itemgroup.elements.element_mod_icon"))
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.ELEMENTS_MOD_ICON))
+                    .displayName(Text.translatable("itemgroup.elements.elements_mod_icon"))
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.GRASS_GEM);
                         entries.add(ModItems.RAW_GRASS_GEM);
                         entries.add(ModBlocks.GRASS_GEM_ORE);
                         entries.add(ModBlocks.GRASS_GEM_BLOCK);
-                        entries.add(ModItems.AIR_BAR);
-                        entries.add(ModItems.AIR_ORE);
-                        entries.add(ModBlocks.AIR_BLOCK);
-                        entries.add(ModBlocks.AIR_ORE_BLOCK);
+
+
+                        entries.add(ModItems.AETHERIUS);
+                        entries.add(ModItems.AERIS_CONCENTRATE);
+                        entries.add(ModItems.AERIS_VAPOR);
+                        entries.add(ModBlocks.AERIS_VAPOR_BLOCK);
+                        entries.add(ModBlocks.AERIS_BLOCK);
+
                         entries.add(ModItems.HYDROCITE_GEM);
                         entries.add(ModItems.HYDROCITE_SHARD);
                         entries.add(ModBlocks.HYDROCITE_ORE);

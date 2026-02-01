@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "elementsmod:grass_gem_ore"
+    "elementsmod:grass_gem_ore",
+    "elementsmod:aeris_vapor_block",
+    "elementsmod:aeris_block"
   ]
 }
