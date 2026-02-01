@@ -55,7 +55,7 @@ public class ModBlocks {
                     .requiresTool()
                     .luminance(state ->15)));
     public static final Block HYDROCITE_ORE = registerBlock("hydrocite_ore",
-            new ExperienceDroppingBlock(UniformIntProvider.create(2,5),AbstractBlock.Settings.create()
+            new ExperienceDroppingBlock(UniformIntProvider.create(3,7),AbstractBlock.Settings.create()
                     .sounds(BlockSoundGroup.STONE)
                     .mapColor(MapColor.LAPIS_BLUE)
                     .strength(50f,1200f)
