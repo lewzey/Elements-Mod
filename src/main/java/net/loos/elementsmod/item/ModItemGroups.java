@@ -23,6 +23,11 @@ public class ModItemGroups {
                         entries.add(ModBlocks.GRASS_GEM_ORE);
                         entries.add(ModBlocks.GRASS_GEM_BLOCK);
 
+                        entries.add(ModItems.ORANGE_STUFF);
+                        entries.add(ModItems.RAW_ORANGE_STUFF);
+                        entries.add(ModBlocks.ORANGE_BLOCK);
+                        entries.add(ModBlocks.RAW_ORANGE_BLOCK);
+
 
                         entries.add(ModItems.AETHERIUS);
                         entries.add(ModItems.AERIS_CONCENTRATE);
@@ -53,6 +58,16 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModBlocks.GRASS_GEM_ORE);
                         entries.add(ModBlocks.GRASS_GEM_BLOCK);
+                    }).build()
+    );
+
+    public static final ItemGroup ORANGE_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(ElementsMod.MOD_ID, "orange_blocks"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.GRASS_GEM_ORE))
+                    .displayName(Text.translatable("itemgroup.elements.orange_stuff_blocks"))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.ORANGE_BLOCK);
+                        entries.add(ModBlocks.RAW_ORANGE_BLOCK);
                     }).build()
     );
 

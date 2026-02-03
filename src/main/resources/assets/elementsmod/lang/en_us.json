@@ -23,5 +23,13 @@
   "item.elementsmod.hydrocite_shard": "Hydrocite Shard",
 
   "block.elementsmod.hydrocite_block": "Block of Hydrocite",
-  "block.elementsmod.hydrocite_ore": "Hydrocite Ore"
+  "block.elementsmod.hydrocite_ore": "Hydrocite Ore",
+
+
+  "item.elementsmod.orange_stuff": "Orange Stuff",
+  "item.elementsmod.raw_orange_stuff": "Raw Orange Stuff",
+
+
+  "block.elementsmod.orange_block": "Block of Orange",
+  "block.elementsmod.raw_orange_block": "Raw Orange Block"
 }

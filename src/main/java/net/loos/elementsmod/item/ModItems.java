@@ -26,8 +26,10 @@ public class ModItems {
     public static final Item AERIS_VAPOR = registerItem("aeris_vapor", new Item(new Item.Settings()));
 
     public static final Item AETHERIUS = registerItem("aetherius", new Aetherius(new Item.Settings()));
-    //FIRE
 
+    //FIRE
+    public static final Item RAW_ORANGE_STUFF = registerItem("raw_orange_stuff", new Item(new Item.Settings()));
+    public static final Item ORANGE_STUFF = registerItem("orange_stuff", new Item(new Item.Settings()));
 
     // WATER
     public static final Item HYDROCITE_GEM = registerItem("hydrocite_gem", new Item(new Item.Settings()));
@@ -45,6 +47,8 @@ public class ModItems {
             entries.add(GRASS_GEM);
             entries.add(RAW_GRASS_GEM);
 
+            entries.add(ORANGE_STUFF);
+            entries.add(RAW_ORANGE_STUFF);
 
             entries.add(AERIS_CONCENTRATE);
             entries.add(AERIS_VAPOR);

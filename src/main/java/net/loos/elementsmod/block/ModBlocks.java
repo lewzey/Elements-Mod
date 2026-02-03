@@ -62,8 +62,18 @@ public class ModBlocks {
                     .requiresTool()
                     .luminance(state ->7)));
 
+    // Fire
+    public static final Block ORANGE_BLOCK = registerBlock("orange_block",
+            new Block(AbstractBlock.Settings.create().strength(3f)
+                    .requiresTool().sounds(BlockSoundGroup.COPPER)));
 
-
+    public static final Block RAW_ORANGE_BLOCK = registerBlock(
+            "raw_orange_block",
+            new Block(AbstractBlock.Settings.create()
+                    .strength(2f)
+                    .requiresTool()
+                    .sounds(BlockSoundGroup.FUNGUS))
+    );
 
 
     private static Block registerBlock (String name, Block block) {
@@ -80,6 +90,8 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(ModBlocks.GRASS_GEM_BLOCK);
             entries.add(ModBlocks.GRASS_GEM_ORE);
+            entries.add(ModBlocks.ORANGE_BLOCK);
+            entries.add(ModBlocks.RAW_ORANGE_BLOCK);
             entries.add(ModBlocks.AERIS_VAPOR_BLOCK);
             entries.add(ModBlocks.AERIS_BLOCK);
             entries.add(ModBlocks.HYDROCITE_BLOCK);
