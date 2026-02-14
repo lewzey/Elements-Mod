@@ -4,7 +4,13 @@
 Choose between **Air, Fire, Grass,** and **Water**, each offering unique abilities, gear, and gameplay mechanics designed to enhance your adventure.
 
 ---
+## About
 
+This mod was created to expand gameplay through elemental progression and give players new ways to interact with the world.
+
+Explore what possibilities the four elements can achieve!
+
+---
 ### ˚⟡˖ ࣪ Features ˚⟡˖ ࣪
 
 ### 🌪 Air Element
