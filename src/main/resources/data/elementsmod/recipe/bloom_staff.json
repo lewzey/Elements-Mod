@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "elementsmod:grass_gem"
+    },
+    "$": {
+      "item": "minecraft:stick"
+    },
+    "*": {
+      "item": "minecraft:gold_ingot"
+    }
+  },
+  "pattern": [
+    "#*#",
+    " $ ",
+    " $ "
+  ],
+  "result": {
+    "count": 1,
+    "id": "elementsmod:bloom_staff"
+  }
+}

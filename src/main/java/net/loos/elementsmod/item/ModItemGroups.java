@@ -20,9 +20,9 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.GRASS_GEM);
                         entries.add(ModItems.RAW_GRASS_GEM);
+                        entries.add(ModItems.BLOOM_STAFF);
                         entries.add(ModBlocks.GRASS_GEM_ORE);
                         entries.add(ModBlocks.GRASS_GEM_BLOCK);
-
 
                         entries.add(ModItems.AETHERIUS);
                         entries.add(ModItems.AERIS_CONCENTRATE);
@@ -43,6 +43,7 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.GRASS_GEM);
                         entries.add(ModItems.RAW_GRASS_GEM);
+                        entries.add(ModItems.BLOOM_STAFF);
                     }).build()
     );
 
