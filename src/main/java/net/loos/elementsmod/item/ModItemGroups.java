@@ -12,7 +12,6 @@ import net.minecraft.util.Identifier;
 
 public class ModItemGroups {
 
-
     public static final ItemGroup ELEMENT_MOD = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(ElementsMod.MOD_ID, "element_mod"),
             FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.ELEMENTS_MOD_ICON))
