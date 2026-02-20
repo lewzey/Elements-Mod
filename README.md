@@ -20,7 +20,8 @@ Explore what possibilities the four elements can achieve!
 - TBA
 
 ### 🌿 Grass Element
-- TBA
+- **`Grass Ore + Gem`**  – Can be found in random patches of dirt and requires an iron shovel to mine!
+- **`Bloom Staff`**  – A staff that allows flowers and saplings to be turned into its other variants! (Requires sunlight) 
 
 ### 💧 Water Element
 - TBA
