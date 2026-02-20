@@ -23,10 +23,10 @@ public class ModItemGroups {
                         entries.add(ModBlocks.GRASS_GEM_ORE);
                         entries.add(ModBlocks.GRASS_GEM_BLOCK);
 
-                        entries.add(ModItems.ORANGE_STUFF);
-                        entries.add(ModItems.RAW_ORANGE_STUFF);
-                        entries.add(ModBlocks.ORANGE_BLOCK);
-                        entries.add(ModBlocks.RAW_ORANGE_BLOCK);
+                        entries.add(ModItems.SPARK_STONE);
+                        entries.add(ModItems.RAW_SPARK_STONE);
+                        entries.add(ModBlocks.SPARK_STONE_BLOCK);
+                        entries.add(ModBlocks.SPARK_STONE_ORE);
 
 
                         entries.add(ModItems.AETHERIUS);
@@ -61,13 +61,23 @@ public class ModItemGroups {
                     }).build()
     );
 
-    public static final ItemGroup ORANGE_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(ElementsMod.MOD_ID, "orange_blocks"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.GRASS_GEM_ORE))
-                    .displayName(Text.translatable("itemgroup.elements.orange_stuff_blocks"))
+    public static final ItemGroup SPARK_STONE_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(ElementsMod.MOD_ID, "spark_stone_items"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModItems.SPARK_STONE))
+                    .displayName(Text.translatable("itemgroup.elements.spark_stone_items"))
                     .entries((displayContext, entries) -> {
-                        entries.add(ModBlocks.ORANGE_BLOCK);
-                        entries.add(ModBlocks.RAW_ORANGE_BLOCK);
+                        entries.add(ModItems.SPARK_STONE);
+                        entries.add(ModItems.RAW_SPARK_STONE);
+                    }).build()
+    );
+
+    public static final ItemGroup SPARK_STONE_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
+            Identifier.of(ElementsMod.MOD_ID, "spark_stone_blocks"),
+            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.SPARK_STONE_ORE))
+                    .displayName(Text.translatable("itemgroup.elements.spark_stone_blocks"))
+                    .entries((displayContext, entries) -> {
+                        entries.add(ModBlocks.SPARK_STONE_BLOCK);
+                        entries.add(ModBlocks.SPARK_STONE_ORE);
                     }).build()
     );
 

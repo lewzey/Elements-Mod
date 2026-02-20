@@ -20,7 +20,6 @@ public class ModItems {
     public static final Item GRASS_GEM = registerItem("grass_gem",new Item(new Item.Settings()));
     public static final Item RAW_GRASS_GEM = registerItem("raw_grass_gem", new Item(new Item.Settings()));
 
-
     // AIR
     public static final Item AERIS_CONCENTRATE = registerItem("aeris_concentrate", new Item(new Item.Settings()));
     public static final Item AERIS_VAPOR = registerItem("aeris_vapor", new Item(new Item.Settings()));
@@ -28,8 +27,8 @@ public class ModItems {
     public static final Item AETHERIUS = registerItem("aetherius", new Aetherius(new Item.Settings()));
 
     //FIRE
-    public static final Item RAW_ORANGE_STUFF = registerItem("raw_orange_stuff", new Item(new Item.Settings()));
-    public static final Item ORANGE_STUFF = registerItem("orange_stuff", new Item(new Item.Settings()));
+    public static final Item RAW_SPARK_STONE = registerItem("raw_spark_stone", new Item(new Item.Settings()));
+    public static final Item SPARK_STONE = registerItem("spark_stone", new Item(new Item.Settings()));
 
     // WATER
     public static final Item HYDROCITE_GEM = registerItem("hydrocite_gem", new Item(new Item.Settings()));
@@ -47,8 +46,8 @@ public class ModItems {
             entries.add(GRASS_GEM);
             entries.add(RAW_GRASS_GEM);
 
-            entries.add(ORANGE_STUFF);
-            entries.add(RAW_ORANGE_STUFF);
+            entries.add(SPARK_STONE);
+            entries.add(RAW_SPARK_STONE);
 
             entries.add(AERIS_CONCENTRATE);
             entries.add(AERIS_VAPOR);

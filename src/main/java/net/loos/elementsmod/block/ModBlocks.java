@@ -63,14 +63,13 @@ public class ModBlocks {
                     .luminance(state ->7)));
 
     // Fire
-    public static final Block ORANGE_BLOCK = registerBlock("orange_block",
+    public static final Block SPARK_STONE_BLOCK = registerBlock("spark_stone_block",
             new Block(AbstractBlock.Settings.create().strength(3f)
                     .requiresTool().sounds(BlockSoundGroup.COPPER)));
 
-    public static final Block RAW_ORANGE_BLOCK = registerBlock(
-            "raw_orange_block",
-            new Block(AbstractBlock.Settings.create()
-                    .strength(2f)
+    public static final Block SPARK_STONE_ORE = registerBlock("spark_stone_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
+                    AbstractBlock.Settings.create().strength(2f)
                     .requiresTool()
                     .sounds(BlockSoundGroup.FUNGUS))
     );
@@ -90,8 +89,8 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(entries -> {
             entries.add(ModBlocks.GRASS_GEM_BLOCK);
             entries.add(ModBlocks.GRASS_GEM_ORE);
-            entries.add(ModBlocks.ORANGE_BLOCK);
-            entries.add(ModBlocks.RAW_ORANGE_BLOCK);
+            entries.add(ModBlocks.SPARK_STONE_BLOCK);
+            entries.add(ModBlocks.SPARK_STONE_ORE);
             entries.add(ModBlocks.AERIS_VAPOR_BLOCK);
             entries.add(ModBlocks.AERIS_BLOCK);
             entries.add(ModBlocks.HYDROCITE_BLOCK);

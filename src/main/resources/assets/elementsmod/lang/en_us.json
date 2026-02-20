@@ -26,10 +26,10 @@
   "block.elementsmod.hydrocite_ore": "Hydrocite Ore",
 
 
-  "item.elementsmod.orange_stuff": "Orange Stuff",
-  "item.elementsmod.raw_orange_stuff": "Raw Orange Stuff",
+  "item.elementsmod.spark_stone": "Spark Stone Shard",
+  "item.elementsmod.raw_spark_stone": "Raw Spark Stone",
 
 
-  "block.elementsmod.orange_block": "Block of Orange",
-  "block.elementsmod.raw_orange_block": "Raw Orange Block"
+  "block.elementsmod.spark_stone_block": "Spark Stone Block",
+  "block.elementsmod.spark_stone_ore": "Spark Stone Ore"
 }
