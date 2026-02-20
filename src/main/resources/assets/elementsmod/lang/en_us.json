@@ -1,17 +1,14 @@
 {
   "item.elementsmod.grass_gem": "Grass Gem",
   "item.elementsmod.raw_grass_gem": "Raw Grass Gem",
-
+  "item.elementsmod.bloom_staff": "Bloom Staff",
   "block.elementsmod.grass_gem_block": "Grass Gem Block",
   "block.elementsmod.grass_gem_ore": "Grass Gem Ore",
 
   "itemgroup.elements.grass_gem_items": "Grass Gem Items",
   "itemgroup.elements.grass_gem_blocks": "Grass Gem Blocks",
 
-
-
   "itemgroup.elements.elements_mod_icon": "Elements Mod",
-
 
   "item.elementsmod.aetherius": "Aetherius",
   "item.elementsmod.aeris_concentrate": "Aeris Concentrate",
@@ -25,11 +22,12 @@
   "block.elementsmod.hydrocite_block": "Block of Hydrocite",
   "block.elementsmod.hydrocite_ore": "Hydrocite Ore",
 
-
   "item.elementsmod.spark_stone": "Spark Stone Shard",
   "item.elementsmod.raw_spark_stone": "Raw Spark Stone",
 
 
   "block.elementsmod.spark_stone_block": "Spark Stone Block",
-  "block.elementsmod.spark_stone_ore": "Spark Stone Ore"
+  "block.elementsmod.spark_stone_ore": "Spark Stone Ore",
+
+  "tooltip.elementsmod.bloom_staff.tooltip": "Change any flower or sapling into other variants!"
 }

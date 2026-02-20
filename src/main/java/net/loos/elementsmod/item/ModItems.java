@@ -3,6 +3,7 @@ package net.loos.elementsmod.item;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.loos.elementsmod.ElementsMod;
 import net.loos.elementsmod.item.custom.Aetherius;
+import net.loos.elementsmod.item.custom.BloomStaff;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
@@ -19,6 +20,7 @@ public class ModItems {
     // GRASS
     public static final Item GRASS_GEM = registerItem("grass_gem",new Item(new Item.Settings()));
     public static final Item RAW_GRASS_GEM = registerItem("raw_grass_gem", new Item(new Item.Settings()));
+    public static final Item BLOOM_STAFF = registerItem("bloom_staff",(new BloomStaff(new Item.Settings().maxDamage(32))));
 
     // AIR
     public static final Item AERIS_CONCENTRATE = registerItem("aeris_concentrate", new Item(new Item.Settings()));
@@ -45,6 +47,7 @@ public class ModItems {
 
             entries.add(GRASS_GEM);
             entries.add(RAW_GRASS_GEM);
+            entries.add(BLOOM_STAFF);
 
             entries.add(SPARK_STONE);
             entries.add(RAW_SPARK_STONE);
