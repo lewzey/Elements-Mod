@@ -2,9 +2,12 @@ package net.loos.elementsmod.item.custom;
 
 import net.loos.elementsmod.block.ModBlocks;
 import net.minecraft.block.*;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUsageContext;
+import net.minecraft.item.tooltip.TooltipType;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.server.world.ServerWorld;
@@ -14,6 +17,8 @@ import net.minecraft.text.Text;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+
+import java.util.List;
 import java.util.Map;
 
 // can change flowers and saplings into other variants when exposed to the sun
@@ -53,19 +58,18 @@ public class BloomStaff extends Item {
         World world = context.getWorld();
         Block clickedBlock = world.getBlockState(context.getBlockPos()).getBlock();
 
-        // 🌞 must be daytime AND exposed to sky
-        if (!world.isDay() || !world.isSkyVisible(context.getBlockPos())) {
-            if (!world.isClient && context.getPlayer() != null) {
-                context.getPlayer().sendMessage(
-                        Text.literal("The staff sleeps without sunlight..."),
-                        true
-                );
-            }
-            return ActionResult.FAIL;
-        }
-
         if(BLOOM_MAP.containsKey(clickedBlock)) {
             if(!world.isClient()  && world instanceof ServerWorld serverWorld) {
+                // 🌞 must be daytime AND exposed to sky
+                if (!world.isDay() || !world.isSkyVisible(context.getBlockPos())) {
+                    if (!world.isClient && context.getPlayer() != null) {
+                        context.getPlayer().sendMessage(
+                                Text.literal("The staff sleeps without sunlight..."),
+                                true
+                        );
+                    }
+                    return ActionResult.FAIL;
+                }
                 world.setBlockState(context.getBlockPos(), BLOOM_MAP.get(clickedBlock).getDefaultState());
 
                 context.getStack().damage(2, (serverWorld), ((ServerPlayerEntity) context.getPlayer()),
@@ -94,4 +98,11 @@ public class BloomStaff extends Item {
 
         return ActionResult.SUCCESS;
     }
+
+    @Override
+    public void appendTooltip(ItemStack stack, Item.TooltipContext context, List<Text> tooltip, TooltipType options) {
+        tooltip.add(Text.translatable("tooltip.elementsmod.bloom_staff.tooltip"));
+        super.appendTooltip(stack, context, tooltip, options);
+    }
+
 }

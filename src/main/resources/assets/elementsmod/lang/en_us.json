@@ -21,5 +21,8 @@
   "item.elementsmod.hydrocite_shard": "Hydrocite Shard",
 
   "block.elementsmod.hydrocite_block": "Block of Hydrocite",
-  "block.elementsmod.hydrocite_ore": "Hydrocite Ore"
+  "block.elementsmod.hydrocite_ore": "Hydrocite Ore",
+
+
+  "tooltip.elementsmod.bloom_staff.tooltip": "Change any flower or sapling into other variants!"
 }
