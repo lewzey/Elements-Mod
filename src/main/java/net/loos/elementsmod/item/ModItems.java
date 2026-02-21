@@ -6,6 +6,7 @@ import net.loos.elementsmod.item.custom.Aetherius;
 import net.loos.elementsmod.item.custom.BloomStaff;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.SwordItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -31,6 +32,9 @@ public class ModItems {
     //FIRE
     public static final Item RAW_SPARK_STONE = registerItem("raw_spark_stone", new Item(new Item.Settings()));
     public static final Item SPARK_STONE = registerItem("spark_stone", new Item(new Item.Settings()));
+    public static final Item SPARK_STONE_SWORD = registerItem("spark_stone_sword",
+            new SwordItem(ModToolMaterials.SPARK_STONE, new Item.Settings()
+                    .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.SPARK_STONE, 3, -2.4f))));
 
     // WATER
     public static final Item HYDROCITE_GEM = registerItem("hydrocite_gem", new Item(new Item.Settings()));
@@ -51,6 +55,7 @@ public class ModItems {
 
             entries.add(SPARK_STONE);
             entries.add(RAW_SPARK_STONE);
+            entries.add(SPARK_STONE_SWORD);
 
             entries.add(AERIS_CONCENTRATE);
             entries.add(AERIS_VAPOR);

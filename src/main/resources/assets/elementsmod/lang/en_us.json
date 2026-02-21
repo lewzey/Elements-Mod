@@ -24,10 +24,11 @@
 
   "item.elementsmod.spark_stone": "Spark Stone Shard",
   "item.elementsmod.raw_spark_stone": "Raw Spark Stone",
-
-
   "block.elementsmod.spark_stone_block": "Spark Stone Block",
   "block.elementsmod.spark_stone_ore": "Spark Stone Ore",
+  "item.elementsmod.spark_stone_sword": "Spark Stone Sword",
+  "itemgroup.elements.spark_stone_items": "Spark Stone Items",
+  "itemgroup.elements.spark_stone_blocks": "Spark Stone Blocks",
 
   "tooltip.elementsmod.bloom_staff.tooltip": "Change any flower or sapling into other variants!"
 }

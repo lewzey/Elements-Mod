@@ -27,6 +27,7 @@ public class ModItemGroups {
                         entries.add(ModItems.RAW_SPARK_STONE);
                         entries.add(ModBlocks.SPARK_STONE_BLOCK);
                         entries.add(ModBlocks.SPARK_STONE_ORE);
+                        entries.add(ModItems.SPARK_STONE_SWORD);
 
                         entries.add(ModItems.AETHERIUS);
                         entries.add(ModItems.AERIS_CONCENTRATE);
@@ -68,6 +69,7 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.SPARK_STONE);
                         entries.add(ModItems.RAW_SPARK_STONE);
+                        entries.add(ModItems.SPARK_STONE_SWORD);
                     }).build()
     );
 
