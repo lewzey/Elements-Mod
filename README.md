@@ -17,7 +17,7 @@ Explore what possibilities the four elements can achieve!
 - TBA
 
 ### 🔥 Fire Element
-- TBA
+- - **`Spark Stone Ore + Shard`**  – Can be found near lava pools and requires an iron pickaxe to mine!
 
 ### 🌿 Grass Element
 - **`Grass Ore + Gem`**  – Can be found in random patches of dirt and requires an iron shovel to mine!
