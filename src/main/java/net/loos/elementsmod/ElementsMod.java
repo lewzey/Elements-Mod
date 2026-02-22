@@ -5,6 +5,7 @@ import net.fabricmc.api.ModInitializer;
 import net.loos.elementsmod.block.ModBlocks;
 import net.loos.elementsmod.item.ModItemGroups;
 import net.loos.elementsmod.item.ModItems;
+import net.loos.elementsmod.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,5 +18,7 @@ public class ElementsMod implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+
+		ModWorldGeneration.generateModWorldGen();
 	}
 }

@@ -7,6 +7,7 @@ import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
+import net.minecraft.world.biome.Biome;
 
 
 public class ModTags {
@@ -27,4 +28,13 @@ public class ModTags {
             return TagKey.of(RegistryKeys.ITEM, Identifier.of(ElementsMod.MOD_ID, name));
         }
     }
+
+    public class Biomes {
+        public static final TagKey<Biome> GRASS_GEM_BIOMES = createTag("grass_gem_biomes");
+
+        private static TagKey<Biome> createTag(String name) {
+            return TagKey.of(RegistryKeys.BIOME, Identifier.of(ElementsMod.MOD_ID, name));
+        }
+    }
+
 }
