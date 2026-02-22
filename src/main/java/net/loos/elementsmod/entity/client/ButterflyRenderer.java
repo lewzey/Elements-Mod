@@ -26,6 +26,8 @@ public class ButterflyRenderer extends MobEntityRenderer<ButterflyEntity, Butter
                         Identifier.of(ElementsMod.MOD_ID, "textures/entity/butterfly/black_butterfly.png"));
                 map.put(ButterflyVariant.RED,
                         Identifier.of(ElementsMod.MOD_ID, "textures/entity/butterfly/red_butterfly.png"));
+                map.put(ButterflyVariant.PINK,
+                        Identifier.of(ElementsMod.MOD_ID, "textures/entity/butterfly/pink_butterfly.png"));
             });
     public ButterflyRenderer(EntityRendererFactory.Context context) {
         super(context, new ButterflyModel<>(context.getPart(ButterflyModel.BUTTERFLY)), 0.75f);

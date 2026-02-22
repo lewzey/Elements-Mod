@@ -9,7 +9,8 @@ public enum ButterflyVariant {
     PURPLE(1),
     BLACK(2),
     RED(3),
-    GREEN(4);
+    GREEN(4),
+    PINK(5);
 
     private static final ButterflyVariant[] BY_ID = Arrays.stream(values()).sorted(Comparator.
             comparingInt(ButterflyVariant::getId)).toArray(ButterflyVariant[]::new);
