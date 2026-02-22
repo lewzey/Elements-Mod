@@ -14,6 +14,7 @@ import net.minecraft.item.Items;
 import net.minecraft.item.MinecartItem;
 import net.minecraft.recipe.book.RecipeCategory;
 import net.minecraft.registry.RegistryWrapper;
+import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.util.Identifier;
 
 import java.util.List;
@@ -35,13 +36,23 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModItems.GRASS_GEM, RecipeCategory.DECORATIONS, ModBlocks.GRASS_GEM_BLOCK);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BLOOM_STICK)
+                .pattern("@$@")
+                .pattern("$S$")
+                .pattern("@$@")
+                .input('$', ModItems.GRASS_GEM)
+                .input('@', ItemTags.FLOWERS)
+                .input('S', Items.STICK)
+                .criterion(hasItem(ModItems.GRASS_GEM), conditionsFromItem(ModItems.GRASS_GEM))
+                .offerTo(recipeExporter);
+
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BLOOM_STAFF)
                 .pattern("$@$")
                 .pattern(" S ")
                 .pattern(" S ")
                 .input('$', ModItems.GRASS_GEM)
                 .input('@', Items.GOLD_INGOT)
-                .input('S', Items.STICK)
+                .input('S', ModItems.BLOOM_STICK)
                 .criterion(hasItem(ModItems.GRASS_GEM), conditionsFromItem(ModItems.GRASS_GEM))
                 .offerTo(recipeExporter);
 

@@ -33,6 +33,7 @@ public class ModModelProvider extends FabricModelProvider {
     public void generateItemModels(ItemModelGenerator itemModelGenerator) {
         itemModelGenerator.register(ModItems.GRASS_GEM, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_GRASS_GEM, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BLOOM_STICK, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.SPARK_STONE, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_SPARK_STONE, Models.GENERATED);

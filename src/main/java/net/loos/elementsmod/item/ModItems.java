@@ -21,6 +21,7 @@ public class ModItems {
     // GRASS
     public static final Item GRASS_GEM = registerItem("grass_gem",new Item(new Item.Settings()));
     public static final Item RAW_GRASS_GEM = registerItem("raw_grass_gem", new Item(new Item.Settings()));
+    public static final Item BLOOM_STICK = registerItem("bloom_stick",new Item(new Item.Settings()));
     public static final Item BLOOM_STAFF = registerItem("bloom_staff",(new BloomStaff(new Item.Settings().maxDamage(32))));
 
     // AIR
@@ -51,6 +52,7 @@ public class ModItems {
 
             entries.add(GRASS_GEM);
             entries.add(RAW_GRASS_GEM);
+            entries.add(BLOOM_STICK);
             entries.add(BLOOM_STAFF);
 
             entries.add(SPARK_STONE);
