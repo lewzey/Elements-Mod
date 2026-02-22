@@ -22,7 +22,7 @@ Explore what possibilities the four elements can achieve!
 ### 🌿 Grass Element
 - **`Grass Ore + Gem`**  – Can be found in random patches of dirt and requires an iron shovel to mine!
 - **`Bloom Staff`**  – A staff that allows flowers and saplings to be turned into its other variants! (Requires sunlight)
-- **`Butterflies`**  – 5 variants of this cute little animal can be found in sunny biomes!
+- **`Butterflies`**  – SIX variants of this cute little animal can be found in sunny biomes!
     
 ### 💧 Water Element
 - TBA
