@@ -2,7 +2,10 @@ package net.loos.elementsmod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.loos.elementsmod.block.ModBlocks;
+import net.loos.elementsmod.entity.ModEntities;
+import net.loos.elementsmod.entity.custom.ButterflyEntity;
 import net.loos.elementsmod.item.ModItemGroups;
 import net.loos.elementsmod.item.ModItems;
 import net.loos.elementsmod.world.gen.ModWorldGeneration;
@@ -20,5 +23,7 @@ public class ElementsMod implements ModInitializer {
 		ModBlocks.registerModBlocks();
 
 		ModWorldGeneration.generateModWorldGen();
+
+		FabricDefaultAttributeRegistry.register(ModEntities.BUTTERFLY, ButterflyEntity.createAttributes());
 	}
 }

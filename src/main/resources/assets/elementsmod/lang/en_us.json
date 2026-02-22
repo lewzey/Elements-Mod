@@ -3,6 +3,8 @@
   "item.elementsmod.raw_grass_gem": "Raw Grass Gem",
   "item.elementsmod.bloom_staff": "Bloom Staff",
   "item.elementsmod.bloom_stick": "Bloom Stick",
+  "item.elementsmod.bloom_crown": "Bloom Crown",
+  "item.elementsmod.butterfly_spawn_egg": "Butterfly Spawn Egg",
   "block.elementsmod.grass_gem_block": "Grass Gem Block",
   "block.elementsmod.grass_gem_ore": "Grass Gem Ore",
 
@@ -31,5 +33,7 @@
   "itemgroup.elements.spark_stone_items": "Spark Stone Items",
   "itemgroup.elements.spark_stone_blocks": "Spark Stone Blocks",
 
-  "tooltip.elementsmod.bloom_staff.tooltip": "Change any flower or sapling into other variants!"
+  "tooltip.elementsmod.bloom_staff.tooltip": "Change any flower or sapling into other variants!",
+
+  "entity.elementsmod.butterfly": "Butterfly"
 }

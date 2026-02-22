@@ -4,9 +4,13 @@ import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.loos.elementsmod.block.ModBlocks;
 import net.loos.elementsmod.item.ModItems;
+import net.minecraft.data.client.*;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.util.Identifier;
+
+import java.util.Optional;
 
 //custom item models do not go here
 public class ModModelProvider extends FabricModelProvider {
@@ -34,6 +38,9 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.GRASS_GEM, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_GRASS_GEM, Models.GENERATED);
         itemModelGenerator.register(ModItems.BLOOM_STICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BUTTERFLY_SPAWN_EGG,
+                new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+
 
         itemModelGenerator.register(ModItems.SPARK_STONE, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_SPARK_STONE, Models.GENERATED);
@@ -47,4 +54,5 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.HYDROCITE_SHARD, Models.GENERATED);
 
     }
+
 }
