@@ -25,6 +25,7 @@ public class ElementsModClient implements ClientModInitializer {
 
         EntityModelLayerRegistry.registerModelLayer(ButterflyModel.BUTTERFLY, ButterflyModel::getTexturedModelData );
         EntityRendererRegistry.register(ModEntities.BUTTERFLY, ButterflyRenderer::new);
+
     }
 }
 

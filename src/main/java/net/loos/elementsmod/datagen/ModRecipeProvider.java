@@ -64,7 +64,35 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.GRASS_GEM), conditionsFromItem(ModItems.GRASS_GEM))
                 .offerTo(recipeExporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GRASS_GEM_HELMET)
+                .pattern("$$$")
+                .pattern("$ $")
+                .input('$', ModItems.GRASS_GEM)
+                .criterion(hasItem(ModItems.GRASS_GEM), conditionsFromItem(ModItems.GRASS_GEM))
+                .offerTo(recipeExporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GRASS_GEM_CHESTPLATE)
+                .pattern("$ $")
+                .pattern("$$$")
+                .pattern("$$$")
+                .input('$', ModItems.GRASS_GEM)
+                .criterion(hasItem(ModItems.GRASS_GEM), conditionsFromItem(ModItems.GRASS_GEM))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GRASS_GEM_LEGGINGS)
+                .pattern("$$$")
+                .pattern("$ $")
+                .pattern("$ $")
+                .input('$', ModItems.GRASS_GEM)
+                .criterion(hasItem(ModItems.GRASS_GEM), conditionsFromItem(ModItems.GRASS_GEM))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GRASS_GEM_BOOTS)
+                .pattern("$ $")
+                .pattern("$ $")
+                .input('$', ModItems.GRASS_GEM)
+                .criterion(hasItem(ModItems.GRASS_GEM), conditionsFromItem(ModItems.GRASS_GEM))
+                .offerTo(recipeExporter);
 
         //water
         offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModItems.HYDROCITE_GEM, RecipeCategory.DECORATIONS, ModBlocks.HYDROCITE_BLOCK);

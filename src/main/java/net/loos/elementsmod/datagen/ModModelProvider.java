@@ -8,6 +8,7 @@ import net.minecraft.data.client.*;
 import net.minecraft.data.client.BlockStateModelGenerator;
 import net.minecraft.data.client.ItemModelGenerator;
 import net.minecraft.data.client.Models;
+import net.minecraft.item.ArmorItem;
 import net.minecraft.util.Identifier;
 
 import java.util.Optional;
@@ -40,6 +41,11 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.BLOOM_STICK, Models.GENERATED);
         itemModelGenerator.register(ModItems.BUTTERFLY_SPAWN_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.GRASS_GEM_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.GRASS_GEM_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.GRASS_GEM_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.GRASS_GEM_BOOTS);
 
 
         itemModelGenerator.register(ModItems.SPARK_STONE, Models.GENERATED);

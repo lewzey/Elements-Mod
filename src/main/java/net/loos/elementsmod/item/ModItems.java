@@ -23,6 +23,18 @@ public class ModItems {
     public static final Item BLOOM_STICK = registerItem("bloom_stick",new Item(new Item.Settings()));
     public static final Item BLOOM_STAFF = registerItem("bloom_staff",(new BloomStaff(new Item.Settings().maxDamage(32))));
     public static final Item BLOOM_CROWN = registerItem("bloom_crown", new Item(new Item.Settings()));
+    public static final Item GRASS_GEM_HELMET = registerItem("grass_gem_helmet",
+            new ArmorItem(ModArmorMaterials.GRASS_GEM_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+                    .maxDamage((ArmorItem.Type.HELMET.getMaxDamage(12)))));
+    public static final Item GRASS_GEM_CHESTPLATE = registerItem("grass_gem_chestplate",
+            new ArmorItem(ModArmorMaterials.GRASS_GEM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
+                    .maxDamage((ArmorItem.Type.HELMET.getMaxDamage(12)))));
+    public static final Item GRASS_GEM_LEGGINGS = registerItem("grass_gem_leggings",
+            new ArmorItem(ModArmorMaterials.GRASS_GEM_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
+                    .maxDamage((ArmorItem.Type.HELMET.getMaxDamage(12)))));
+    public static final Item GRASS_GEM_BOOTS = registerItem("grass_gem_boots",
+            new ArmorItem(ModArmorMaterials.GRASS_GEM_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
+                    .maxDamage((ArmorItem.Type.HELMET.getMaxDamage(12)))));
     public static final Item BUTTERFLY_SPAWN_EGG = registerItem("butterfly_spawn_egg",
             new SpawnEggItem(ModEntities.BUTTERFLY, 0xede512, 0xd32cc7, new Item.Settings()));
 
@@ -57,6 +69,10 @@ public class ModItems {
             entries.add(BLOOM_STICK);
             entries.add(BLOOM_STAFF);
             entries.add(BLOOM_CROWN);
+            entries.add(GRASS_GEM_HELMET);
+            entries.add(GRASS_GEM_CHESTPLATE);
+            entries.add(GRASS_GEM_LEGGINGS);
+            entries.add(GRASS_GEM_BOOTS);
 
             entries.add(SPARK_STONE);
             entries.add(RAW_SPARK_STONE);

@@ -8,6 +8,12 @@
   "block.elementsmod.grass_gem_block": "Grass Gem Block",
   "block.elementsmod.grass_gem_ore": "Grass Gem Ore",
 
+  "item.elementsmod.grass_gem_helmet": "Grass Gem Helmet",
+  "item.elementsmod.grass_gem_chestplate": "Grass Gem Chestplate",
+  "item.elementsmod.grass_gem_leggings": "Grass Gem Leggings",
+  "item.elementsmod.grass_gem_boots": "Grass Gem Boots",
+
+
   "itemgroup.elements.grass_gem_items": "Grass Gem Items",
   "itemgroup.elements.grass_gem_blocks": "Grass Gem Blocks",
 

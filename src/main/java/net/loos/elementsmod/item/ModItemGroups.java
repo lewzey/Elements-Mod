@@ -25,6 +25,10 @@ public class ModItemGroups {
                         entries.add(ModBlocks.GRASS_GEM_BLOCK);
                         entries.add(ModItems.BLOOM_CROWN);
                         entries.add(ModItems.BUTTERFLY_SPAWN_EGG);
+                        entries.add(ModItems.GRASS_GEM_HELMET);
+                        entries.add(ModItems.GRASS_GEM_CHESTPLATE);
+                        entries.add(ModItems.GRASS_GEM_LEGGINGS);
+                        entries.add(ModItems.GRASS_GEM_BOOTS);
 
                         entries.add(ModItems.SPARK_STONE);
                         entries.add(ModItems.RAW_SPARK_STONE);
@@ -54,6 +58,12 @@ public class ModItemGroups {
                         entries.add(ModItems.BLOOM_STICK);
                         entries.add(ModItems.BLOOM_STAFF);
                         entries.add(ModItems.BLOOM_CROWN);
+                        entries.add(ModItems.BUTTERFLY_SPAWN_EGG);
+                        entries.add(ModItems.GRASS_GEM_HELMET);
+                        entries.add(ModItems.GRASS_GEM_CHESTPLATE);
+                        entries.add(ModItems.GRASS_GEM_LEGGINGS);
+                        entries.add(ModItems.GRASS_GEM_BOOTS);
+
                     }).build()
     );
 
