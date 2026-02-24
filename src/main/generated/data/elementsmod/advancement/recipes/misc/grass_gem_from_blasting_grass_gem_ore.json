@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_grass_gem_ore": {
+      "conditions": {
+        "items": [
+          {
+            "items": "elementsmod:grass_gem_ore"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:grass_gem_from_blasting_grass_gem_ore"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_grass_gem_ore"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:grass_gem_from_blasting_grass_gem_ore"
+    ]
+  }
+}

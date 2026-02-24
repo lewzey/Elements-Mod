@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "$": {
+      "item": "elementsmod:grass_gem"
+    }
+  },
+  "pattern": [
+    "$$$",
+    "$ $",
+    "$ $"
+  ],
+  "result": {
+    "count": 1,
+    "id": "elementsmod:grass_gem_leggings"
+  }
+}

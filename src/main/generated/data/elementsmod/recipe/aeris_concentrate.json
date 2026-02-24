@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "elementsmod:aeris_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "elementsmod:aeris_concentrate"
+  }
+}

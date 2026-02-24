@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_grass_gem": {
+      "conditions": {
+        "items": [
+          {
+            "items": "elementsmod:grass_gem"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "elementsmod:bloom_crown"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_grass_gem"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "elementsmod:bloom_crown"
+    ]
+  }
+}

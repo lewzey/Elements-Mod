@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "$": {
+      "item": "elementsmod:grass_gem"
+    },
+    "@": {
+      "tag": "minecraft:flowers"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    "@$@",
+    "$S$",
+    "@$@"
+  ],
+  "result": {
+    "count": 1,
+    "id": "elementsmod:bloom_stick"
+  }
+}
