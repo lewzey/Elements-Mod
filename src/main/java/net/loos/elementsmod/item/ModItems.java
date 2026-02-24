@@ -5,6 +5,7 @@ import net.loos.elementsmod.ElementsMod;
 import net.loos.elementsmod.entity.ModEntities;
 import net.loos.elementsmod.item.custom.Aetherius;
 import net.loos.elementsmod.item.custom.BloomStaff;
+import net.loos.elementsmod.item.custom.WaterStaff;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -54,6 +55,8 @@ public class ModItems {
     // WATER
     public static final Item HYDROCITE_GEM = registerItem("hydrocite_gem", new Item(new Item.Settings()));
     public static final Item HYDROCITE_SHARD = registerItem("hydrocite_shard", new Item(new Item.Settings()));
+    public static final Item WATER_STAFF = registerItem("water_staff", new WaterStaff(new Item.Settings()));
+
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(ElementsMod.MOD_ID, name), item);
