@@ -2,6 +2,7 @@ package net.loos.elementsmod.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
+import net.loos.elementsmod.item.ModItems;
 import net.loos.elementsmod.util.ModTags;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.TagKey;
@@ -19,7 +20,28 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
-
+        getOrCreateTagBuilder(ModTags.Items.TRANSFORMABLE_ITEMS)
+                .add(ModItems.AERIS_CONCENTRATE)
+                .add(ModItems.AERIS_VAPOR)
+                .add(ModItems.AETHERIUS)
+                .add(ModItems.BLOOM_CROWN)
+                .add(ModItems.BLOOM_STAFF)
+                .add(ModItems.BLOOM_STICK)
+                .add(ModItems.BUTTERFLY_SPAWN_EGG)
+                .add(ModItems.ELEMENTS_MOD_ICON)
+                .add(ModItems.GRASS_GEM)
+                .add(ModItems.GRASS_GEM_BOOTS)
+                .add(ModItems.GRASS_GEM_CHESTPLATE)
+                .add(ModItems.GRASS_GEM_HELMET)
+                .add(ModItems.GRASS_GEM_LEGGINGS)
+                .add(ModItems.ELEMENTS_MOD_ICON)
+                .add(ModItems.HYDROCITE_GEM)
+                .add(ModItems.HYDROCITE_SHARD)
+                .add(ModItems.RAW_GRASS_GEM)
+                .add(ModItems.RAW_SPARK_STONE)
+                .add(ModItems.SPARK_STONE)
+                .add(ModItems.SPARK_STONE_SWORD)
+                .add(ModItems.WATER_STAFF);
     }
 
 }
