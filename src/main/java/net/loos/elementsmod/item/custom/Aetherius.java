@@ -74,7 +74,7 @@ public class Aetherius extends Item {
 
             Vec3d eyePos = player.getEyePos();
             Vec3d lookDir = player.getRotationVector();
-            double range = 8.0; // How far the wind travels in blocks
+            double range = 8.0; // how far the wind travels in blocks
 
             // for swaping the cloud particles 1
             for (int i = 1; i <= range; i++) {

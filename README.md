@@ -15,6 +15,8 @@ Explore what possibilities the four elements can achieve!
 
 ### 🌪 Air Element
 - TBA
+- **`Aeris Vapor + Concentrate`** - Found in the sky and reqires a diamond shovel to mine!
+- **`Aetherius`** - Crafted with the Aeris, grants flight and cloud bending abilities
 
 ### 🔥 Fire Element
 - **`Spark Stone Ore + Shard`**  – Can be found near lava pools and requires an iron pickaxe to mine!
