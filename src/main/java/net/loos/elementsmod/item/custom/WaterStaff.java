@@ -6,10 +6,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.Equipment;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.sound.SoundCategory;
@@ -21,14 +18,13 @@ import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 import net.minecraft.server.world.ServerWorld;
 
-public class WaterStaff extends Item implements Equipment {
+public class WaterStaff extends SwordItem implements Equipment {
 
     //Define Box around player
 
 
-    public WaterStaff(Settings settings) {
-        super(settings);
-        //Dispenser will equip directly onto player / mob
+    public WaterStaff(ToolMaterial material, Settings settings) {
+        super(material, settings.attributeModifiers(SwordItem.createAttributeModifiers(material,4, -2.5f)));
         DispenserBlock.registerBehavior(this, ArmorItem.DISPENSER_BEHAVIOR);
     }
     public static final float MIN_DAMAGE_AMOUNT_TO_BREAK = 3.0F;

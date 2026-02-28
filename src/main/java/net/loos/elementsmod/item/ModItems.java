@@ -55,7 +55,7 @@ public class ModItems {
     // WATER
     public static final Item HYDROCITE_GEM = registerItem("hydrocite_gem", new Item(new Item.Settings()));
     public static final Item HYDROCITE_SHARD = registerItem("hydrocite_shard", new Item(new Item.Settings()));
-    public static final Item WATER_STAFF = registerItem("water_staff", new WaterStaff(new Item.Settings()));
+    public static final Item WATER_STAFF = registerItem("water_staff", new SwordItem(ModToolMaterials.HYDROCITE);
 
 
     private static Item registerItem(String name, Item item) {
