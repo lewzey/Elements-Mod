@@ -10,6 +10,7 @@ import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.Rarity;
 
 public class ModItems {
 
@@ -43,7 +44,7 @@ public class ModItems {
     public static final Item AERIS_CONCENTRATE = registerItem("aeris_concentrate", new Item(new Item.Settings()));
     public static final Item AERIS_VAPOR = registerItem("aeris_vapor", new Item(new Item.Settings()));
 
-    public static final Item AETHERIUS = registerItem("aetherius", new Aetherius(new Item.Settings()));
+    public static final Item AETHERIUS = registerItem("aetherius", new Aetherius(new Item.Settings().rarity(Rarity.EPIC)));
 
     //FIRE
     public static final Item RAW_SPARK_STONE = registerItem("raw_spark_stone", new Item(new Item.Settings()));

@@ -134,7 +134,15 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.AERIS_VAPOR), conditionsFromItem(ModItems.AERIS_VAPOR))
                 .offerTo(recipeExporter, Identifier.of(ElementsMod.MOD_ID, "aeris_concentrate_from_aeris_vapor"));
 
-
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.AETHERIUS)
+                .pattern(" V ")
+                .pattern("VXV")
+                .pattern(" Z ")
+                .input('V', ModItems.AERIS_CONCENTRATE)
+                .input('X', Items.NETHER_STAR)
+                .input('Z', Items.STICK)
+                .criterion(hasItem(Items.NETHER_STAR), conditionsFromItem(Items.NETHER_STAR))
+                .offerTo(recipeExporter);
 
     }
 
