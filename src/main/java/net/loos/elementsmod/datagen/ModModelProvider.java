@@ -51,6 +51,13 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SPARK_STONE, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_SPARK_STONE, Models.GENERATED);
         itemModelGenerator.register(ModItems.SPARK_STONE_SWORD, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.SPARK_STAFF, Models.HANDHELD);
+        itemModelGenerator.register(ModItems.SPARK_STICK, Models.GENERATED);
+
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.SPARK_STONE_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.SPARK_STONE_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.SPARK_STONE_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.SPARK_STONE_BOOTS);
 
         itemModelGenerator.register(ModItems.AERIS_CONCENTRATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.AERIS_VAPOR, Models.GENERATED);

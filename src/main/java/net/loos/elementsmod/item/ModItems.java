@@ -6,6 +6,7 @@ import net.loos.elementsmod.entity.ModEntities;
 import net.loos.elementsmod.item.custom.Aetherius;
 import net.loos.elementsmod.item.custom.BloomStaff;
 import net.loos.elementsmod.item.custom.WaterStaff;
+import net.loos.elementsmod.item.custom.SparkStaff;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -52,6 +53,21 @@ public class ModItems {
     public static final Item SPARK_STONE_SWORD = registerItem("spark_stone_sword",
             new SwordItem(ModToolMaterials.SPARK_STONE, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.SPARK_STONE, 3, -2.4f))));
+    public static final Item SPARK_STAFF = registerItem("spark_staff", new SparkStaff(new Item.Settings()));
+    public static final Item SPARK_STICK = registerItem("spark_stick", new Item(new Item.Settings()));
+
+    public static final Item SPARK_STONE_HELMET = registerItem("spark_stone_helmet",
+            new ArmorItem(ModArmorMaterials.SPARK_STONE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+                    .maxDamage((ArmorItem.Type.HELMET.getMaxDamage(12)))));
+    public static final Item SPARK_STONE_CHESTPLATE = registerItem("spark_stone_chestplate",
+            new ArmorItem(ModArmorMaterials.SPARK_STONE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
+                    .maxDamage((ArmorItem.Type.HELMET.getMaxDamage(12)))));
+    public static final Item SPARK_STONE_LEGGINGS = registerItem("spark_stone_leggings",
+            new ArmorItem(ModArmorMaterials.SPARK_STONE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
+                    .maxDamage((ArmorItem.Type.HELMET.getMaxDamage(12)))));
+    public static final Item SPARK_STONE_BOOTS = registerItem("spark_stone_boots",
+            new ArmorItem(ModArmorMaterials.SPARK_STONE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
+                    .maxDamage((ArmorItem.Type.HELMET.getMaxDamage(12)))));
 
     // WATER
     public static final Item HYDROCITE_GEM = registerItem("hydrocite_gem", new Item(new Item.Settings()));
@@ -81,6 +97,11 @@ public class ModItems {
             entries.add(SPARK_STONE);
             entries.add(RAW_SPARK_STONE);
             entries.add(SPARK_STONE_SWORD);
+            entries.add(SPARK_STICK);
+            entries.add(SPARK_STONE_HELMET);
+            entries.add(SPARK_STONE_CHESTPLATE);
+            entries.add(SPARK_STONE_LEGGINGS);
+            entries.add(SPARK_STONE_BOOTS);
 
             entries.add(AERIS_CONCENTRATE);
             entries.add(AERIS_VAPOR);
