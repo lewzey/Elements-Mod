@@ -2,6 +2,7 @@ package net.loos.elementsmod.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.loos.elementsmod.ElementsMod;
+import net.loos.elementsmod.block.ModBlocks;
 import net.loos.elementsmod.entity.ModEntities;
 import net.loos.elementsmod.item.custom.Aetherius;
 import net.loos.elementsmod.item.custom.BloomStaff;
@@ -40,7 +41,9 @@ public class ModItems {
                     .maxDamage((ArmorItem.Type.HELMET.getMaxDamage(12)))));
     public static final Item BUTTERFLY_SPAWN_EGG = registerItem("butterfly_spawn_egg",
             new SpawnEggItem(ModEntities.BUTTERFLY, 0xede512, 0xd32cc7, new Item.Settings()));
-
+    public static final Item FLUTTERBLOOM = registerItem("flutterbloom", new Item(new Item.Settings().food(ModFoodComponents.FLUTTERBLOOM)));
+    public static final Item FLUTTERBLOOM_SEEDS = registerItem("flutterbloom_seeds",
+            new AliasedBlockItem(ModBlocks.FLUTTERBLOOM_CROP, new Item.Settings()));
     // AIR
     public static final Item AERIS_CONCENTRATE = registerItem("aeris_concentrate", new Item(new Item.Settings()));
     public static final Item AERIS_VAPOR = registerItem("aeris_vapor", new Item(new Item.Settings()));
@@ -93,6 +96,8 @@ public class ModItems {
             entries.add(GRASS_GEM_CHESTPLATE);
             entries.add(GRASS_GEM_LEGGINGS);
             entries.add(GRASS_GEM_BOOTS);
+            entries.add(FLUTTERBLOOM);
+            entries.add(FLUTTERBLOOM_SEEDS);
 
             entries.add(SPARK_STONE);
             entries.add(RAW_SPARK_STONE);
