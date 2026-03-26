@@ -26,6 +26,7 @@ Explore what possibilities the four elements can achieve!
 - **`Grass Gem Armor`**  – A fun new green armor set to add to the collection ^_^
 - **`Bloom Staff`**  – A staff that allows flowers and saplings to be turned into its other variants! (Requires sunlight)
 - **`Butterflies`**  – SIX variants of this cute little animal can be found in sunny biomes!
+- **`Flutterbloom's`**  – A new crop that will give you speed when consumed! (seeds dropped by butterflies)
     
 ### 💧 Water Element
 - TBA
