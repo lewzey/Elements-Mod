@@ -31,6 +31,7 @@ public class ModItemGroups {
                         entries.add(ModItems.GRASS_GEM_BOOTS);
                         entries.add(ModItems.FLUTTERBLOOM);
                         entries.add(ModItems.FLUTTERBLOOM_SEEDS);
+                        entries.add(ModItems.BLOOM_SHATTERER);
 
                         entries.add(ModItems.SPARK_STONE);
                         entries.add(ModItems.RAW_SPARK_STONE);
@@ -74,6 +75,7 @@ public class ModItemGroups {
                         entries.add(ModItems.GRASS_GEM_BOOTS);
                         entries.add(ModItems.FLUTTERBLOOM);
                         entries.add(ModItems.FLUTTERBLOOM_SEEDS);
+                        entries.add(ModItems.BLOOM_SHATTERER);
                     }).build()
     );
 

@@ -4,10 +4,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.loos.elementsmod.ElementsMod;
 import net.loos.elementsmod.block.ModBlocks;
 import net.loos.elementsmod.entity.ModEntities;
-import net.loos.elementsmod.item.custom.Aetherius;
-import net.loos.elementsmod.item.custom.BloomStaff;
-import net.loos.elementsmod.item.custom.WaterStaff;
-import net.loos.elementsmod.item.custom.SparkStaff;
+import net.loos.elementsmod.item.custom.*;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -25,10 +22,12 @@ public class ModItems {
     public static final Item GRASS_GEM = registerItem("grass_gem",new Item(new Item.Settings()));
     public static final Item RAW_GRASS_GEM = registerItem("raw_grass_gem", new Item(new Item.Settings()));
     public static final Item BLOOM_STICK = registerItem("bloom_stick",new Item(new Item.Settings()));
+    public static final Item BLOOM_SHATTERER = registerItem("bloom_shatterer", new HammerItem(ModToolMaterials.GRASS_GEM, new Item.Settings()
+            .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.GRASS_GEM, 8, -3.5f))));
     public static final Item BLOOM_STAFF = registerItem("bloom_staff",(new BloomStaff(new Item.Settings().maxDamage(32))));
     public static final Item BLOOM_CROWN = registerItem("bloom_crown", new Item(new Item.Settings()));
     public static final Item GRASS_GEM_HELMET = registerItem("grass_gem_helmet",
-            new ArmorItem(ModArmorMaterials.GRASS_GEM_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+            new ModArmorItem(ModArmorMaterials.GRASS_GEM_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
                     .maxDamage((ArmorItem.Type.HELMET.getMaxDamage(12)))));
     public static final Item GRASS_GEM_CHESTPLATE = registerItem("grass_gem_chestplate",
             new ArmorItem(ModArmorMaterials.GRASS_GEM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
@@ -98,6 +97,7 @@ public class ModItems {
             entries.add(GRASS_GEM_BOOTS);
             entries.add(FLUTTERBLOOM);
             entries.add(FLUTTERBLOOM_SEEDS);
+            entries.add(BLOOM_SHATTERER);
 
             entries.add(SPARK_STONE);
             entries.add(RAW_SPARK_STONE);

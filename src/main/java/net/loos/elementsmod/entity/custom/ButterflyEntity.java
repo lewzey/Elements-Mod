@@ -134,8 +134,8 @@ public class ButterflyEntity extends AnimalEntity {
 
         if (!this.getWorld().isClient) {
             // 25% chance to drop seeds
-            if (this.random.nextFloat() < 0.5f) {
-                this.dropItem(ModItems.FLUTTERBLOOM_SEEDS, 1);
+            if (this.random.nextFloat() < 0.1f) {
+                this.dropItem(ModItems.BLOOM_CROWN, 1);
             }
         }
     }

@@ -13,7 +13,9 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterials implements ToolMaterial {
     SPARK_STONE(ModTags.Blocks.INCORRECT_FOR_SPARK_STONE_TOOL,
-            1111, 5.0F, 4.0F, 20, () -> Ingredient.ofItems(ModItems.SPARK_STONE));
+            1111, 5.0F, 4.0F, 20, () -> Ingredient.ofItems(ModItems.SPARK_STONE)),
+    GRASS_GEM(ModTags.Blocks.INCORRECT_FOR_GRASS_GEM_TOOL,
+            3000, 7.0F, 2.0F, 20, () -> Ingredient.ofItems(ModItems.GRASS_GEM));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;
