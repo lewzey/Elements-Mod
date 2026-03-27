@@ -26,7 +26,7 @@ Explore what possibilities the four elements can achieve!
 - **`Grass Gem Armor`**  – A fun new green armor set that gives haste and speed when the set is equipped! (Requires sunlight)
 - **`Bloom Staff`**  – A staff that allows flowers and saplings to be turned into its other variants! (Requires sunlight)
 - **`Bloom Shatterer`**  – A bloom weapon that will mine a 3x3 area after breaking a pickaxable block
-- - **`Bloom Crown`**  – A fun little crown to show off for display (dropped by butterflies)
+- **`Bloom Crown`**  – A fun little crown to show off for display (dropped by butterflies)
 - **`Butterflies`**  – SIX variants of this cute little animal can be found in sunny biomes!
 - **`Flutterblooms`**  – A new crop that will give you speed when consumed! (seeds found in short grass)
     
