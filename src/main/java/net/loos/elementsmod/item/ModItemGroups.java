@@ -46,6 +46,8 @@ public class ModItemGroups {
                         entries.add(ModItems.SPARK_STONE_BOOTS);
 
                         entries.add(ModItems.AETHERIUS);
+                        entries.add(ModItems.COSMOLIGHT);
+
                         entries.add(ModItems.AERIS_CONCENTRATE);
                         entries.add(ModItems.AERIS_VAPOR);
                         entries.add(ModBlocks.AERIS_VAPOR_BLOCK);

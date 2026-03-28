@@ -49,6 +49,8 @@ public class ModItems {
 
     public static final Item AETHERIUS = registerItem("aetherius", new Aetherius(new Item.Settings().rarity(Rarity.EPIC)));
 
+    public static final Item COSMOLIGHT = registerItem("cosmolight", new Cosmolight(new Item.Settings().rarity(Rarity.EPIC)));
+
     //FIRE
     public static final Item RAW_SPARK_STONE = registerItem("raw_spark_stone", new Item(new Item.Settings()));
     public static final Item SPARK_STONE = registerItem("spark_stone", new Item(new Item.Settings()));

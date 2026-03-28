@@ -36,5 +36,8 @@ public class ModOreGeneration {
 
         BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.MULTIPLE_SPARK_STONE_ORES_PLACED);
+
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.AERIS_VAPOR_BLOCK_PLACED);
     }
 }

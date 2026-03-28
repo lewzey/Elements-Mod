@@ -66,6 +66,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.AERIS_CONCENTRATE, Models.GENERATED);
         itemModelGenerator.register(ModItems.AERIS_VAPOR, Models.GENERATED);
         itemModelGenerator.register(ModItems.AETHERIUS, Models.GENERATED);
+        itemModelGenerator.register(ModItems.COSMOLIGHT, Models.GENERATED);
 
         itemModelGenerator.register(ModItems.HYDROCITE_GEM, Models.GENERATED);
         itemModelGenerator.register(ModItems.HYDROCITE_SHARD, Models.GENERATED);
