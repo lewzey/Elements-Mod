@@ -243,6 +243,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(Items.NETHER_STAR), conditionsFromItem(Items.NETHER_STAR))
                 .offerTo(recipeExporter);
 
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.COSMOLIGHT)
+                .pattern("XZX")
+                .pattern("ZVZ")
+                .pattern("XZX")
+                .input('V', ModBlocks.AERIS_BLOCK)
+                .input('X', Items.NETHERITE_INGOT)
+                .input('Z', Items.COMPASS)
+                .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
+                .offerTo(recipeExporter);
     }
 
 }

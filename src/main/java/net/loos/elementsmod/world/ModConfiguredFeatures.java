@@ -40,7 +40,7 @@ public class ModConfiguredFeatures {
 
         SimpleBlockFeatureConfig vaporBlockConfig = new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.AERIS_VAPOR_BLOCK));
 
-        // this is how i make the clouds spawn
+        // this is how I make the clouds spawn
         RandomPatchFeatureConfig cloudConfig = new RandomPatchFeatureConfig(96, 7, 1,
                 RegistryEntry.of(new PlacedFeature(RegistryEntry.of(new ConfiguredFeature<>(Feature.SIMPLE_BLOCK, vaporBlockConfig)),
                         List.of(BlockFilterPlacementModifier.of(BlockPredicate.matchingBlocks(Blocks.AIR)))
