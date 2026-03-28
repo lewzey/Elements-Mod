@@ -12,7 +12,11 @@
   "item.elementsmod.grass_gem_chestplate": "Grass Gem Chestplate",
   "item.elementsmod.grass_gem_leggings": "Grass Gem Leggings",
   "item.elementsmod.grass_gem_boots": "Grass Gem Boots",
+  "item.elementsmod.bloom_shatterer": "Bloom Shatterer",
 
+  "block.elementsmod.flutterbloom_crop": "Flutterbloom Crop",
+  "item.elementsmod.flutterbloom_seeds": "Flutterbloom Seeds",
+  "item.elementsmod.flutterbloom": "Flutterbloom",
 
   "itemgroup.elements.grass_gem_items": "Grass Gem Items",
   "itemgroup.elements.grass_gem_blocks": "Grass Gem Blocks",
@@ -29,6 +33,10 @@
   "item.elementsmod.water_staff": "Water Staff",
   "item.elementsmod.hydrocite_gem": "Hydrocite Gem",
   "item.elementsmod.hydrocite_shard": "Hydrocite Shard",
+  "item.elementsmod.hydrocite_helmet": "Hydrocite Helmet",
+  "item.elementsmod.hydrocite_chestplate": "Hydrocite Chestplate",
+  "item.elementsmod.hydrocite_leggings": "Hydrocite Leggings",
+  "item.elementsmod.hydrocite_boots": "Hydrocite Boots",
 
   "block.elementsmod.hydrocite_block": "Block of Hydrocite",
   "block.elementsmod.hydrocite_ore": "Hydrocite Ore",
@@ -37,9 +45,19 @@
   "item.elementsmod.raw_spark_stone": "Raw Spark Stone",
   "block.elementsmod.spark_stone_block": "Spark Stone Block",
   "block.elementsmod.spark_stone_ore": "Spark Stone Ore",
+
   "item.elementsmod.spark_stone_sword": "Spark Stone Sword",
+  "item.elementsmod.spark_staff": "Spark Staff",
+  "item.elementsmod.spark_stick": "Spark Stick",
+
   "itemgroup.elements.spark_stone_items": "Spark Stone Items",
   "itemgroup.elements.spark_stone_blocks": "Spark Stone Blocks",
+
+  "item.elementsmod.spark_stone_helmet": "Spark Stone Helmet",
+  "item.elementsmod.spark_stone_chestplate": "Spark Stone Chestplate",
+  "item.elementsmod.spark_stone_leggings": "Spark Stone Leggings",
+  "item.elementsmod.spark_stone_boots": "Spark Stone Boots",
+
 
   "tooltip.elementsmod.bloom_staff.tooltip": "Change any flower or sapling into other variants!",
 

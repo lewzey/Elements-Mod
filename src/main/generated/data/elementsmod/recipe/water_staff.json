@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "$": {
+      "item": "elementsmod:hydrocite_gem"
+    },
+    "@": {
+      "item": "minecraft:stick"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "S": {
+      "item": "minecraft:nether_star"
+    }
+  },
+  "pattern": [
+    "N$N",
+    "$S$",
+    " @ "
+  ],
+  "result": {
+    "count": 1,
+    "id": "elementsmod:water_staff"
+  }
+}

@@ -2,10 +2,12 @@ package net.loos.elementsmod.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.loos.elementsmod.ElementsMod;
+import net.loos.elementsmod.block.custom.FlutterbloomCropBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.block.MapColor;
+import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -25,7 +27,9 @@ public class ModBlocks {
             new ExperienceDroppingBlock(UniformIntProvider.create(2,5),
                     AbstractBlock.Settings.create().strength(3f).
                     requiresTool().sounds(BlockSoundGroup.ROOTED_DIRT)));
-
+    public static final Block FLUTTERBLOOM_CROP = registerBlockWithoutBlockItem("flutterbloom_crop",
+            new FlutterbloomCropBlock((AbstractBlock.Settings.create().noCollision()
+                    .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP).pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.DARK_GREEN))));
 
     // air
     public static final Block AERIS_VAPOR_BLOCK = registerBlock("aeris_vapor_block",
@@ -77,6 +81,9 @@ public class ModBlocks {
 
     private static Block registerBlock (String name, Block block) {
         registerBlockItem(name, block);
+        return Registry.register(Registries.BLOCK, Identifier.of(ElementsMod.MOD_ID, name), block);
+    }
+    private static Block registerBlockWithoutBlockItem (String name, Block block) {
         return Registry.register(Registries.BLOCK, Identifier.of(ElementsMod.MOD_ID, name), block);
     }
     private static void registerBlockItem(String name, Block block) {

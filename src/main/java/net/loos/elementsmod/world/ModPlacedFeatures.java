@@ -20,6 +20,8 @@ import java.util.List;
 public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> ONE_GRASS_GEM_ORE_PLACED = registerKey("one_grass_gem_ore_placed");
     public static final RegistryKey<PlacedFeature> MULTIPLE_GRASS_GEM_ORES_PLACED = registerKey("multiple_grass_gem_ores_placed");
+    public static final RegistryKey<PlacedFeature> ONE_SPARK_STONE_ORE_PLACED = registerKey("one_spark_stone_ore");
+    public static final RegistryKey<PlacedFeature> MULTIPLE_SPARK_STONE_ORES_PLACED = registerKey("multiple_spark_stone_ores");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -28,6 +30,11 @@ public class ModPlacedFeatures {
                 ModOrePlacement.modifiersWithCount(100, HeightRangePlacementModifier.uniform(YOffset.fixed(60), YOffset.fixed(120))));
         register(context,MULTIPLE_GRASS_GEM_ORES_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.MULTIPLE_GRASS_GEM_ORES),
                 ModOrePlacement.modifiersWithCount(80, HeightRangePlacementModifier.uniform(YOffset.fixed(60), YOffset.fixed(120))));
+
+        register(context, ONE_SPARK_STONE_ORE_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.ONE_SPARK_STONE_ORE),
+                ModOrePlacement.modifiersWithCount(40, HeightRangePlacementModifier.uniform(YOffset.fixed(-60), YOffset.fixed(-20))));
+        register(context, MULTIPLE_SPARK_STONE_ORES_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.MULTIPLE_SPARK_STONE_ORES),
+                ModOrePlacement.modifiersWithCount(30, HeightRangePlacementModifier.uniform(YOffset.fixed(-60), YOffset.fixed(-20))));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

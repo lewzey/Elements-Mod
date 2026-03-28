@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_hydrocite_gem": {
+      "conditions": {
+        "items": [
+          {
+            "items": "elementsmod:hydrocite_gem"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "elementsmod:hydrocite_boots"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_hydrocite_gem"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "elementsmod:hydrocite_boots"
+    ]
+  }
+}

@@ -31,5 +31,10 @@ public class ModOreGeneration {
                 BiomeKeys.SAVANNA),
                 GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.MULTIPLE_GRASS_GEM_ORES_PLACED);
 
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.ONE_SPARK_STONE_ORE_PLACED);
+
+        BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(),
+                GenerationStep.Feature.UNDERGROUND_ORES, ModPlacedFeatures.MULTIPLE_SPARK_STONE_ORES_PLACED);
     }
 }

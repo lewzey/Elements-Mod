@@ -94,6 +94,16 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .criterion(hasItem(ModItems.GRASS_GEM), conditionsFromItem(ModItems.GRASS_GEM))
                 .offerTo(recipeExporter);
 
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.BLOOM_SHATTERER)
+                .pattern("@$@")
+                .pattern("$S$")
+                .pattern(" S ")
+                .input('$', ModItems.GRASS_GEM)
+                .input('@', Items.DIAMOND)
+                .input('S', ModItems.BLOOM_STICK)
+                .criterion(hasItem(ModItems.GRASS_GEM), conditionsFromItem(ModItems.GRASS_GEM))
+                .offerTo(recipeExporter);
+
         //water
         offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModItems.HYDROCITE_GEM, RecipeCategory.DECORATIONS, ModBlocks.HYDROCITE_BLOCK);
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.HYDROCITE_GEM)
@@ -102,16 +112,46 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .pattern("$$$")
                 .input('$', ModItems.HYDROCITE_SHARD)
                 .criterion(hasItem(ModItems.HYDROCITE_SHARD), conditionsFromItem(ModItems.HYDROCITE_SHARD))
-                .offerTo(recipeExporter);
+                .offerTo(recipeExporter, Identifier.of(ElementsMod.MOD_ID, "hydrocite_gem_from_shards"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.WATER_STAFF)
                 .pattern("N$N")
                 .pattern("$S$")
-                .pattern("@")
+                .pattern(" @ ")
                 .input('$', ModItems.HYDROCITE_GEM)
                 .input('S', Items.NETHER_STAR)
                 .input('N',Items.NETHERITE_INGOT)
                 .input('@', Items.STICK)
+                .criterion(hasItem(ModItems.HYDROCITE_GEM), conditionsFromItem(ModItems.HYDROCITE_GEM))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.HYDROCITE_HELMET)
+                .pattern("###")
+                .pattern("# #")
+                .input('#', ModItems.HYDROCITE_GEM)
+                .criterion(hasItem(ModItems.HYDROCITE_GEM), conditionsFromItem(ModItems.HYDROCITE_GEM))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.HYDROCITE_CHESTPLATE)
+                .pattern("# #")
+                .pattern("###")
+                .pattern("###")
+                .input('#', ModItems.HYDROCITE_GEM)
+                .criterion(hasItem(ModItems.HYDROCITE_GEM), conditionsFromItem(ModItems.HYDROCITE_GEM))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.HYDROCITE_LEGGINGS)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("# #")
+                .input('#', ModItems.HYDROCITE_GEM)
+                .criterion(hasItem(ModItems.HYDROCITE_GEM), conditionsFromItem(ModItems.HYDROCITE_GEM))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.HYDROCITE_BOOTS)
+                .pattern("# #")
+                .pattern("# #")
+                .input('#', ModItems.HYDROCITE_GEM)
                 .criterion(hasItem(ModItems.HYDROCITE_GEM), conditionsFromItem(ModItems.HYDROCITE_GEM))
                 .offerTo(recipeExporter);
 
@@ -123,6 +163,65 @@ public class ModRecipeProvider extends FabricRecipeProvider {
         offerBlasting(recipeExporter, SPARK_STONE_SMELTABLES, RecipeCategory.MISC, ModItems.SPARK_STONE, 0.20f, 70, "spark_stone");
 
         offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModItems.SPARK_STONE, RecipeCategory.DECORATIONS, ModBlocks.SPARK_STONE_BLOCK);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SPARK_STICK)
+                .pattern("@$@")
+                .pattern("$S$")
+                .pattern("@$@")
+                .input('$', ModItems.SPARK_STONE)
+                .input('@', Items.OBSIDIAN)
+                .input('S', Items.STICK)
+                .criterion(hasItem(ModItems.SPARK_STONE), conditionsFromItem(ModItems.SPARK_STONE))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SPARK_STAFF)
+                .pattern("$@$")
+                .pattern(" S ")
+                .pattern(" S ")
+                .input('$', ModItems.SPARK_STONE)
+                .input('@', Items.REDSTONE)
+                .input('S', ModItems.SPARK_STICK)
+                .criterion(hasItem(ModItems.SPARK_STONE), conditionsFromItem(ModItems.SPARK_STONE))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SPARK_STONE_SWORD)
+                .pattern(" @ ")
+                .pattern(" @ ")
+                .pattern(" S ")
+                .input('@', ModItems.SPARK_STONE)
+                .input('S', ModItems.SPARK_STICK)
+                .criterion(hasItem(ModItems.SPARK_STONE), conditionsFromItem(ModItems.SPARK_STONE))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SPARK_STONE_HELMET)
+                .pattern("$$$")
+                .pattern("$ $")
+                .input('$', ModItems.SPARK_STONE)
+                .criterion(hasItem(ModItems.SPARK_STONE), conditionsFromItem(ModItems.SPARK_STONE))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SPARK_STONE_CHESTPLATE)
+                .pattern("$ $")
+                .pattern("$$$")
+                .pattern("$$$")
+                .input('$', ModItems.SPARK_STONE)
+                .criterion(hasItem(ModItems.SPARK_STONE), conditionsFromItem(ModItems.SPARK_STONE))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SPARK_STONE_LEGGINGS)
+                .pattern("$$$")
+                .pattern("$ $")
+                .pattern("$ $")
+                .input('$', ModItems.SPARK_STONE)
+                .criterion(hasItem(ModItems.SPARK_STONE), conditionsFromItem(ModItems.SPARK_STONE))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.SPARK_STONE_BOOTS)
+                .pattern("$ $")
+                .pattern("$ $")
+                .input('$', ModItems.SPARK_STONE)
+                .criterion(hasItem(ModItems.SPARK_STONE), conditionsFromItem(ModItems.SPARK_STONE))
+                .offerTo(recipeExporter);
 
         //air
         offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModItems.AERIS_CONCENTRATE, RecipeCategory.DECORATIONS, ModBlocks.AERIS_BLOCK);

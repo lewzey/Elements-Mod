@@ -4,6 +4,7 @@ import net.loos.elementsmod.entity.ModEntities;
 import net.loos.elementsmod.entity.client.ButterflyFlyGoal;
 import net.loos.elementsmod.entity.client.ButterflyHoverFlowerGoal;
 import net.loos.elementsmod.item.ModItems;
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.AnimationState;
 import net.minecraft.entity.EntityData;
 import net.minecraft.entity.EntityType;
@@ -30,6 +31,8 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Util;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
 import net.minecraft.world.World;
@@ -56,7 +59,7 @@ public class ButterflyEntity extends AnimalEntity {
         this.goalSelector.add(0, new SwimGoal(this));
 
         this.goalSelector.add(1, new AnimalMateGoal(this, 1.150));
-        this.goalSelector.add(2, new TemptGoal(this, 1.25, Ingredient.ofItems(ModItems.BLOOM_CROWN), false));
+        this.goalSelector.add(2, new TemptGoal(this, 1.25, Ingredient.ofItems(ModItems.FLUTTERBLOOM), false));
 
         this.goalSelector.add(3, new FollowParentGoal(this, 1.10));
 
@@ -68,10 +71,10 @@ public class ButterflyEntity extends AnimalEntity {
 
     public static DefaultAttributeContainer.Builder createAttributes() {
         return MobEntity.createMobAttributes()
-                .add(EntityAttributes.GENERIC_MAX_HEALTH, 3)
+                .add(EntityAttributes.GENERIC_MAX_HEALTH, 1)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.12)
                 .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 20)
-                .add(EntityAttributes.GENERIC_FLYING_SPEED, 0.4);
+                .add(EntityAttributes.GENERIC_FLYING_SPEED, 0.2);
     }
 
     private void setupAnimationStates() {
@@ -98,7 +101,7 @@ public class ButterflyEntity extends AnimalEntity {
         super.tickMovement();
 
         if (resting) {
-            this.setVelocity(0, this.getVelocity().y, 0);
+            this.setVelocity(this.getVelocity().multiply(0.6, 1.0, 0.6));
 
             if (--restTicks <= 0) {
                 resting = false;
@@ -107,19 +110,43 @@ public class ButterflyEntity extends AnimalEntity {
             return;
         }
 
-        if (this.isOnGround() && this.getWorld().getBlockState(this.getBlockPos()).isIn(BlockTags.FLOWERS)) {
-            if (this.random.nextInt(1200) == 0) {
+        if (this.getWorld().getBlockState(this.getBlockPos().down()).isIn(BlockTags.FLOWERS)) {
+            if (this.random.nextInt(6000) == 0) {
                 resting = true;
                 restTicks = 80 + this.random.nextInt(80);
-                this.setNoGravity(false);
+            }
+        }
+
+        if (this.getY() < this.getWorld().getTopY() &&
+                this.getWorld().getBlockState(this.getBlockPos().down()).isOpaque()) {
+            Vec3d vel = this.getVelocity();
+
+            double targetY = 0.05; // desired gentle upward drift
+            double newY = vel.y + (targetY - vel.y) * 0.1;
+
+            this.setVelocity(vel.x, newY, vel.z);
+        }
+    }
+
+    @Override
+    protected void dropLoot(DamageSource source, boolean causedByPlayer) {
+        super.dropLoot(source, causedByPlayer);
+
+        if (!this.getWorld().isClient) {
+            // 25% chance to drop seeds
+            if (this.random.nextFloat() < 0.1f) {
+                this.dropItem(ModItems.BLOOM_CROWN, 1);
             }
         }
     }
 
-
     @Override
     public boolean isBreedingItem(ItemStack stack) {
-        return stack.isOf(ModItems.BLOOM_CROWN);
+        return stack.isOf(ModItems.FLUTTERBLOOM);
+    }
+
+    @Override
+    protected void fall(double heightDifference, boolean onGround, BlockState state, BlockPos landedPosition) {
     }
 
     @Override
@@ -169,7 +196,7 @@ public class ButterflyEntity extends AnimalEntity {
         this.dataTracker.set(DATA_ID_TYPE_VARIANT, nbt.getInt("Variant"));
     }
 
-    //randomizes
+    //randomizesD
     @Override
     public EntityData initialize(ServerWorldAccess world, LocalDifficulty difficulty, SpawnReason spawnReason,
                                  @Nullable EntityData entityData) {
