@@ -14,10 +14,10 @@ Explore what possibilities the four elements can achieve!
 ### ˚⟡˖ ࣪ Features ˚⟡˖ ࣪
 
 ### 🌪 Air Element
-- TBA
 - **`Aeris Vapor + Concentrate`** - Found in the sky and reqires a diamond shovel to mine!
-- **`Aetherius`** - Crafted with the Aeris, grants flight and cloud bending abilities
-
+- **`Aetherius`** - Crafted with the Aeris, grants flight and cloud bending abilities.
+- **`Cosmolight`** - A powerful tool to change the time and weather. (Terraria Calamity inspired)
+- **`Clouds`** - Natural cloud generation to obtain the powerful Aeris vapor and concentrate.
 ### 🔥 Fire Element
 - **`Spark Stone Ore + Shard`**  – Can be found near lava pools and requires an iron pickaxe to mine!
 
