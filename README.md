@@ -31,9 +31,9 @@ Explore what possibilities the four elements can achieve!
 - **`Flutterblooms`**  – A new crop that will give you speed when consumed! (seeds found in short grass)
     
 ### 💧 Water Element
-- TBA
-
----
+- **`Hydrocite Ore + Gem`**  – Can be found in deep ocean patches and requires a diamond pickaxe to mine!
+- **`Hydrocite Gem Armor`** – A powerful new deep-blue armor set that gives Conduit Power and Dolphin's Grace when touching water or rain!
+- **`Water Staff`** – A complex Netherite-tier staff with three distinct water abilities including a protective bubble shield, a hostile mob whirlpool, and a passive healing rain!
 
 ### Content Added
 
