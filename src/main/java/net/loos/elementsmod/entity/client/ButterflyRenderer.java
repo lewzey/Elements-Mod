@@ -42,9 +42,9 @@ public class ButterflyRenderer extends MobEntityRenderer<ButterflyEntity, Butter
     public void render(ButterflyEntity livingEntity, float f, float g, MatrixStack matrixStack,
                        VertexConsumerProvider vertexConsumerProvider, int i) {
         if(livingEntity.isBaby()) {
-            matrixStack.scale(0.15f, 0.15f, 0.15f);
+            matrixStack.scale(0.08f, 0.08f, 0.08f);
         } else {
-            matrixStack.scale(0.3f, 0.3f, 0.3f);
+            matrixStack.scale(0.15f, 0.15f, 0.15f);
         }
 
         super.render(livingEntity, f, g, matrixStack, vertexConsumerProvider, i);

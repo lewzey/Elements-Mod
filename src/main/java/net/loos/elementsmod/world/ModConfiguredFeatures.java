@@ -21,6 +21,8 @@ import java.util.List;
 public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ? >> ONE_GRASS_GEM_ORE = registerKey("one_grass_gem_ore");
     public static final RegistryKey<ConfiguredFeature<?, ? >> MULTIPLE_GRASS_GEM_ORES = registerKey("multiple_grass_gem_ores");
+    public static final RegistryKey<ConfiguredFeature<?, ? >> ONE_SPARK_STONE_ORE = registerKey("one_spark_stone_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ? >> MULTIPLE_SPARK_STONE_ORES = registerKey("multiple_spark_stone_ores");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest dirtReplaceables = new BlockMatchRuleTest(Blocks.DIRT);
@@ -30,9 +32,14 @@ public class ModConfiguredFeatures {
         List<OreFeatureConfig.Target> dirtGrassGemOres =
                 List.of(OreFeatureConfig.createTarget(dirtReplaceables, ModBlocks.GRASS_GEM_ORE.getDefaultState()));
 
+        List<OreFeatureConfig.Target> stoneSparkStoneOres =
+                List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.SPARK_STONE_ORE.getDefaultState()));
+
         register(context, ONE_GRASS_GEM_ORE, Feature.ORE, new OreFeatureConfig(dirtGrassGemOres, 1));
         register(context, MULTIPLE_GRASS_GEM_ORES, Feature.ORE, new OreFeatureConfig(dirtGrassGemOres, 3));
 
+        register(context, ONE_SPARK_STONE_ORE, Feature.ORE, new OreFeatureConfig(stoneSparkStoneOres, 1));
+        register(context, MULTIPLE_SPARK_STONE_ORES, Feature.ORE, new OreFeatureConfig(stoneSparkStoneOres, 4));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> registerKey(String name) {

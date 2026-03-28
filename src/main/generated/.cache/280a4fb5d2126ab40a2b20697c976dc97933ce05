@@ -1,6 +1,6 @@
-// 1.21	2026-02-27T20:29:06.2830623	Elements Mod/Tags for minecraft:block
-2ba32f2729de2ba0d38c6bc22c0482403682a82e data\minecraft\tags\block\mineable\pickaxe.json
-310b61acb8b2a1ec192e156b7fb25e435166556c data\minecraft\tags\block\needs_stone_tool.json
+// 1.21	2026-03-27T00:18:04.5700199	Elements Mod/Tags for minecraft:block
 9db31003158c1198da055997efd63275391b0cda data\minecraft\tags\block\needs_diamond_tool.json
+2ba32f2729de2ba0d38c6bc22c0482403682a82e data\minecraft\tags\block\mineable\pickaxe.json
 2d1e5c1ae773a56b96dc83dce2bfb5f6779d18ca data\minecraft\tags\block\needs_iron_tool.json
+310b61acb8b2a1ec192e156b7fb25e435166556c data\minecraft\tags\block\needs_stone_tool.json
 27966f7ac06a748a679f7f26e4fe9da4fd5df0c9 data\minecraft\tags\block\mineable\shovel.json

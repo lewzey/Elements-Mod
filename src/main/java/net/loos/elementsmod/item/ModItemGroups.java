@@ -29,12 +29,21 @@ public class ModItemGroups {
                         entries.add(ModItems.GRASS_GEM_CHESTPLATE);
                         entries.add(ModItems.GRASS_GEM_LEGGINGS);
                         entries.add(ModItems.GRASS_GEM_BOOTS);
+                        entries.add(ModItems.FLUTTERBLOOM);
+                        entries.add(ModItems.FLUTTERBLOOM_SEEDS);
+                        entries.add(ModItems.BLOOM_SHATTERER);
 
                         entries.add(ModItems.SPARK_STONE);
                         entries.add(ModItems.RAW_SPARK_STONE);
                         entries.add(ModBlocks.SPARK_STONE_BLOCK);
                         entries.add(ModBlocks.SPARK_STONE_ORE);
                         entries.add(ModItems.SPARK_STONE_SWORD);
+                        entries.add(ModItems.SPARK_STAFF);
+                        entries.add(ModItems.SPARK_STICK);
+                        entries.add(ModItems.SPARK_STONE_HELMET);
+                        entries.add(ModItems.SPARK_STONE_CHESTPLATE);
+                        entries.add(ModItems.SPARK_STONE_LEGGINGS);
+                        entries.add(ModItems.SPARK_STONE_BOOTS);
 
                         entries.add(ModItems.AETHERIUS);
                         entries.add(ModItems.AERIS_CONCENTRATE);
@@ -64,7 +73,9 @@ public class ModItemGroups {
                         entries.add(ModItems.GRASS_GEM_CHESTPLATE);
                         entries.add(ModItems.GRASS_GEM_LEGGINGS);
                         entries.add(ModItems.GRASS_GEM_BOOTS);
-
+                        entries.add(ModItems.FLUTTERBLOOM);
+                        entries.add(ModItems.FLUTTERBLOOM_SEEDS);
+                        entries.add(ModItems.BLOOM_SHATTERER);
                     }).build()
     );
 
@@ -86,6 +97,12 @@ public class ModItemGroups {
                         entries.add(ModItems.SPARK_STONE);
                         entries.add(ModItems.RAW_SPARK_STONE);
                         entries.add(ModItems.SPARK_STONE_SWORD);
+                        entries.add(ModItems.SPARK_STAFF);
+                        entries.add(ModItems.SPARK_STICK);
+                        entries.add(ModItems.SPARK_STONE_HELMET);
+                        entries.add(ModItems.SPARK_STONE_CHESTPLATE);
+                        entries.add(ModItems.SPARK_STONE_LEGGINGS);
+                        entries.add(ModItems.SPARK_STONE_BOOTS);
                     }).build()
     );
 

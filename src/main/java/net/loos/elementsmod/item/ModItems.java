@@ -2,10 +2,9 @@ package net.loos.elementsmod.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.loos.elementsmod.ElementsMod;
+import net.loos.elementsmod.block.ModBlocks;
 import net.loos.elementsmod.entity.ModEntities;
-import net.loos.elementsmod.item.custom.Aetherius;
-import net.loos.elementsmod.item.custom.BloomStaff;
-import net.loos.elementsmod.item.custom.WaterStaff;
+import net.loos.elementsmod.item.custom.*;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -23,10 +22,12 @@ public class ModItems {
     public static final Item GRASS_GEM = registerItem("grass_gem",new Item(new Item.Settings()));
     public static final Item RAW_GRASS_GEM = registerItem("raw_grass_gem", new Item(new Item.Settings()));
     public static final Item BLOOM_STICK = registerItem("bloom_stick",new Item(new Item.Settings()));
+    public static final Item BLOOM_SHATTERER = registerItem("bloom_shatterer", new HammerItem(ModToolMaterials.GRASS_GEM, new Item.Settings()
+            .attributeModifiers(PickaxeItem.createAttributeModifiers(ModToolMaterials.GRASS_GEM, 8, -3.5f))));
     public static final Item BLOOM_STAFF = registerItem("bloom_staff",(new BloomStaff(new Item.Settings().maxDamage(32))));
     public static final Item BLOOM_CROWN = registerItem("bloom_crown", new Item(new Item.Settings()));
     public static final Item GRASS_GEM_HELMET = registerItem("grass_gem_helmet",
-            new ArmorItem(ModArmorMaterials.GRASS_GEM_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+            new ModArmorItem(ModArmorMaterials.GRASS_GEM_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
                     .maxDamage((ArmorItem.Type.HELMET.getMaxDamage(12)))));
     public static final Item GRASS_GEM_CHESTPLATE = registerItem("grass_gem_chestplate",
             new ArmorItem(ModArmorMaterials.GRASS_GEM_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
@@ -39,7 +40,9 @@ public class ModItems {
                     .maxDamage((ArmorItem.Type.HELMET.getMaxDamage(12)))));
     public static final Item BUTTERFLY_SPAWN_EGG = registerItem("butterfly_spawn_egg",
             new SpawnEggItem(ModEntities.BUTTERFLY, 0xede512, 0xd32cc7, new Item.Settings()));
-
+    public static final Item FLUTTERBLOOM = registerItem("flutterbloom", new Item(new Item.Settings().food(ModFoodComponents.FLUTTERBLOOM)));
+    public static final Item FLUTTERBLOOM_SEEDS = registerItem("flutterbloom_seeds",
+            new AliasedBlockItem(ModBlocks.FLUTTERBLOOM_CROP, new Item.Settings()));
     // AIR
     public static final Item AERIS_CONCENTRATE = registerItem("aeris_concentrate", new Item(new Item.Settings()));
     public static final Item AERIS_VAPOR = registerItem("aeris_vapor", new Item(new Item.Settings()));
@@ -52,6 +55,21 @@ public class ModItems {
     public static final Item SPARK_STONE_SWORD = registerItem("spark_stone_sword",
             new SwordItem(ModToolMaterials.SPARK_STONE, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.SPARK_STONE, 3, -2.4f))));
+    public static final Item SPARK_STAFF = registerItem("spark_staff", new SparkStaff(new Item.Settings()));
+    public static final Item SPARK_STICK = registerItem("spark_stick", new Item(new Item.Settings()));
+
+    public static final Item SPARK_STONE_HELMET = registerItem("spark_stone_helmet",
+            new ArmorItem(ModArmorMaterials.SPARK_STONE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+                    .maxDamage((ArmorItem.Type.HELMET.getMaxDamage(12)))));
+    public static final Item SPARK_STONE_CHESTPLATE = registerItem("spark_stone_chestplate",
+            new ArmorItem(ModArmorMaterials.SPARK_STONE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
+                    .maxDamage((ArmorItem.Type.HELMET.getMaxDamage(12)))));
+    public static final Item SPARK_STONE_LEGGINGS = registerItem("spark_stone_leggings",
+            new ArmorItem(ModArmorMaterials.SPARK_STONE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
+                    .maxDamage((ArmorItem.Type.HELMET.getMaxDamage(12)))));
+    public static final Item SPARK_STONE_BOOTS = registerItem("spark_stone_boots",
+            new ArmorItem(ModArmorMaterials.SPARK_STONE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
+                    .maxDamage((ArmorItem.Type.HELMET.getMaxDamage(12)))));
 
     // WATER
     public static final Item HYDROCITE_GEM = registerItem("hydrocite_gem", new Item(new Item.Settings()));
@@ -77,10 +95,18 @@ public class ModItems {
             entries.add(GRASS_GEM_CHESTPLATE);
             entries.add(GRASS_GEM_LEGGINGS);
             entries.add(GRASS_GEM_BOOTS);
+            entries.add(FLUTTERBLOOM);
+            entries.add(FLUTTERBLOOM_SEEDS);
+            entries.add(BLOOM_SHATTERER);
 
             entries.add(SPARK_STONE);
             entries.add(RAW_SPARK_STONE);
             entries.add(SPARK_STONE_SWORD);
+            entries.add(SPARK_STICK);
+            entries.add(SPARK_STONE_HELMET);
+            entries.add(SPARK_STONE_CHESTPLATE);
+            entries.add(SPARK_STONE_LEGGINGS);
+            entries.add(SPARK_STONE_BOOTS);
 
             entries.add(AERIS_CONCENTRATE);
             entries.add(AERIS_VAPOR);

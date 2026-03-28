@@ -18,13 +18,23 @@ import java.util.function.Supplier;
 public class ModArmorMaterials {
     public static final RegistryEntry<ArmorMaterial> GRASS_GEM_ARMOR_MATERIAL = registerArmorMaterial("grass_gem",
             () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
-                map.put(ArmorItem.Type.HELMET, 2);
-                map.put(ArmorItem.Type.BOOTS, 2);
-                map.put(ArmorItem.Type.LEGGINGS, 4);
-                map.put(ArmorItem.Type.CHESTPLATE, 5);
-                map.put(ArmorItem.Type.BODY, 6);
+                map.put(ArmorItem.Type.HELMET, 4);
+                map.put(ArmorItem.Type.BOOTS, 5);
+                map.put(ArmorItem.Type.LEGGINGS, 7);
+                map.put(ArmorItem.Type.CHESTPLATE, 8);
+                map.put(ArmorItem.Type.BODY, 9);
             }), 20, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, () -> Ingredient.ofItems(ModItems.GRASS_GEM),
                     List.of(new ArmorMaterial.Layer(Identifier.of(ElementsMod.MOD_ID,"grass_gem"))),0, 0));
+
+    public static final RegistryEntry<ArmorMaterial> SPARK_STONE_ARMOR_MATERIAL = registerArmorMaterial("spark_stone",
+            () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
+                map.put(ArmorItem.Type.HELMET, 4);
+                map.put(ArmorItem.Type.BOOTS, 4);
+                map.put(ArmorItem.Type.LEGGINGS, 6);
+                map.put(ArmorItem.Type.CHESTPLATE, 7);
+                map.put(ArmorItem.Type.BODY, 8);
+            }), 20, SoundEvents.ITEM_ARMOR_EQUIP_LEATHER, () -> Ingredient.ofItems(ModItems.SPARK_STONE),
+                    List.of(new ArmorMaterial.Layer(Identifier.of(ElementsMod.MOD_ID,"spark_stone"))),0, 0));
 
     public static RegistryEntry<ArmorMaterial> registerArmorMaterial(String name, Supplier<ArmorMaterial> material){
         return Registry.registerReference(Registries.ARMOR_MATERIAL, Identifier.of(ElementsMod.MOD_ID, name), material.get());

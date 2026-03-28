@@ -34,6 +34,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.GRASS_GEM_CHESTPLATE)
                 .add(ModItems.GRASS_GEM_HELMET)
                 .add(ModItems.GRASS_GEM_LEGGINGS)
+                .add(ModItems.FLUTTERBLOOM)
+                .add(ModItems.FLUTTERBLOOM_SEEDS)
                 .add(ModItems.ELEMENTS_MOD_ICON)
                 .add(ModItems.HYDROCITE_GEM)
                 .add(ModItems.HYDROCITE_SHARD)
