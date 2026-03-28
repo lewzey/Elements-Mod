@@ -11,9 +11,7 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.FeatureConfig;
 import net.minecraft.world.gen.feature.PlacedFeature;
-import net.minecraft.world.gen.placementmodifier.HeightRangePlacementModifier;
-import net.minecraft.world.gen.placementmodifier.HeightmapPlacementModifier;
-import net.minecraft.world.gen.placementmodifier.PlacementModifier;
+import net.minecraft.world.gen.placementmodifier.*;
 
 import java.util.List;
 
@@ -22,6 +20,7 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> MULTIPLE_GRASS_GEM_ORES_PLACED = registerKey("multiple_grass_gem_ores_placed");
     public static final RegistryKey<PlacedFeature> ONE_SPARK_STONE_ORE_PLACED = registerKey("one_spark_stone_ore");
     public static final RegistryKey<PlacedFeature> MULTIPLE_SPARK_STONE_ORES_PLACED = registerKey("multiple_spark_stone_ores");
+    public static final RegistryKey<PlacedFeature> AERIS_VAPOR_BLOCK_PLACED = registerKey("aeris_vapor_block_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -35,6 +34,10 @@ public class ModPlacedFeatures {
                 ModOrePlacement.modifiersWithCount(40, HeightRangePlacementModifier.uniform(YOffset.fixed(-60), YOffset.fixed(-20))));
         register(context, MULTIPLE_SPARK_STONE_ORES_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.MULTIPLE_SPARK_STONE_ORES),
                 ModOrePlacement.modifiersWithCount(30, HeightRangePlacementModifier.uniform(YOffset.fixed(-60), YOffset.fixed(-20))));
+
+        //spawn one in every 22x22=512 chunk, very rare
+        register(context, AERIS_VAPOR_BLOCK_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.AERIS_VAPOR_BLOCK), RarityFilterPlacementModifier.of(512),
+                SquarePlacementModifier.of(), HeightRangePlacementModifier.trapezoid(YOffset.fixed(150), YOffset.fixed(200)), BiomePlacementModifier.of());
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

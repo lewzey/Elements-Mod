@@ -24,6 +24,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.AERIS_CONCENTRATE)
                 .add(ModItems.AERIS_VAPOR)
                 .add(ModItems.AETHERIUS)
+                .add(ModItems.COSMOLIGHT)
+
                 .add(ModItems.BLOOM_CROWN)
                 .add(ModItems.BLOOM_STAFF)
                 .add(ModItems.BLOOM_STICK)

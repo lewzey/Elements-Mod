@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "elementsmod:block/flutterbloom_crop_stage2"
+  }
+}
