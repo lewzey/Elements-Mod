@@ -76,8 +76,23 @@ public class ModItems {
     // WATER
     public static final Item HYDROCITE_GEM = registerItem("hydrocite_gem", new Item(new Item.Settings()));
     public static final Item HYDROCITE_SHARD = registerItem("hydrocite_shard", new Item(new Item.Settings()));
-    public static final Item WATER_STAFF = registerItem("water_staff", new WaterStaff(new Item.Settings()));
+    public static final Item WATER_STAFF = registerItem("water_staff",
+            new WaterStaff(ModToolMaterials.HYDROCITE, new Item.Settings()));
+    public static final Item HYDROCITE_HELMET = registerItem("hydrocite_helmet",
+            new ArmorItem(ModArmorMaterials.HYDROCITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.HELMET.getMaxDamage(37))));
 
+    public static final Item HYDROCITE_CHESTPLATE = registerItem("hydrocite_chestplate",
+            new ArmorItem(ModArmorMaterials.HYDROCITE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.CHESTPLATE.getMaxDamage(37))));
+
+    public static final Item HYDROCITE_LEGGINGS = registerItem("hydrocite_leggings",
+            new ArmorItem(ModArmorMaterials.HYDROCITE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.LEGGINGS.getMaxDamage(37))));
+
+    public static final Item HYDROCITE_BOOTS = registerItem("hydrocite_boots",
+            new ArmorItem(ModArmorMaterials.HYDROCITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
+                    .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(37))));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(ElementsMod.MOD_ID, name), item);
@@ -116,6 +131,13 @@ public class ModItems {
 
             entries.add(HYDROCITE_GEM);
             entries.add(HYDROCITE_SHARD);
+            entries.add(WATER_STAFF);
+            entries.add(HYDROCITE_HELMET);
+            entries.add(HYDROCITE_CHESTPLATE);
+            entries.add(HYDROCITE_LEGGINGS);
+            entries.add(HYDROCITE_BOOTS);
+
+
         });
     }
 

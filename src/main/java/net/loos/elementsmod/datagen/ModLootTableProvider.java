@@ -31,8 +31,10 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
         addDrop(ModBlocks.GRASS_GEM_BLOCK);
+        addDrop(ModBlocks.HYDROCITE_BLOCK);
 
         addDrop(ModBlocks.GRASS_GEM_ORE, oreDrops(ModBlocks.GRASS_GEM_ORE, ModItems.RAW_GRASS_GEM));
+        addDrop(ModBlocks.HYDROCITE_ORE, multipleOreDrops(ModBlocks.HYDROCITE_ORE, ModItems.HYDROCITE_GEM,1, 2 ));
 
         BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.FLUTTERBLOOM_CROP)
                 .properties(StatePredicate.Builder.create().exactMatch(FlutterbloomCropBlock.AGE, FlutterbloomCropBlock.MAX_AGE));

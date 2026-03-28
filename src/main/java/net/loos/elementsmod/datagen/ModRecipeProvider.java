@@ -106,6 +106,55 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         //water
         offerReversibleCompactingRecipes(recipeExporter, RecipeCategory.BUILDING_BLOCKS, ModItems.HYDROCITE_GEM, RecipeCategory.DECORATIONS, ModBlocks.HYDROCITE_BLOCK);
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.HYDROCITE_GEM)
+                .pattern("$$$")
+                .pattern("$$$")
+                .pattern("$$$")
+                .input('$', ModItems.HYDROCITE_SHARD)
+                .criterion(hasItem(ModItems.HYDROCITE_SHARD), conditionsFromItem(ModItems.HYDROCITE_SHARD))
+                .offerTo(recipeExporter, Identifier.of(ElementsMod.MOD_ID, "hydrocite_gem_from_shards"));
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.WATER_STAFF)
+                .pattern("N$N")
+                .pattern("$S$")
+                .pattern(" @ ")
+                .input('$', ModItems.HYDROCITE_GEM)
+                .input('S', Items.NETHER_STAR)
+                .input('N',Items.NETHERITE_INGOT)
+                .input('@', Items.STICK)
+                .criterion(hasItem(ModItems.HYDROCITE_GEM), conditionsFromItem(ModItems.HYDROCITE_GEM))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.HYDROCITE_HELMET)
+                .pattern("###")
+                .pattern("# #")
+                .input('#', ModItems.HYDROCITE_GEM)
+                .criterion(hasItem(ModItems.HYDROCITE_GEM), conditionsFromItem(ModItems.HYDROCITE_GEM))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.HYDROCITE_CHESTPLATE)
+                .pattern("# #")
+                .pattern("###")
+                .pattern("###")
+                .input('#', ModItems.HYDROCITE_GEM)
+                .criterion(hasItem(ModItems.HYDROCITE_GEM), conditionsFromItem(ModItems.HYDROCITE_GEM))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.HYDROCITE_LEGGINGS)
+                .pattern("###")
+                .pattern("# #")
+                .pattern("# #")
+                .input('#', ModItems.HYDROCITE_GEM)
+                .criterion(hasItem(ModItems.HYDROCITE_GEM), conditionsFromItem(ModItems.HYDROCITE_GEM))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.HYDROCITE_BOOTS)
+                .pattern("# #")
+                .pattern("# #")
+                .input('#', ModItems.HYDROCITE_GEM)
+                .criterion(hasItem(ModItems.HYDROCITE_GEM), conditionsFromItem(ModItems.HYDROCITE_GEM))
+                .offerTo(recipeExporter);
+
 
         //fire
         List<ItemConvertible> SPARK_STONE_SMELTABLES = List.of(ModItems.RAW_SPARK_STONE, ModBlocks.SPARK_STONE_ORE);

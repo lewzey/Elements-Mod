@@ -41,11 +41,15 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.ELEMENTS_MOD_ICON)
                 .add(ModItems.HYDROCITE_GEM)
                 .add(ModItems.HYDROCITE_SHARD)
+                .add(ModItems.HYDROCITE_HELMET)
+                .add(ModItems.HYDROCITE_CHESTPLATE)
+                .add(ModItems.HYDROCITE_LEGGINGS)
+                .add(ModItems.HYDROCITE_BOOTS)
+                .add(ModItems.WATER_STAFF)
                 .add(ModItems.RAW_GRASS_GEM)
                 .add(ModItems.RAW_SPARK_STONE)
                 .add(ModItems.SPARK_STONE)
-                .add(ModItems.SPARK_STONE_SWORD)
-                .add(ModItems.WATER_STAFF);
+                .add(ModItems.SPARK_STONE_SWORD);
     }
 
 }

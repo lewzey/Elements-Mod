@@ -71,6 +71,10 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.HYDROCITE_GEM, Models.GENERATED);
         itemModelGenerator.register(ModItems.HYDROCITE_SHARD, Models.GENERATED);
         itemModelGenerator.register(ModItems.WATER_STAFF, Models.HANDHELD);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.HYDROCITE_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.HYDROCITE_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.HYDROCITE_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.HYDROCITE_BOOTS);
 
     }
 

@@ -6,10 +6,7 @@ import net.minecraft.entity.Entity;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ArmorItem;
-import net.minecraft.item.Equipment;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
+import net.minecraft.item.*;
 import net.minecraft.particle.ParticleTypes;
 import net.minecraft.registry.tag.ItemTags;
 import net.minecraft.sound.SoundCategory;
@@ -20,15 +17,20 @@ import net.minecraft.util.TypedActionResult;
 import net.minecraft.util.UseAction;
 import net.minecraft.world.World;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.Blocks;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
+import net.minecraft.entity.mob.HostileEntity;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.Vec3d;
+import java.util.List;
 
-public class WaterStaff extends Item implements Equipment {
 
-    //Define Box around player
+public class WaterStaff extends SwordItem implements Equipment {
 
-
-    public WaterStaff(Settings settings) {
-        super(settings);
-        //Dispenser will equip directly onto player / mob
+    public WaterStaff(ToolMaterial material, Settings settings) {
+        super(material, settings.attributeModifiers(SwordItem.createAttributeModifiers(material,4, -2.5f)));
         DispenserBlock.registerBehavior(this, ArmorItem.DISPENSER_BEHAVIOR);
     }
     public static final float MIN_DAMAGE_AMOUNT_TO_BREAK = 3.0F;
@@ -52,34 +54,122 @@ public class WaterStaff extends Item implements Equipment {
     }
 
     //Function So the bubbles and block persist after holding right click
-    //Chat did the math using the Fibonacci Sphere formula
     @Override
     public void usageTick(World world, LivingEntity user, ItemStack stack, int remainingUseTicks) {
 
         if (!world.isClient() && world instanceof ServerWorld serverWorld) {
-            double radius = 1.5;
+
+            //  BUBBLE SPHERE
+            double visualRadius = 1.5;
             int numParticles = 50;
-            // The Golden Angle in radians (approx 137.5 degrees)
             double goldenAngle = Math.PI * (3.0 - Math.sqrt(5.0));
-            // Use the remaining ticks to slowly spin the entire globe
             double spin = remainingUseTicks * 0.15;
+
             for (int i = 0; i < numParticles; i++) {
-                // 1. Calculate the vertical Y position evenly from top (1.0) to bottom (-1.0)
                 double y = 1.0 - (i / (double)(numParticles - 1)) * 2.0;
-                // 2. Calculate how wide the sphere is at this specific Y height
                 double radiusAtY = Math.sqrt(1.0 - y * y);
-                // 3. Calculate the horizontal angle using the Golden Ratio plus spin offset
                 double theta = goldenAngle * i + spin;
-                // 4. Convert to exact world coordinates
-                double particleX = user.getX() + (radius * Math.cos(theta) * radiusAtY);
-                double particleY = user.getY() + 1.0 + (radius * y);
-                double particleZ = user.getZ() + (radius * Math.sin(theta) * radiusAtY);
-                // 5. Spawn bubble
-                serverWorld.spawnParticles(
-                        ParticleTypes.BUBBLE_COLUMN_UP,
-                        particleX, particleY, particleZ,
-                        1, 0.0, 0.0, 0.0, 0.0
-                );
+
+                double particleX = user.getX() + (visualRadius * Math.cos(theta) * radiusAtY);
+                double particleY = user.getY() + 1.0 + (visualRadius * y);
+                double particleZ = user.getZ() + (visualRadius * Math.sin(theta) * radiusAtY);
+
+                serverWorld.spawnParticles(ParticleTypes.BUBBLE_COLUMN_UP, particleX, particleY, particleZ, 1, 0.0, 0.0, 0.0, 0.0);
+            }
+
+            //  WHIRLPOOL VORTEX & HEALING RAIN
+            double effectRadius = 8.0; // How far the staff can reach
+            boolean isSneaking = user.isSneaking();
+
+            // Find everything nearby
+            List<Entity> nearbyEntities = world.getOtherEntities(user, user.getBoundingBox().expand(effectRadius));
+
+            for (Entity entity : nearbyEntities) {
+                if (entity instanceof LivingEntity target) {
+
+                    // WHIRLPOOL Only drag hostile mobstowards you
+                    if (target instanceof HostileEntity) {
+                        double distance = user.distanceTo(target);
+
+                        // Stop pulling if they are already inside your bubble shield
+                        if (distance > 1.5) {
+                            // Calculate the exact vector to pull them towards you
+                            Vec3d pullVec = new Vec3d(user.getX() - target.getX(), user.getY() - target.getY(), user.getZ() - target.getZ())
+                                    .normalize()
+                                    .multiply(0.04);
+
+                            target.addVelocity(pullVec.x, pullVec.y, pullVec.z);
+                            target.velocityModified = true;
+                        }
+                    }
+                    // HEALING RAIN: If sneaking, heal nearby friendly players/pets every 1 second
+                    if (isSneaking && remainingUseTicks % 20 == 0) {
+                        if (!(target instanceof HostileEntity)) {
+                            target.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 40, 0, false, true));
+                        }
+                    }
+                }
+            }
+            // Apply healing to the player themselves, but damage the staff for using this powerful magic
+            if (isSneaking && remainingUseTicks % 20 == 0) {
+                user.addStatusEffect(new StatusEffectInstance(StatusEffects.REGENERATION, 40, 0, false, true));
+                stack.damage(1, user, EquipmentSlot.MAINHAND);
+            }
+        }
+    }
+
+    @Override
+    public void onStoppedUsing(ItemStack stack, World world, LivingEntity user, int remainingUseTicks) {
+
+        if (!world.isClient() && world instanceof ServerWorld serverWorld) {
+            double radius = 5.0;
+
+            //CLEANSING WAVE
+            BlockPos center = user.getBlockPos();
+            int r = (int) radius;
+
+            // Loop through a 3D grid of blocks around the player
+            for (BlockPos pos : BlockPos.iterate(center.add(-r, -r, -r), center.add(r, r, r))) {
+                BlockState state = world.getBlockState(pos);
+
+                // Extinguish fire blocks
+                if (state.getBlock() == Blocks.FIRE) {
+                    world.removeBlock(pos, false);
+                }
+                // Turn still Lava into Obsidian
+                else if (state.getBlock() == Blocks.LAVA && state.getFluidState().isStill()) {
+                    world.setBlockState(pos, Blocks.OBSIDIAN.getDefaultState());
+                    serverWorld.spawnParticles(ParticleTypes.LARGE_SMOKE, pos.getX() + 0.5, pos.getY() + 1.0, pos.getZ() + 0.5, 2, 0.2, 0.2, 0.2, 0.0);
+                }
+            }
+
+            //CLEANSING WAVE & THE EXPLOSION
+            List<Entity> targets = world.getOtherEntities(user, user.getBoundingBox().expand(radius));
+
+            for (Entity entity : targets) {
+
+                if (entity.isOnFire()) {
+                    entity.extinguish();
+                }
+
+                // Blast away and damage enemies
+                if (entity instanceof LivingEntity target && entity instanceof HostileEntity) {
+                    target.damage(world.getDamageSources().magic(), 6.0F);
+
+                    double knockbackX = target.getX() - user.getX();
+                    double knockbackZ = target.getZ() - user.getZ();
+
+                    target.takeKnockback(2.0, -knockbackX, -knockbackZ);
+                }
+            }
+
+            // VISUALS & COOLDOWN
+            serverWorld.spawnParticles(ParticleTypes.CLOUD, user.getX(), user.getY() + 1.0, user.getZ(), 200, radius / 2.0, 1.0, radius / 2.0, 0.5);
+            world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_GENERIC_EXPLODE, SoundCategory.PLAYERS, 1.0f, 1.5f);
+            world.playSound(null, user.getX(), user.getY(), user.getZ(), SoundEvents.ENTITY_GENERIC_SPLASH, SoundCategory.PLAYERS, 2.0f, 0.5f);
+
+            if (user instanceof PlayerEntity player) {
+                player.getItemCooldownManager().set(this, 100);
             }
         }
     }

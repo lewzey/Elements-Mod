@@ -20,7 +20,12 @@ public class ModArmorItem extends ArmorItem {
             (new ImmutableMap.Builder<RegistryEntry<ArmorMaterial>, List<StatusEffectInstance>>())
                     .put(ModArmorMaterials.GRASS_GEM_ARMOR_MATERIAL,
                             List.of(new StatusEffectInstance(StatusEffects.HASTE, 400, 2, false, false),
-                                    new StatusEffectInstance(StatusEffects.SPEED, 400, 3, false, false))).build();
+                                    new StatusEffectInstance(StatusEffects.SPEED, 400, 3, false, false)))
+
+                    .put(ModArmorMaterials.HYDROCITE_ARMOR_MATERIAL,
+                            List.of(new StatusEffectInstance(StatusEffects.CONDUIT_POWER, 400, 0, false, false),
+                                    new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 400, 0, false, false)))
+                    .build();
 
     public ModArmorItem(RegistryEntry<ArmorMaterial> material, Type type, Settings settings) {
         super(material, type, settings);

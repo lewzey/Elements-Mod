@@ -19,10 +19,14 @@
     "elementsmod:elements_mod_icon",
     "elementsmod:hydrocite_gem",
     "elementsmod:hydrocite_shard",
+    "elementsmod:hydrocite_helmet",
+    "elementsmod:hydrocite_chestplate",
+    "elementsmod:hydrocite_leggings",
+    "elementsmod:hydrocite_boots",
+    "elementsmod:water_staff",
     "elementsmod:raw_grass_gem",
     "elementsmod:raw_spark_stone",
     "elementsmod:spark_stone",
-    "elementsmod:spark_stone_sword",
-    "elementsmod:water_staff"
+    "elementsmod:spark_stone_sword"
   ]
 }
