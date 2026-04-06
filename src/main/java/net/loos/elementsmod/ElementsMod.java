@@ -21,6 +21,7 @@ import net.minecraft.loot.provider.number.UniformLootNumberProvider;
 import org.intellij.lang.annotations.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import net.loos.elementsmod.entity.custom.SparkSnakeEntity;
 
 public class ElementsMod implements ModInitializer {
 	public static final String MOD_ID = "elementsmod";
@@ -40,5 +41,6 @@ public class ElementsMod implements ModInitializer {
 		CompostingChanceRegistry.INSTANCE.add(ModItems.BLOOM_CROWN,0.5f);
 		CompostingChanceRegistry.INSTANCE.add(ModItems.FLUTTERBLOOM_SEEDS,0.25f);
 
+		FabricDefaultAttributeRegistry.register(ModEntities.SPARK_SNAKE, SparkSnakeEntity.createAttributes());
 	}
 }

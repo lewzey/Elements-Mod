@@ -21,6 +21,10 @@ public class ModEntitySpawns {
                 BiomeKeys.SUNFLOWER_PLAINS,
                 BiomeKeys.MEADOW
         ), SpawnGroup.CREATURE, ModEntities.BUTTERFLY, 50, 4, 8);
+
+        BiomeModifications.addSpawn(BiomeSelectors.foundInOverworld(),
+                SpawnGroup.CREATURE, ModEntities.SPARK_SNAKE, 20, 1, 2);
+
         SpawnRestriction.register(ModEntities.BUTTERFLY, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, AnimalEntity::isValidNaturalSpawn);
     }
 }

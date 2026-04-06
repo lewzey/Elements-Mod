@@ -25,6 +25,9 @@ public class ModArmorItem extends ArmorItem {
                     .put(ModArmorMaterials.HYDROCITE_ARMOR_MATERIAL,
                             List.of(new StatusEffectInstance(StatusEffects.CONDUIT_POWER, 400, 0, false, false),
                                     new StatusEffectInstance(StatusEffects.DOLPHINS_GRACE, 400, 0, false, false)))
+
+                    .put(ModArmorMaterials.SPARK_STONE_ARMOR_MATERIAL,
+                            List.of(new StatusEffectInstance(StatusEffects.FIRE_RESISTANCE, 400, 0, false, false)))
                     .build();
 
     public ModArmorItem(RegistryEntry<ArmorMaterial> material, Type type, Settings settings) {
@@ -35,11 +38,14 @@ public class ModArmorItem extends ArmorItem {
     public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
         if(!world.isClient()) {
             if(entity instanceof PlayerEntity player) {
-                if (hasFullSuitOfArmorOn(player) && isExposedToSun(world, player)) {
-                    evaluateArmorEffects(player);
-                }
-                else {
-                    removeEffects(player);
+                if (hasFullSuitOfArmorOn(player)) {
+                    boolean isSpark = hasCorrectArmorOn(ModArmorMaterials.SPARK_STONE_ARMOR_MATERIAL, player);
+
+                    if (isSpark || isExposedToSun(world, player)) {
+                        evaluateArmorEffects(player);
+                    } else {
+                        removeEffects(player);
+                    }
                 }
             }
         }
@@ -104,5 +110,9 @@ public class ModArmorItem extends ArmorItem {
     private void removeEffects(PlayerEntity player) {
         player.removeStatusEffect(StatusEffects.HASTE);
         player.removeStatusEffect(StatusEffects.SPEED);
+        player.removeStatusEffect(StatusEffects.CONDUIT_POWER);
+        player.removeStatusEffect(StatusEffects.DOLPHINS_GRACE);
+        player.removeStatusEffect(StatusEffects.FIRE_RESISTANCE);
     }
+
 }
