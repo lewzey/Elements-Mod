@@ -35,6 +35,9 @@ public abstract class ItemRendererMixin {
         if (stack.getItem() == ModItems.BLOOM_STAFF && (renderMode == ModelTransformationMode.GUI || renderMode == ModelTransformationMode.GROUND || renderMode == ModelTransformationMode.FIXED)) {
             return getModels().getModelManager().getModel(ModelIdentifier.ofInventoryVariant(Identifier.of(ElementsMod.MOD_ID, "bloom_staff")));
         }
+        if (stack.getItem() == ModItems.BLOOM_SHATTERER && (renderMode == ModelTransformationMode.GUI || renderMode == ModelTransformationMode.GROUND || renderMode == ModelTransformationMode.FIXED)) {
+            return getModels().getModelManager().getModel(ModelIdentifier.ofInventoryVariant(Identifier.of(ElementsMod.MOD_ID, "bloom_shatterer")));
+        }
 
         return bakedModel;
     }
@@ -48,6 +51,10 @@ public abstract class ItemRendererMixin {
         if (stack.getItem() == ModItems.BLOOM_STAFF) {
             return this.models.getModelManager().getModel(ModelIdentifier.ofInventoryVariant(Identifier.of(ElementsMod.MOD_ID, "bloom_staff_3d")));
         }
+        if (stack.getItem() == ModItems.BLOOM_SHATTERER) {
+            return this.models.getModelManager().getModel(ModelIdentifier.ofInventoryVariant(Identifier.of(ElementsMod.MOD_ID, "bloom_shatterer_3d")));
+        }
+
 
         return bakedModel;
     }

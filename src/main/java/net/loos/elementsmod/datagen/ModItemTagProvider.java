@@ -29,6 +29,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.BLOOM_CROWN)
                 .add(ModItems.BLOOM_STAFF)
                 .add(ModItems.BLOOM_STICK)
+                .add(ModItems.BLOOM_SHATTERER)
                 .add(ModItems.BUTTERFLY_SPAWN_EGG)
                 .add(ModItems.ELEMENTS_MOD_ICON)
                 .add(ModItems.GRASS_GEM)
