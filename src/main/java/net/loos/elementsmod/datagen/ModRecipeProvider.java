@@ -65,9 +65,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(recipeExporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.GRASS_GEM_HELMET)
-                .pattern("$$$")
+                .pattern("$@$")
                 .pattern("$ $")
                 .input('$', ModItems.GRASS_GEM)
+                .input('@', ModItems.BLOOM_CROWN)
                 .criterion(hasItem(ModItems.GRASS_GEM), conditionsFromItem(ModItems.GRASS_GEM))
                 .offerTo(recipeExporter);
 
