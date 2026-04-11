@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "V": {
+      "item": "elementsmod:aeris_concentrate"
+    },
+    "X": {
+      "item": "minecraft:nether_star"
+    },
+    "Z": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " V ",
+    "VXV",
+    " Z "
+  ],
+  "result": {
+    "count": 1,
+    "id": "elementsmod:aetherius"
+  }
+}

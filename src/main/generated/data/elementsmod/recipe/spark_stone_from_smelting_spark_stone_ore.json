@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "cookingtime": 170,
+  "experience": 0.2,
+  "group": "spark_stone",
+  "ingredient": {
+    "item": "elementsmod:spark_stone_ore"
+  },
+  "result": {
+    "id": "elementsmod:spark_stone"
+  }
+}
