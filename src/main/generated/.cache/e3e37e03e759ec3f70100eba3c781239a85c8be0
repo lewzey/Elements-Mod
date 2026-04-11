@@ -1,4 +1,6 @@
-// 1.21	2026-03-27T23:02:49.480011	Elements Mod/
+// 1.21	2026-03-27T23:36:48.1202721	Elements Mod/
+4541e7e8136b56dd3d934a88aefb3f4b1b61f2d9 data\elementsmod\worldgen\configured_feature\aeris_vapor_block.json
+ea22e9799b6e6955a906b0d08b450062b5e99d5c data\elementsmod\worldgen\placed_feature\aeris_vapor_block_placed.json
 f044abfca13cd7d50b59710945c9fab150e10510 data\elementsmod\worldgen\configured_feature\one_spark_stone_ore.json
 c2be4218ba0c963c2cc362b4a17e5e4014e7023a data\elementsmod\worldgen\configured_feature\multiple_spark_stone_ores.json
 4c5cfe09a776ef7db1af5db754d39e86f89393da data\elementsmod\worldgen\placed_feature\multiple_grass_gem_ores_placed.json
