@@ -4,10 +4,13 @@
   "key": {
     "$": {
       "item": "elementsmod:grass_gem"
+    },
+    "@": {
+      "item": "elementsmod:bloom_crown"
     }
   },
   "pattern": [
-    "$$$",
+    "$@$",
     "$ $"
   ],
   "result": {

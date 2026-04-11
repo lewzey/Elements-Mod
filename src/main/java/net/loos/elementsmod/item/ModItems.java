@@ -10,6 +10,8 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
+import net.loos.elementsmod.item.custom.SparkStoneSwordItem;
+import net.minecraft.item.SpawnEggItem;
 
 public class ModItems {
 
@@ -51,17 +53,17 @@ public class ModItems {
 
     public static final Item COSMOLIGHT = registerItem("cosmolight", new Cosmolight(new Item.Settings().rarity(Rarity.EPIC)));
 
-    //FIRE
+    // FIRE
     public static final Item RAW_SPARK_STONE = registerItem("raw_spark_stone", new Item(new Item.Settings()));
     public static final Item SPARK_STONE = registerItem("spark_stone", new Item(new Item.Settings()));
     public static final Item SPARK_STONE_SWORD = registerItem("spark_stone_sword",
-            new SwordItem(ModToolMaterials.SPARK_STONE, new Item.Settings()
+            new SparkStoneSwordItem(ModToolMaterials.SPARK_STONE, new Item.Settings()
                     .attributeModifiers(SwordItem.createAttributeModifiers(ModToolMaterials.SPARK_STONE, 3, -2.4f))));
     public static final Item SPARK_STAFF = registerItem("spark_staff", new SparkStaff(new Item.Settings()));
     public static final Item SPARK_STICK = registerItem("spark_stick", new Item(new Item.Settings()));
 
     public static final Item SPARK_STONE_HELMET = registerItem("spark_stone_helmet",
-            new ArmorItem(ModArmorMaterials.SPARK_STONE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+            new ModArmorItem(ModArmorMaterials.SPARK_STONE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
                     .maxDamage((ArmorItem.Type.HELMET.getMaxDamage(12)))));
     public static final Item SPARK_STONE_CHESTPLATE = registerItem("spark_stone_chestplate",
             new ArmorItem(ModArmorMaterials.SPARK_STONE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
@@ -72,6 +74,9 @@ public class ModItems {
     public static final Item SPARK_STONE_BOOTS = registerItem("spark_stone_boots",
             new ArmorItem(ModArmorMaterials.SPARK_STONE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
                     .maxDamage((ArmorItem.Type.HELMET.getMaxDamage(12)))));
+
+    public static final Item SPARK_SNAKE_SPAWN_EGG = registerItem("spark_snake_spawn_egg",
+            new SpawnEggItem(ModEntities.SPARK_SNAKE, 0x3b2f2f, 0xff6a00, new Item.Settings()));
 
     // WATER
     public static final Item HYDROCITE_GEM = registerItem("hydrocite_gem", new Item(new Item.Settings()));
@@ -124,6 +129,7 @@ public class ModItems {
             entries.add(SPARK_STONE_CHESTPLATE);
             entries.add(SPARK_STONE_LEGGINGS);
             entries.add(SPARK_STONE_BOOTS);
+            entries.add(SPARK_SNAKE_SPAWN_EGG);
 
             entries.add(AERIS_CONCENTRATE);
             entries.add(AERIS_VAPOR);

@@ -12,8 +12,8 @@ import net.loos.elementsmod.entity.client.ButterflyModel;
 import net.loos.elementsmod.entity.client.ButterflyRenderer;
 import net.minecraft.client.render.RenderLayer;
 import net.loos.elementsmod.block.ModBlocks;
-import net.minecraft.client.render.entity.model.EntityModelLayer;
-import net.minecraft.util.Identifier;
+import net.loos.elementsmod.entity.client.SparkSnakeRenderer;
+
 
 
 public class ElementsModClient implements ClientModInitializer {
@@ -27,6 +27,7 @@ public class ElementsModClient implements ClientModInitializer {
         EntityModelLayerRegistry.registerModelLayer(ButterflyModel.BUTTERFLY, ButterflyModel::getTexturedModelData );
         EntityRendererRegistry.register(ModEntities.BUTTERFLY, ButterflyRenderer::new);
 
+        EntityRendererRegistry.register(ModEntities.SPARK_SNAKE, SparkSnakeRenderer::new);
     }
 }
 

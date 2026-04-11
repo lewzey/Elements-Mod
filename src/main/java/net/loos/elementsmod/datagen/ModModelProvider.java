@@ -49,8 +49,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor((ArmorItem) ModItems.GRASS_GEM_CHESTPLATE);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.GRASS_GEM_LEGGINGS);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.GRASS_GEM_BOOTS);
-        itemModelGenerator.register(ModItems.BLOOM_SHATTERER, Models.HANDHELD);
-
 
         itemModelGenerator.register(ModItems.SPARK_STONE, Models.GENERATED);
         itemModelGenerator.register(ModItems.RAW_SPARK_STONE, Models.GENERATED);

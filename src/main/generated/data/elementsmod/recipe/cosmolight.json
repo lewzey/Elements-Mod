@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "V": {
+      "item": "elementsmod:aeris_block"
+    },
+    "X": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "Z": {
+      "item": "minecraft:compass"
+    }
+  },
+  "pattern": [
+    "XZX",
+    "ZVZ",
+    "XZX"
+  ],
+  "result": {
+    "count": 1,
+    "id": "elementsmod:cosmolight"
+  }
+}
