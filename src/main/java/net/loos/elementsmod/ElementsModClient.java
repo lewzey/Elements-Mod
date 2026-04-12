@@ -31,6 +31,7 @@ public class ElementsModClient implements ClientModInitializer {
 
         EntityModelLayerRegistry.registerModelLayer(LuminousRayModel.LUMINOUS_RAY, LuminousRayModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.LUMINOUS_RAY, LuminousRayRenderer::new);
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AQUABLOOM_CROP, RenderLayer.getCutout());
 
         EntityRendererRegistry.register(ModEntities.SPARK_SNAKE, SparkSnakeRenderer::new);
     }

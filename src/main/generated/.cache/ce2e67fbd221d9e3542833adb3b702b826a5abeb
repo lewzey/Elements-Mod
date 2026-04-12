@@ -1,5 +1,6 @@
-// 1.21	2026-04-11T23:36:40.0568079	Elements Mod/Block Loot Tables
+// 1.21	2026-04-12T15:52:02.0492361	Elements Mod/Block Loot Tables
 d0bfdfeb5f18657b5d9b549fa22af2538753a365 data\elementsmod\loot_table\blocks\grass_gem_ore.json
+97b70e1343fe7c3ff4fdf0ba0904973d4c5133e9 data\elementsmod\loot_table\blocks\aquabloom_crop.json
 26b704b92b77b34f2f8243d5687da15dc38e8d1e data\elementsmod\loot_table\blocks\hydrocite_block.json
 3058b4d8ab4637b4fa7ef2803a33c15199267de5 data\elementsmod\loot_table\blocks\hydrocite_ore.json
 340446f6e01cd55402c24e37bd6b5675f68c5471 data\elementsmod\loot_table\blocks\flutterbloom_crop.json
