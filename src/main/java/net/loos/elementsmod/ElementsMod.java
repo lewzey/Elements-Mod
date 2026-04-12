@@ -9,6 +9,7 @@ import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.loos.elementsmod.block.ModBlocks;
 import net.loos.elementsmod.entity.ModEntities;
 import net.loos.elementsmod.entity.custom.ButterflyEntity;
+import net.loos.elementsmod.entity.custom.LuminousRayEntity;
 import net.loos.elementsmod.item.ModItemGroups;
 import net.loos.elementsmod.item.ModItems;
 import net.loos.elementsmod.util.HammerUsageEvent;
@@ -40,6 +41,8 @@ public class ElementsMod implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.BUTTERFLY, ButterflyEntity.createAttributes());
 		CompostingChanceRegistry.INSTANCE.add(ModItems.BLOOM_CROWN,0.5f);
 		CompostingChanceRegistry.INSTANCE.add(ModItems.FLUTTERBLOOM_SEEDS,0.25f);
+
+		FabricDefaultAttributeRegistry.register(ModEntities.LUMINOUS_RAY, LuminousRayEntity.createAttributes());
 
 		FabricDefaultAttributeRegistry.register(ModEntities.SPARK_SNAKE, SparkSnakeEntity.createAttributes());
 	}

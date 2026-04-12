@@ -73,6 +73,8 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor((ArmorItem) ModItems.HYDROCITE_CHESTPLATE);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.HYDROCITE_LEGGINGS);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.HYDROCITE_BOOTS);
+        itemModelGenerator.register(ModItems.LUMINOUS_RAY_SPAWN_EGG,
+                new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
 
     }
 

@@ -99,6 +99,9 @@ public class ModItems {
             new ArmorItem(ModArmorMaterials.HYDROCITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
                     .maxDamage(ArmorItem.Type.BOOTS.getMaxDamage(37))));
 
+    public static final Item LUMINOUS_RAY_SPAWN_EGG = registerItem("luminous_ray_spawn_egg",
+            new SpawnEggItem(ModEntities.LUMINOUS_RAY, 0x000080, 0x39FF14, new Item.Settings()));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(ElementsMod.MOD_ID, name), item);
     }
@@ -142,6 +145,7 @@ public class ModItems {
             entries.add(HYDROCITE_CHESTPLATE);
             entries.add(HYDROCITE_LEGGINGS);
             entries.add(HYDROCITE_BOOTS);
+            entries.add(LUMINOUS_RAY_SPAWN_EGG);
 
 
         });

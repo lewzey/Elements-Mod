@@ -2,6 +2,7 @@ package net.loos.elementsmod.entity;
 
 import net.loos.elementsmod.ElementsMod;
 import net.loos.elementsmod.entity.custom.ButterflyEntity;
+import net.loos.elementsmod.entity.custom.LuminousRayEntity;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnGroup;
@@ -17,6 +18,11 @@ public class ModEntities {
             Identifier.of(ElementsMod.MOD_ID, "butterfly"),
             EntityType.Builder.create(ButterflyEntity::new, SpawnGroup.CREATURE)
                     .dimensions(0.3f, 0.3f).build());
+
+    public static final EntityType<LuminousRayEntity> LUMINOUS_RAY = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(ElementsMod.MOD_ID, "ray"),
+            EntityType.Builder.create(LuminousRayEntity::new, SpawnGroup.WATER_AMBIENT)
+                    .dimensions(1.5f, 0.4f).build());
     public static void registerModEntities() {
         ElementsMod.LOGGER.info("Registering Mob Entities for" + ElementsMod.MOD_ID);
     }

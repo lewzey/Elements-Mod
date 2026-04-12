@@ -47,6 +47,7 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.HYDROCITE_LEGGINGS)
                 .add(ModItems.HYDROCITE_BOOTS)
                 .add(ModItems.WATER_STAFF)
+                .add(ModItems.LUMINOUS_RAY_SPAWN_EGG)
                 .add(ModItems.RAW_GRASS_GEM)
                 .add(ModItems.RAW_SPARK_STONE)
                 .add(ModItems.SPARK_STONE)
