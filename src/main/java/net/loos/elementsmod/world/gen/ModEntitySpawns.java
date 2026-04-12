@@ -32,6 +32,18 @@ public class ModEntitySpawns {
                 BiomeKeys.SAVANNA
         ), SpawnGroup.CREATURE, ModEntities.SPARK_SNAKE, 20, 3, 5);
 
+
+        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(
+                BiomeKeys.COLD_OCEAN,
+                BiomeKeys.DEEP_LUKEWARM_OCEAN,
+                BiomeKeys.DEEP_OCEAN,
+                BiomeKeys.WARM_OCEAN,
+                BiomeKeys.RIVER,
+                BiomeKeys.DEEP_COLD_OCEAN,
+                BiomeKeys.LUKEWARM_OCEAN,
+                BiomeKeys.OCEAN
+        ), SpawnGroup.WATER_AMBIENT, ModEntities.LUMINOUS_RAY, 70, 3, 5);
+
         SpawnRestriction.register(ModEntities.BUTTERFLY, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, AnimalEntity::isValidNaturalSpawn);
     }
 }
