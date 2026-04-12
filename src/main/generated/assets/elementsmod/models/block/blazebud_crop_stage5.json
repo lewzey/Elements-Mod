@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "elementsmod:block/blazebud_crop_stage5"
+  }
+}
