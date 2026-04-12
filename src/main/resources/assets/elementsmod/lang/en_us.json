@@ -62,6 +62,10 @@
   "item.elementsmod.spark_stone_leggings": "Spark Stone Leggings",
   "item.elementsmod.spark_stone_boots": "Spark Stone Boots",
 
+  "item.elementsmod.blazebud": "Blazebud",
+  "item.elementsmod.blazebud_seeds": "Blazebud Seeds",
+  "block.elementsmod.blazebud_crop": "Blazebud Crop",
+
 
   "tooltip.elementsmod.bloom_staff.tooltip": "Change any flower or sapling into other variants!",
 

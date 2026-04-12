@@ -77,6 +77,9 @@ public class ModItems {
 
     public static final Item SPARK_SNAKE_SPAWN_EGG = registerItem("spark_snake_spawn_egg",
             new SpawnEggItem(ModEntities.SPARK_SNAKE, 0x3b2f2f, 0xff6a00, new Item.Settings()));
+    public static final Item BLAZEBUD = registerItem("blazebud", new Item(new Item.Settings()));
+    public static final Item BLAZEBUD_SEEDS = registerItem("blazebud_seeds",
+            new AliasedBlockItem(ModBlocks.BLAZEBUD_CROP, new Item.Settings()));
 
     // WATER
     public static final Item HYDROCITE_GEM = registerItem("hydrocite_gem", new Item(new Item.Settings()));
@@ -130,6 +133,8 @@ public class ModItems {
             entries.add(SPARK_STONE_LEGGINGS);
             entries.add(SPARK_STONE_BOOTS);
             entries.add(SPARK_SNAKE_SPAWN_EGG);
+            entries.add(BLAZEBUD);
+            entries.add(BLAZEBUD_SEEDS);
 
             entries.add(AERIS_CONCENTRATE);
             entries.add(AERIS_VAPOR);

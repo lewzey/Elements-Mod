@@ -1,4 +1,4 @@
-// 1.21	2026-04-11T11:30:45.566091	Elements Mod/Model Definitions
+// 1.21	2026-04-11T18:47:22.318432	Elements Mod/Model Definitions
 ed26c83ec4006b93da6eba0c44a889b462948231 assets/elementsmod/models/item/hydrocite_boots_amethyst_trim.json
 22dba08becc8864dff09b2d73870482708cdd6b5 assets/elementsmod/models/item/aeris_vapor.json
 3a97e0ed3e0d2f0d6f1d4fbd3492d0ade18d1949 assets/elementsmod/models/item/spark_stone_boots_amethyst_trim.json
@@ -10,8 +10,8 @@ b0d24d438b96b9ceb5217c74436dcc27cd104f86 assets/elementsmod/models/item/hydrocit
 664a0ba70b17b9293199c8ffdee2534299e96e7d assets/elementsmod/models/item/grass_gem_chestplate_gold_trim.json
 fabced89eae1d81d1c39053a37590538f0da0c31 assets/elementsmod/models/item/spark_stone_leggings_amethyst_trim.json
 9535ccc9d335f5f3ec8914168093dc0d9e6bf3ab assets/elementsmod/models/item/spark_stone_helmet_gold_trim.json
-8f17744b5eddf6abe3e69f36c5e1928fe9072d2c assets/elementsmod/models/item/spark_stone_helmet_quartz_trim.json
 638b5a3a5d5bc6948399d59ae5dbea053a29323d assets/elementsmod/models/item/hydrocite_helmet_quartz_trim.json
+8f17744b5eddf6abe3e69f36c5e1928fe9072d2c assets/elementsmod/models/item/spark_stone_helmet_quartz_trim.json
 33a2b623dbee1402fc6e33fc5aa80e923f309933 assets/elementsmod/models/item/spark_stone_leggings_lapis_trim.json
 49dfdf3523ef8d708e08e5041ed90acef379d2d2 assets/elementsmod/models/item/grass_gem_boots_gold_trim.json
 3e7d727a49b266ab2783ba96de747f8ec4c22bdd assets/elementsmod/models/item/hydrocite_leggings_diamond_trim.json

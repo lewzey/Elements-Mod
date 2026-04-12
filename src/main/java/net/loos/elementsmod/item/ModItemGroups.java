@@ -45,6 +45,8 @@ public class ModItemGroups {
                         entries.add(ModItems.SPARK_STONE_LEGGINGS);
                         entries.add(ModItems.SPARK_STONE_BOOTS);
                         entries.add(ModItems.SPARK_SNAKE_SPAWN_EGG);
+                        entries.add(ModItems.BLAZEBUD);
+                        entries.add(ModItems.BLAZEBUD_SEEDS);
 
 
                         entries.add(ModItems.AETHERIUS);
@@ -114,22 +116,10 @@ public class ModItemGroups {
                         entries.add(ModBlocks.SPARK_STONE_ORE);
                         entries.add(ModBlocks.SPARK_STONE_BLOCK);
                         entries.add(ModItems.SPARK_SNAKE_SPAWN_EGG);
+                        entries.add(ModItems.BLAZEBUD);
+                        entries.add(ModItems.BLAZEBUD_SEEDS);
                     }).build()
     );
-
-    /*
-    public static final ItemGroup SPARK_STONE_BLOCKS_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(ElementsMod.MOD_ID, "spark_stone_blocks"),
-            FabricItemGroup.builder().icon(() -> new ItemStack(ModBlocks.SPARK_STONE_ORE))
-                    .displayName(Text.translatable("itemgroup.elements.spark_stone_blocks"))
-                    .entries((displayContext, entries) -> {
-                        entries.add(ModBlocks.SPARK_STONE_BLOCK);
-                        entries.add(ModBlocks.SPARK_STONE_ORE);
-                    }).build()
-    );
-    */
-
-
 
     public static void registerItemGroups () {
         ElementsMod.LOGGER.info("Registering Item Groups for " + ElementsMod.MOD_ID );

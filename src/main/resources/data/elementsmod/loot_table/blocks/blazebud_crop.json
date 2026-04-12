@@ -1,0 +1,33 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "entries": [
+        {
+          "type": "minecraft:alternatives",
+          "children": [
+            {
+              "type": "minecraft:item",
+              "conditions": [
+                {
+                  "condition": "minecraft:block_state_property",
+                  "block": "elementsmod:blazebud_crop",
+                  "properties": {
+                    "age": "6"
+                  }
+                }
+              ],
+              "name": "elementsmod:blazebud"
+            },
+            {
+              "type": "minecraft:item",
+              "name": "elementsmod:blazebud_seeds"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "random_sequence": "elementsmod:blocks/blazebud_crop"
+}
