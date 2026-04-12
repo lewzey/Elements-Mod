@@ -45,6 +45,8 @@ public class ModItemGroups {
                         entries.add(ModItems.SPARK_STONE_LEGGINGS);
                         entries.add(ModItems.SPARK_STONE_BOOTS);
                         entries.add(ModItems.SPARK_SNAKE_SPAWN_EGG);
+                        entries.add(ModItems.BLAZEBUD);
+                        entries.add(ModItems.BLAZEBUD_SEEDS);
 
 
                         entries.add(ModItems.AETHERIUS);
@@ -115,6 +117,8 @@ public class ModItemGroups {
                         entries.add(ModBlocks.SPARK_STONE_ORE);
                         entries.add(ModBlocks.SPARK_STONE_BLOCK);
                         entries.add(ModItems.SPARK_SNAKE_SPAWN_EGG);
+                        entries.add(ModItems.BLAZEBUD);
+                        entries.add(ModItems.BLAZEBUD_SEEDS);
                     }).build()
     );
 

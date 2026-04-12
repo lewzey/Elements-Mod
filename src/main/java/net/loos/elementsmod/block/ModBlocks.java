@@ -14,7 +14,11 @@ import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.util.Identifier;import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.loos.elementsmod.block.custom.BlazebudCropBlock;
 
 public class ModBlocks {
 
@@ -77,7 +81,10 @@ public class ModBlocks {
                     .requiresTool()
                     .sounds(BlockSoundGroup.FUNGUS))
     );
-
+    public static final Block BLAZEBUD_CROP = registerBlockWithoutBlockItem("blazebud_crop",
+            new BlazebudCropBlock((AbstractBlock.Settings.create().noCollision()
+                    .ticksRandomly().breakInstantly().sounds(BlockSoundGroup.CROP)
+                    .pistonBehavior(PistonBehavior.DESTROY).mapColor(MapColor.RED))));
 
     private static Block registerBlock (String name, Block block) {
         registerBlockItem(name, block);
