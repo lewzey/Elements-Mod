@@ -73,6 +73,8 @@ public class ModItemGroups {
                         entries.add(ModItems.HYDROCITE_LEGGINGS);
                         entries.add(ModItems.HYDROCITE_BOOTS);
                         entries.add(ModItems.LUMINOUS_RAY_SPAWN_EGG);
+                        entries.add(ModItems.AQUABLOOM);
+                        entries.add(ModItems.AQUABLOOM_SEEDS);
                     }).build()
     );
     public static final ItemGroup GRASS_GEM_ITEMS_GROUP = Registry.register(Registries.ITEM_GROUP,

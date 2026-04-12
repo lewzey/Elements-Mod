@@ -43,19 +43,27 @@ public class ModArmorItem extends ArmorItem {
         if(!world.isClient()) {
             if(entity instanceof PlayerEntity player) {
                 if (hasFullSuitOfArmorOn(player)) {
-                    boolean isSpark = hasCorrectArmorOn(ModArmorMaterials.SPARK_STONE_ARMOR_MATERIAL, player);
-
-                    if (isSpark || isExposedToSun(world, player)) {
+                    // Check which material the player is actually wearing
+                    if (hasCorrectArmorOn(ModArmorMaterials.HYDROCITE_ARMOR_MATERIAL, player)) {
                         evaluateArmorEffects(player);
-                    } else {
-                        removeEffects(player);
+                    } else if (hasCorrectArmorOn(ModArmorMaterials.SPARK_STONE_ARMOR_MATERIAL, player)) {
+                        evaluateArmorEffects(player);
+                    } else if (hasCorrectArmorOn(ModArmorMaterials.GRASS_GEM_ARMOR_MATERIAL, player)) {
+                        // Grass only works in the sun
+                        if (isExposedToSun(world, player)) {
+                            evaluateArmorEffects(player);
+                        } else {
+                            removeEffects(player);
+                        }
                     }
+                } else {
+                    removeEffects(player);
                 }
             }
         }
-
         super.inventoryTick(stack, world, entity, slot, selected);
     }
+
 
     private void evaluateArmorEffects(PlayerEntity player) {
         for (Map.Entry<RegistryEntry<ArmorMaterial>, List<StatusEffectInstance>> entry : MATERIAL_TO_EFFECT_MAP.entrySet()) {

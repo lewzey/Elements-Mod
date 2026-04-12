@@ -2,6 +2,7 @@ package net.loos.elementsmod.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.loos.elementsmod.ElementsMod;
+import net.loos.elementsmod.block.custom.AquabloomCropBlock;
 import net.loos.elementsmod.block.custom.FlutterbloomCropBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -69,6 +70,16 @@ public class ModBlocks {
                     .strength(50f,1200f)
                     .requiresTool()
                     .luminance(state ->7)));
+
+    public static final Block AQUABLOOM_CROP = registerBlockWithoutBlockItem("aquabloom_crop",
+            new AquabloomCropBlock(AbstractBlock.Settings.create()
+                    .noCollision()
+                    .ticksRandomly()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.CROP)
+                    .luminance(state -> 10)
+                    .emissiveLighting((state, world, pos) -> true)
+                    .mapColor(MapColor.WATER_BLUE)));
 
     // Fire
     public static final Block SPARK_STONE_BLOCK = registerBlock("spark_stone_block",

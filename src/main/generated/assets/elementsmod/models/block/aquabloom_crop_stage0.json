@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "elementsmod:block/aquabloom_crop_stage0"
+  }
+}

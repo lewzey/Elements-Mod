@@ -128,6 +128,12 @@ public class ModItems {
     public static final Item LUMINOUS_RAY_SPAWN_EGG = registerItem("luminous_ray_spawn_egg",
             new SpawnEggItem(ModEntities.LUMINOUS_RAY, 0x000080, 0x39FF14, new Item.Settings()));
 
+    public static final Item AQUABLOOM = registerItem("aquabloom",
+            new Item(new Item.Settings()));
+
+    public static final Item AQUABLOOM_SEEDS = registerItem("aquabloom_seeds",
+            new AliasedBlockItem(ModBlocks.AQUABLOOM_CROP, new Item.Settings()));
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, Identifier.of(ElementsMod.MOD_ID, name), item);
     }

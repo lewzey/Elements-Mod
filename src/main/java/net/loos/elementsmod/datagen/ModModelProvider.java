@@ -3,6 +3,7 @@ package net.loos.elementsmod.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.loos.elementsmod.block.ModBlocks;
+import net.loos.elementsmod.block.custom.AquabloomCropBlock;
 import net.loos.elementsmod.block.custom.FlutterbloomCropBlock;
 import net.loos.elementsmod.item.ModItems;
 import net.minecraft.data.client.*;
@@ -34,6 +35,8 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.HYDROCITE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.HYDROCITE_ORE);
+        blockStateModelGenerator.registerCrop(ModBlocks.AQUABLOOM_CROP, AquabloomCropBlock.AGE, 0, 1, 2);
+
     }
 
     @Override
@@ -83,6 +86,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.registerArmor((ArmorItem) ModItems.HYDROCITE_BOOTS);
         itemModelGenerator.register(ModItems.LUMINOUS_RAY_SPAWN_EGG,
                 new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+        itemModelGenerator.register(ModItems.AQUABLOOM, Models.GENERATED);
 
     }
 

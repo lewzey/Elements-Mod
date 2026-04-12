@@ -3,6 +3,7 @@ package net.loos.elementsmod.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.loos.elementsmod.block.ModBlocks;
+import net.loos.elementsmod.block.custom.AquabloomCropBlock;
 import net.loos.elementsmod.block.custom.FlutterbloomCropBlock;
 import net.loos.elementsmod.item.ModItems;
 import net.minecraft.block.Block;
@@ -39,7 +40,16 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
         BlockStatePropertyLootCondition.Builder builder2 = BlockStatePropertyLootCondition.builder(ModBlocks.FLUTTERBLOOM_CROP)
                 .properties(StatePredicate.Builder.create().exactMatch(FlutterbloomCropBlock.AGE, FlutterbloomCropBlock.MAX_AGE));
         this.addDrop(ModBlocks.FLUTTERBLOOM_CROP, this.cropDrops(ModBlocks.FLUTTERBLOOM_CROP, ModItems.FLUTTERBLOOM, ModItems.FLUTTERBLOOM_SEEDS, builder2));
+
+        BlockStatePropertyLootCondition.Builder aquabloomBuilder = BlockStatePropertyLootCondition.builder(ModBlocks.AQUABLOOM_CROP)
+                .properties(StatePredicate.Builder.create()
+                        .exactMatch(AquabloomCropBlock.AGE, AquabloomCropBlock.MAX_AGE));
+
+        this.addDrop(ModBlocks.AQUABLOOM_CROP, this.cropDrops(ModBlocks.AQUABLOOM_CROP,
+                ModItems.AQUABLOOM, ModItems.AQUABLOOM_SEEDS, aquabloomBuilder));
     }
+
+
 
     //call this if blocks drop multiple items
     public LootTable.Builder multipleOreDrops(Block drop, Item item, float minDrops, float maxDrops) {

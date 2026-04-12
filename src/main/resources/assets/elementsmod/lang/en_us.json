@@ -48,6 +48,9 @@
 
   "block.elementsmod.hydrocite_block": "Block of Hydrocite",
   "block.elementsmod.hydrocite_ore": "Hydrocite Ore",
+  "item.elementsmod.aquabloom": "Aquabloom",
+  "item.elementsmod.aquabloom_seeds": "Aquabloom Seeds",
+  "block.elementsmod.aquabloom_crop": "Aquabloom Crop",
 
   "item.elementsmod.spark_stone": "Spark Stone Shard",
   "item.elementsmod.raw_spark_stone": "Raw Spark Stone",
