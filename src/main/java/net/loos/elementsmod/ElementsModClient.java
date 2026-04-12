@@ -8,14 +8,9 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.loos.elementsmod.entity.ModEntities;
-import net.loos.elementsmod.entity.client.ButterflyModel;
-import net.loos.elementsmod.entity.client.ButterflyRenderer;
-import net.loos.elementsmod.entity.client.LuminousRayModel;
-import net.loos.elementsmod.entity.client.LuminousRayRenderer;
+import net.loos.elementsmod.entity.client.*;
 import net.minecraft.client.render.RenderLayer;
 import net.loos.elementsmod.block.ModBlocks;
-import net.loos.elementsmod.entity.client.SparkSnakeRenderer;
-
 
 
 public class ElementsModClient implements ClientModInitializer {
@@ -33,6 +28,10 @@ public class ElementsModClient implements ClientModInitializer {
         EntityRendererRegistry.register(ModEntities.LUMINOUS_RAY, LuminousRayRenderer::new);
 
         EntityRendererRegistry.register(ModEntities.SPARK_SNAKE, SparkSnakeRenderer::new);
+
+        EntityModelLayerRegistry.registerModelLayer(BirdModel.BIRD, BirdModel::getTexturedModelData);
+        EntityRendererRegistry.register(ModEntities.BIRD, BirdRenderer::new);
+
     }
 }
 

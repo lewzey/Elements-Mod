@@ -53,6 +53,24 @@ public class ModItems {
 
     public static final Item COSMOLIGHT = registerItem("cosmolight", new Cosmolight(new Item.Settings().rarity(Rarity.EPIC)));
 
+    public static final Item AERIS_HELMET = registerItem("aeris_helmet",
+            new ModArmorItem(ModArmorMaterials.AERIS_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Settings()
+                    .maxDamage((ArmorItem.Type.HELMET.getMaxDamage(12)))));
+    public static final Item AERIS_CHESTPLATE = registerItem("aeris_chestplate",
+            new ArmorItem(ModArmorMaterials.AERIS_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Settings()
+                    .maxDamage((ArmorItem.Type.CHESTPLATE.getMaxDamage(12)))));
+    public static final Item AERIS_LEGGINGS = registerItem("aeris_leggings",
+            new ArmorItem(ModArmorMaterials.AERIS_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Settings()
+                    .maxDamage((ArmorItem.Type.LEGGINGS.getMaxDamage(12)))));
+    public static final Item AERIS_BOOTS = registerItem("aeris_boots",
+            new ArmorItem(ModArmorMaterials.AERIS_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Settings()
+                    .maxDamage((ArmorItem.Type.BOOTS.getMaxDamage(12)))));
+
+
+
+
+
+
     // FIRE
     public static final Item RAW_SPARK_STONE = registerItem("raw_spark_stone", new Item(new Item.Settings()));
     public static final Item SPARK_STONE = registerItem("spark_stone", new Item(new Item.Settings()));
@@ -80,6 +98,11 @@ public class ModItems {
     public static final Item BLAZEBUD = registerItem("blazebud", new Item(new Item.Settings()));
     public static final Item BLAZEBUD_SEEDS = registerItem("blazebud_seeds",
             new AliasedBlockItem(ModBlocks.BLAZEBUD_CROP, new Item.Settings()));
+
+
+    public static final Item BIRD_SPAWN_EGG = registerItem("bird_spawn_egg",
+            new SpawnEggItem(ModEntities.BIRD, 0xe0f7fa, 0xffd54f, new Item.Settings()));
+
 
     // WATER
     public static final Item HYDROCITE_GEM = registerItem("hydrocite_gem", new Item(new Item.Settings()));

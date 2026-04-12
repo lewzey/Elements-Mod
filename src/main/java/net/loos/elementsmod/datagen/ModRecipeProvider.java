@@ -254,6 +254,37 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .input('Z', Items.COMPASS)
                 .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
                 .offerTo(recipeExporter);
+
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.AERIS_HELMET)
+                .pattern("$$$")
+                .pattern("$ $")
+                .input('$', ModItems.AERIS_CONCENTRATE)
+                .criterion(hasItem(ModItems.AERIS_CONCENTRATE), conditionsFromItem(ModItems.AERIS_CONCENTRATE))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.AERIS_CHESTPLATE)
+                .pattern("$ $")
+                .pattern("$$$")
+                .pattern("$$$")
+                .input('$', ModItems.AERIS_CONCENTRATE)
+                .criterion(hasItem(ModItems.AERIS_CONCENTRATE), conditionsFromItem(ModItems.AERIS_CONCENTRATE))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.AERIS_LEGGINGS)
+                .pattern("$$$")
+                .pattern("$ $")
+                .pattern("$ $")
+                .input('$', ModItems.AERIS_CONCENTRATE)
+                .criterion(hasItem(ModItems.AERIS_CONCENTRATE), conditionsFromItem(ModItems.AERIS_CONCENTRATE))
+                .offerTo(recipeExporter);
+
+        ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.AERIS_BOOTS)
+                .pattern("$ $")
+                .pattern("$ $")
+                .input('$', ModItems.AERIS_CONCENTRATE)
+                .criterion(hasItem(ModItems.AERIS_CONCENTRATE), conditionsFromItem(ModItems.AERIS_CONCENTRATE))
+                .offerTo(recipeExporter);
     }
 
 }

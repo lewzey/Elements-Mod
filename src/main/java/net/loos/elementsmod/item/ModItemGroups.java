@@ -51,11 +51,17 @@ public class ModItemGroups {
 
                         entries.add(ModItems.AETHERIUS);
                         entries.add(ModItems.COSMOLIGHT);
-
                         entries.add(ModItems.AERIS_CONCENTRATE);
                         entries.add(ModItems.AERIS_VAPOR);
                         entries.add(ModBlocks.AERIS_VAPOR_BLOCK);
                         entries.add(ModBlocks.AERIS_BLOCK);
+                        entries.add(ModItems.AERIS_BOOTS);
+                        entries.add(ModItems.AERIS_CHESTPLATE);
+                        entries.add(ModItems.AERIS_HELMET);
+                        entries.add(ModItems.AERIS_LEGGINGS);
+                        entries.add(ModItems.BIRD_SPAWN_EGG);
+
+
 
                         entries.add(ModItems.HYDROCITE_GEM);
                         entries.add(ModItems.HYDROCITE_SHARD);

@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "$": {
+      "item": "elementsmod:aeris_concentrate"
+    }
+  },
+  "pattern": [
+    "$$$",
+    "$ $"
+  ],
+  "result": {
+    "count": 1,
+    "id": "elementsmod:aeris_helmet"
+  }
+}

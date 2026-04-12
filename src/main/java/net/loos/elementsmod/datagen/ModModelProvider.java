@@ -65,6 +65,14 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.AERIS_VAPOR, Models.GENERATED);
         itemModelGenerator.register(ModItems.AETHERIUS, Models.GENERATED);
         itemModelGenerator.register(ModItems.COSMOLIGHT, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BIRD_SPAWN_EGG,
+                new Model(Optional.of(Identifier.of("item/template_spawn_egg")), Optional.empty()));
+
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.AERIS_HELMET);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.AERIS_CHESTPLATE);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.AERIS_LEGGINGS);
+        itemModelGenerator.registerArmor((ArmorItem) ModItems.AERIS_BOOTS);
+
 
         itemModelGenerator.register(ModItems.HYDROCITE_GEM, Models.GENERATED);
         itemModelGenerator.register(ModItems.HYDROCITE_SHARD, Models.GENERATED);

@@ -8,6 +8,7 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRe
 import net.fabricmc.fabric.api.registry.CompostingChanceRegistry;
 import net.loos.elementsmod.block.ModBlocks;
 import net.loos.elementsmod.entity.ModEntities;
+import net.loos.elementsmod.entity.custom.BirdEntity;
 import net.loos.elementsmod.entity.custom.ButterflyEntity;
 import net.loos.elementsmod.entity.custom.LuminousRayEntity;
 import net.loos.elementsmod.item.ModItemGroups;
@@ -45,5 +46,7 @@ public class ElementsMod implements ModInitializer {
 		FabricDefaultAttributeRegistry.register(ModEntities.LUMINOUS_RAY, LuminousRayEntity.createAttributes());
 
 		FabricDefaultAttributeRegistry.register(ModEntities.SPARK_SNAKE, SparkSnakeEntity.createAttributes());
+
+		FabricDefaultAttributeRegistry.register(ModEntities.BIRD, BirdEntity.createAttributes());
 	}
 }

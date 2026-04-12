@@ -30,6 +30,11 @@
   "block.elementsmod.aeris_vapor_block": "Aeris Vapor Block",
   "block.elementsmod.aeris_block": "Aeris Block",
 
+  "item.elementsmod.aeris_helmet": "Aeris Helmet",
+  "item.elementsmod.aeris_chestplate": "Aeris Chestplate",
+  "item.elementsmod.aeris_leggings": "Aeris Leggings",
+  "item.elementsmod.aeris_boots": "Aeris Boots",
+  "item.elementsmod.bird_spawn_egg": "Bird Spawn Egg",
 
   "item.elementsmod.water_staff": "Water Staff",
   "item.elementsmod.hydrocite_gem": "Hydrocite Gem",
@@ -70,5 +75,7 @@
 
   "tooltip.elementsmod.bloom_staff.tooltip": "Change any flower or sapling into other variants!",
 
-  "entity.elementsmod.butterfly": "Butterfly"
+  "entity.elementsmod.butterfly": "Butterfly",
+
+  "entity.elementsmod.bird": "Bird"
 }

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_aeris_concentrate": {
+      "conditions": {
+        "items": [
+          {
+            "items": "elementsmod:aeris_concentrate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "elementsmod:aeris_helmet"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_aeris_concentrate"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "elementsmod:aeris_helmet"
+    ]
+  }
+}

@@ -1,6 +1,7 @@
 package net.loos.elementsmod.entity;
 
 import net.loos.elementsmod.ElementsMod;
+import net.loos.elementsmod.entity.custom.BirdEntity;
 import net.loos.elementsmod.entity.custom.ButterflyEntity;
 import net.loos.elementsmod.entity.custom.LuminousRayEntity;
 import net.minecraft.entity.Entity;
@@ -23,12 +24,18 @@ public class ModEntities {
             Identifier.of(ElementsMod.MOD_ID, "ray"),
             EntityType.Builder.create(LuminousRayEntity::new, SpawnGroup.WATER_AMBIENT)
                     .dimensions(1.5f, 0.4f).build());
-    public static void registerModEntities() {
-        ElementsMod.LOGGER.info("Registering Mob Entities for" + ElementsMod.MOD_ID);
-    }
 
     public static final EntityType<SparkSnakeEntity> SPARK_SNAKE = Registry.register(Registries.ENTITY_TYPE,
             Identifier.of(ElementsMod.MOD_ID, "spark_snake"),
             FabricEntityTypeBuilder.create(SpawnGroup.MONSTER, SparkSnakeEntity::new)
                     .dimensions(EntityDimensions.fixed(0.9f, 0.6f)).build());
+
+    public static final EntityType<BirdEntity> BIRD = Registry.register(Registries.ENTITY_TYPE,
+            Identifier.of(ElementsMod.MOD_ID, "bird"),
+            FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, BirdEntity::new)
+                    .dimensions(EntityDimensions.fixed(0.5f, 0.7f)).build());
+
+    public static void registerModEntities() {
+        ElementsMod.LOGGER.info("Registering Mob Entities for" + ElementsMod.MOD_ID);
+    }
 }
