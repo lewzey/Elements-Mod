@@ -21,9 +21,12 @@ public class ModPlacedFeatures {
     public static final RegistryKey<PlacedFeature> ONE_SPARK_STONE_ORE_PLACED = registerKey("one_spark_stone_ore");
     public static final RegistryKey<PlacedFeature> MULTIPLE_SPARK_STONE_ORES_PLACED = registerKey("multiple_spark_stone_ores");
     public static final RegistryKey<PlacedFeature> AERIS_VAPOR_BLOCK_PLACED = registerKey("aeris_vapor_block_placed");
+    public static final RegistryKey<PlacedFeature> HYDROCITE_ORE_PLACED_KEY = registerKey("hydrocite_ore_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> context) {
         var configuredFeatures = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
+        var configuredFeatureRegistryEntryLookup = context.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
+
 
         register(context,ONE_GRASS_GEM_ORE_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.ONE_GRASS_GEM_ORE),
                 ModOrePlacement.modifiersWithCount(100, HeightRangePlacementModifier.uniform(YOffset.fixed(60), YOffset.fixed(120))));
@@ -38,6 +41,9 @@ public class ModPlacedFeatures {
         //spawn one in every 22x22=512 chunk, very rare
         register(context, AERIS_VAPOR_BLOCK_PLACED, configuredFeatures.getOrThrow(ModConfiguredFeatures.AERIS_VAPOR_BLOCK), RarityFilterPlacementModifier.of(512),
                 SquarePlacementModifier.of(), HeightRangePlacementModifier.trapezoid(YOffset.fixed(150), YOffset.fixed(200)), BiomePlacementModifier.of());
+
+        register(context, HYDROCITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.HYDROCITE_ORE_KEY),
+                ModOrePlacement.modifiersWithCount(8, HeightRangePlacementModifier.uniform(YOffset.fixed(0), YOffset.fixed(80))));
     }
 
     public static RegistryKey<PlacedFeature> registerKey(String name) {

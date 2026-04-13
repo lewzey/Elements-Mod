@@ -72,7 +72,7 @@ public class AquabloomCropBlock extends CropBlock implements Waterloggable {
 
     @Override
     protected int getGrowthAmount(World world) {
-        // Returns either 1 or 2, but never more than your MAX_AGE
+
         return world.random.nextInt(2) + 1;
     }
 }
