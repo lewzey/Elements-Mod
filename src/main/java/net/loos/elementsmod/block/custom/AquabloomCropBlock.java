@@ -5,7 +5,6 @@ import net.minecraft.block.*;
 import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.ItemConvertible;
-import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.IntProperty;
@@ -22,7 +21,6 @@ public class AquabloomCropBlock extends CropBlock implements Waterloggable {
 
     public AquabloomCropBlock(Settings settings) {
         super(settings);
-        // We set waterlogged to true by default since it's an underwater plant
         setDefaultState(this.stateManager.getDefaultState()
                 .with(AGE, 0)
                 .with(WATERLOGGED, true));
@@ -33,7 +31,6 @@ public class AquabloomCropBlock extends CropBlock implements Waterloggable {
         builder.add(AGE, WATERLOGGED);
     }
 
-    // 1. Strictly Underwater Placement
     @Override
     public boolean canPlaceAt(BlockState state, WorldView world, BlockPos pos) {
         BlockPos groundPos = pos.down();
@@ -72,7 +69,7 @@ public class AquabloomCropBlock extends CropBlock implements Waterloggable {
 
     @Override
     protected int getGrowthAmount(World world) {
-        // Returns either 1 or 2, but never more than your MAX_AGE
+
         return world.random.nextInt(2) + 1;
     }
 }

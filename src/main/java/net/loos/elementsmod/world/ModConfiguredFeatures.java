@@ -24,19 +24,22 @@ public class ModConfiguredFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ? >> MULTIPLE_GRASS_GEM_ORES = registerKey("multiple_grass_gem_ores");
     public static final RegistryKey<ConfiguredFeature<?, ? >> ONE_SPARK_STONE_ORE = registerKey("one_spark_stone_ore");
     public static final RegistryKey<ConfiguredFeature<?, ? >> MULTIPLE_SPARK_STONE_ORES = registerKey("multiple_spark_stone_ores");
-
+    public static final RegistryKey<ConfiguredFeature<?, ?>> HYDROCITE_ORE_KEY = registerKey("hydrocite_ore");
     public static final RegistryKey<ConfiguredFeature<?, ? >> AERIS_VAPOR_BLOCK = registerKey("aeris_vapor_block");
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> context) {
         RuleTest dirtReplaceables = new BlockMatchRuleTest(Blocks.DIRT);
         RuleTest stoneReplaceables = new TagMatchRuleTest(BlockTags.STONE_ORE_REPLACEABLES);
         RuleTest deepslateReplaceables = new TagMatchRuleTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
+        RuleTest endReplaceables = new BlockMatchRuleTest(Blocks.END_STONE);
+
+        List<OreFeatureConfig.Target> endHydrociteTargets =
+                List.of(OreFeatureConfig.createTarget(endReplaceables, ModBlocks.HYDROCITE_ORE.getDefaultState()));
         List<OreFeatureConfig.Target> dirtGrassGemOres =
                 List.of(OreFeatureConfig.createTarget(dirtReplaceables, ModBlocks.GRASS_GEM_ORE.getDefaultState()));
 
         List<OreFeatureConfig.Target> stoneSparkStoneOres =
                 List.of(OreFeatureConfig.createTarget(stoneReplaceables, ModBlocks.SPARK_STONE_ORE.getDefaultState()));
-
 
         SimpleBlockFeatureConfig vaporBlockConfig = new SimpleBlockFeatureConfig(BlockStateProvider.of(ModBlocks.AERIS_VAPOR_BLOCK));
 
@@ -48,7 +51,7 @@ public class ModConfiguredFeatures {
         );
         register(context, ONE_GRASS_GEM_ORE, Feature.ORE, new OreFeatureConfig(dirtGrassGemOres, 1));
         register(context, MULTIPLE_GRASS_GEM_ORES, Feature.ORE, new OreFeatureConfig(dirtGrassGemOres, 3));
-
+        register(context, HYDROCITE_ORE_KEY, Feature.ORE, new OreFeatureConfig(endHydrociteTargets, 3));
         register(context, ONE_SPARK_STONE_ORE, Feature.ORE, new OreFeatureConfig(stoneSparkStoneOres, 1));
         register(context, MULTIPLE_SPARK_STONE_ORES, Feature.ORE, new OreFeatureConfig(stoneSparkStoneOres, 4));
         register(context, AERIS_VAPOR_BLOCK, Feature.RANDOM_PATCH, cloudConfig);

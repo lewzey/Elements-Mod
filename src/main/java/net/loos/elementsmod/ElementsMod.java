@@ -34,9 +34,8 @@ public class ElementsMod implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
-		ModLootTableModifiers.modifyLootTables();
-
 		ModWorldGeneration.generateModWorldGen();
+		ModLootTableModifiers.modifyLootTables();
 
 		PlayerBlockBreakEvents.BEFORE.register((new HammerUsageEvent()));
 		FabricDefaultAttributeRegistry.register(ModEntities.BUTTERFLY, ButterflyEntity.createAttributes());
