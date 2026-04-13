@@ -4,10 +4,13 @@
   "key": {
     "$": {
       "item": "elementsmod:aeris_concentrate"
+    },
+    "X": {
+      "item": "elementsmod:aetheria_crop"
     }
   },
   "pattern": [
-    "$$$",
+    "$X$",
     "$ $",
     "$ $"
   ],

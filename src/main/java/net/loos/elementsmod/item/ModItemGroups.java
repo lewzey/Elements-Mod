@@ -60,7 +60,8 @@ public class ModItemGroups {
                         entries.add(ModItems.AERIS_HELMET);
                         entries.add(ModItems.AERIS_LEGGINGS);
                         entries.add(ModItems.BIRD_SPAWN_EGG);
-
+                        entries.add(ModItems.AETHERIA_SEEDS);
+                        entries.add(ModItems.AETHERIA_CROP);
 
 
                         entries.add(ModItems.HYDROCITE_GEM);

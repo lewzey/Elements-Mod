@@ -30,6 +30,8 @@ public class ElementsModClient implements ClientModInitializer {
 
         EntityRendererRegistry.register(ModEntities.SPARK_SNAKE, SparkSnakeRenderer::new);
 
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AETHERIA_CROP, RenderLayer.getCutout());
+
         EntityModelLayerRegistry.registerModelLayer(BirdModel.BIRD, BirdModel::getTexturedModelData);
         EntityRendererRegistry.register(ModEntities.BIRD, BirdRenderer::new);
 

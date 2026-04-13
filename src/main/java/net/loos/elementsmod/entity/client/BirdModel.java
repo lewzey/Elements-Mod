@@ -13,7 +13,7 @@ public class BirdModel<T extends BirdEntity> extends SinglePartEntityModel<T> {
     public static final EntityModelLayer BIRD = new EntityModelLayer(
             Identifier.of(ElementsMod.MOD_ID, "bird"), "main");
 
-    private final ModelPart root; // This is the actual root from the constructor
+    private final ModelPart root;
     private final ModelPart body;
     private final ModelPart right_leg;
     private final ModelPart left_leg;
@@ -24,10 +24,9 @@ public class BirdModel<T extends BirdEntity> extends SinglePartEntityModel<T> {
     public BirdModel(ModelPart root) {
         this.root = root;
 
-        // FIX: Grab the 'body' first since everything is inside it now
+
         this.body = root.getChild("body");
 
-        // FIX: Grab the children FROM the body, not the root
         this.right_leg = this.body.getChild("right leg");
         this.left_leg = this.body.getChild("left leg");
         this.right_wing = this.body.getChild("right wing");
@@ -39,13 +38,10 @@ public class BirdModel<T extends BirdEntity> extends SinglePartEntityModel<T> {
         ModelData modelData = new ModelData();
         ModelPartData modelPartData = modelData.getRoot();
 
-        // The master BODY folder
         ModelPartData body = modelPartData.addChild("body", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 24.0F, 0.0F));
 
-        // Cubes inside the body
         body.addChild("body_r1", ModelPartBuilder.create().uv(0, 0).cuboid(-6.0F, -4.0F, 0.0F, 3.0F, 4.0F, 3.0F, new Dilation(0.0F)), ModelTransform.of(4.0F, -2.0F, -1.0F, -0.1745F, 0.0F, 0.0F));
 
-        // Sub-folders inside the body
         body.addChild("right leg", ModelPartBuilder.create().uv(0, 13).cuboid(-0.5F, 0.0F, -0.5F, 1.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(0.5F, -2.0F, 0.5F));
         body.addChild("left leg", ModelPartBuilder.create().uv(4, 13).cuboid(-0.5F, 0.0F, -0.5F, 1.0F, 2.0F, 1.0F, new Dilation(0.0F)), ModelTransform.pivot(-1.5F, -2.0F, 0.5F));
 
@@ -72,7 +68,7 @@ public class BirdModel<T extends BirdEntity> extends SinglePartEntityModel<T> {
         float pitchOffset = (float) Math.toRadians(-20);
         this.head.pitch = ((-headPitch) * ((float)Math.PI / 180f)) + pitchOffset;
 
-        // Animations
+        // animations
         this.animateMovement(BirdAnimation.walking, limbSwing, limbSwingAmount, 2f, 2.5f);
         this.updateAnimation(entity.idleAnimationState, BirdAnimation.idle, ageInTicks, 1f);
         this.updateAnimation(entity.flyAnimationState, BirdAnimation.flying, ageInTicks, 1f);

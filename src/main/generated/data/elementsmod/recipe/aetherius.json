@@ -8,12 +8,15 @@
     "X": {
       "item": "minecraft:nether_star"
     },
+    "Y": {
+      "item": "elementsmod:aetheria_crop"
+    },
     "Z": {
       "item": "minecraft:stick"
     }
   },
   "pattern": [
-    " V ",
+    " Y ",
     "VXV",
     " Z "
   ],

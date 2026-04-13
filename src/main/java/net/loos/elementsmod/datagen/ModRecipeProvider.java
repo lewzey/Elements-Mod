@@ -235,9 +235,10 @@ public class ModRecipeProvider extends FabricRecipeProvider {
                 .offerTo(recipeExporter, Identifier.of(ElementsMod.MOD_ID, "aeris_concentrate_from_aeris_vapor"));
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.AETHERIUS)
-                .pattern(" V ")
+                .pattern(" Y ")
                 .pattern("VXV")
                 .pattern(" Z ")
+                .input('Y', ModItems.AETHERIA_CROP)
                 .input('V', ModItems.AERIS_CONCENTRATE)
                 .input('X', Items.NETHER_STAR)
                 .input('Z', Items.STICK)
@@ -247,42 +248,47 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, ModItems.COSMOLIGHT)
                 .pattern("XZX")
-                .pattern("ZVZ")
+                .pattern("YVY")
                 .pattern("XZX")
                 .input('V', ModBlocks.AERIS_BLOCK)
                 .input('X', Items.NETHERITE_INGOT)
                 .input('Z', Items.COMPASS)
+                .input('Y', Items.CLOCK)
                 .criterion(hasItem(Items.NETHERITE_INGOT), conditionsFromItem(Items.NETHERITE_INGOT))
                 .offerTo(recipeExporter);
 
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.AERIS_HELMET)
-                .pattern("$$$")
+                .pattern("$X$")
                 .pattern("$ $")
                 .input('$', ModItems.AERIS_CONCENTRATE)
+                .input('X', ModItems.AETHERIA_CROP)
                 .criterion(hasItem(ModItems.AERIS_CONCENTRATE), conditionsFromItem(ModItems.AERIS_CONCENTRATE))
                 .offerTo(recipeExporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.AERIS_CHESTPLATE)
                 .pattern("$ $")
-                .pattern("$$$")
+                .pattern("$X$")
                 .pattern("$$$")
                 .input('$', ModItems.AERIS_CONCENTRATE)
+                .input('X', ModItems.AETHERIA_CROP)
                 .criterion(hasItem(ModItems.AERIS_CONCENTRATE), conditionsFromItem(ModItems.AERIS_CONCENTRATE))
                 .offerTo(recipeExporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.AERIS_LEGGINGS)
-                .pattern("$$$")
+                .pattern("$X$")
                 .pattern("$ $")
                 .pattern("$ $")
                 .input('$', ModItems.AERIS_CONCENTRATE)
+                .input('X', ModItems.AETHERIA_CROP)
                 .criterion(hasItem(ModItems.AERIS_CONCENTRATE), conditionsFromItem(ModItems.AERIS_CONCENTRATE))
                 .offerTo(recipeExporter);
 
         ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.AERIS_BOOTS)
                 .pattern("$ $")
-                .pattern("$ $")
+                .pattern("X X")
                 .input('$', ModItems.AERIS_CONCENTRATE)
+                .input('X', ModItems.AETHERIA_CROP)
                 .criterion(hasItem(ModItems.AERIS_CONCENTRATE), conditionsFromItem(ModItems.AERIS_CONCENTRATE))
                 .offerTo(recipeExporter);
     }

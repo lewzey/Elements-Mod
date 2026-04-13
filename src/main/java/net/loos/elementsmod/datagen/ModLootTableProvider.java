@@ -3,6 +3,7 @@ package net.loos.elementsmod.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
 import net.loos.elementsmod.block.ModBlocks;
+import net.loos.elementsmod.block.custom.AetheriaCropBlock;
 import net.loos.elementsmod.block.custom.AquabloomCropBlock;
 import net.loos.elementsmod.block.custom.FlutterbloomCropBlock;
 import net.loos.elementsmod.item.ModItems;
@@ -21,7 +22,6 @@ import net.minecraft.predicate.StatePredicate;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 
-import javax.swing.plaf.nimbus.State;
 import java.util.concurrent.CompletableFuture;
 
 public class ModLootTableProvider extends FabricBlockLootTableProvider {
@@ -47,6 +47,13 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
 
         this.addDrop(ModBlocks.AQUABLOOM_CROP, this.cropDrops(ModBlocks.AQUABLOOM_CROP,
                 ModItems.AQUABLOOM, ModItems.AQUABLOOM_SEEDS, aquabloomBuilder));
+
+
+        BlockStatePropertyLootCondition.Builder aetheria_builder = BlockStatePropertyLootCondition.builder(ModBlocks.AETHERIA_CROP)
+                .properties(StatePredicate.Builder.create().exactMatch(AetheriaCropBlock.AGE, AetheriaCropBlock.MAX_AGE));
+        this.addDrop(ModBlocks.AETHERIA_CROP, this.cropDrops(ModBlocks.AETHERIA_CROP, ModItems.AETHERIA_CROP, ModItems.AETHERIA_SEEDS, aetheria_builder));
+
+
     }
 
 

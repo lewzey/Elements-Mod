@@ -8,7 +8,8 @@ import java.util.Comparator;
 public enum BirdVariant {
     BROWN(0),
     SANDY(1),
-    BLUE(2);
+    BLUE(2),
+    GREEN(3);
 
     private static final BirdVariant[] BY_ID = Arrays.stream(values()).sorted(Comparator.
             comparingInt(BirdVariant::getId)).toArray(BirdVariant[]::new);

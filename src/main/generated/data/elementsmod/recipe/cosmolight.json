@@ -8,13 +8,16 @@
     "X": {
       "item": "minecraft:netherite_ingot"
     },
+    "Y": {
+      "item": "minecraft:clock"
+    },
     "Z": {
       "item": "minecraft:compass"
     }
   },
   "pattern": [
     "XZX",
-    "ZVZ",
+    "YVY",
     "XZX"
   ],
   "result": {

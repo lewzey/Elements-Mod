@@ -22,6 +22,8 @@ public class BirdRenderer extends MobEntityRenderer<BirdEntity, BirdModel<BirdEn
                         Identifier.of(ElementsMod.MOD_ID, "textures/entity/bird/sandy.png"));
                 map.put(BirdVariant.BLUE,
                         Identifier.of(ElementsMod.MOD_ID, "textures/entity/bird/blue.png"));
+                map.put(BirdVariant.GREEN,
+                        Identifier.of(ElementsMod.MOD_ID, "textures/entity/bird/green.png"));
             });
 
     public BirdRenderer(EntityRendererFactory.Context context) {

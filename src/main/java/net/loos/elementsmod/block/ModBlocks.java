@@ -2,6 +2,7 @@ package net.loos.elementsmod.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.loos.elementsmod.ElementsMod;
+import net.loos.elementsmod.block.custom.AetheriaCropBlock;
 import net.loos.elementsmod.block.custom.AquabloomCropBlock;
 import net.loos.elementsmod.block.custom.FlutterbloomCropBlock;
 import net.minecraft.block.AbstractBlock;
@@ -15,8 +16,6 @@ import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.loos.elementsmod.block.custom.BlazebudCropBlock;
@@ -54,6 +53,16 @@ public class ModBlocks {
                     .requiresTool()
                     .sounds(BlockSoundGroup.WOOL)
                     .luminance(state -> 10)));
+
+    public static final Block AETHERIA_CROP = registerBlockWithoutBlockItem("aetheria_crop",
+            new AetheriaCropBlock(AbstractBlock.Settings.create()
+                    .noCollision() // You can walk through it
+                    .ticksRandomly() // Necessary for growth
+                    .breakInstantly()
+                    .nonOpaque()
+                    .luminance(state -> (Integer)state.get(AetheriaCropBlock.AGE) * 2)
+                    .sounds(BlockSoundGroup.CROP)));
+
 
     //Water
     public static final Block HYDROCITE_BLOCK = registerBlock("hydrocite_block",

@@ -34,15 +34,16 @@ public class ElementsMod implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+		ModLootTableModifiers.modifyLootTables();
 
 		ModWorldGeneration.generateModWorldGen();
-		ModLootTableModifiers.modifyLootTables();
 
 		PlayerBlockBreakEvents.BEFORE.register((new HammerUsageEvent()));
 		FabricDefaultAttributeRegistry.register(ModEntities.BUTTERFLY, ButterflyEntity.createAttributes());
 		CompostingChanceRegistry.INSTANCE.add(ModItems.BLOOM_CROWN,0.5f);
 		CompostingChanceRegistry.INSTANCE.add(ModItems.FLUTTERBLOOM_SEEDS,0.25f);
 		CompostingChanceRegistry.INSTANCE.add(ModItems.AQUABLOOM_SEEDS,0.5f);
+		CompostingChanceRegistry.INSTANCE.add(ModItems.AETHERIA_SEEDS,0.5f);
 
 		FabricDefaultAttributeRegistry.register(ModEntities.LUMINOUS_RAY, LuminousRayEntity.createAttributes());
 

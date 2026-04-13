@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/crop",
+  "textures": {
+    "crop": "elementsmod:block/aetheria_crop_stage5"
+  }
+}
