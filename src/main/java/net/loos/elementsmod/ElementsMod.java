@@ -34,7 +34,6 @@ public class ElementsMod implements ModInitializer {
 		ModItemGroups.registerItemGroups();
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
-
 		ModWorldGeneration.generateModWorldGen();
 		ModLootTableModifiers.modifyLootTables();
 

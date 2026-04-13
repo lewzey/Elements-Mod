@@ -2,9 +2,11 @@ package net.loos.elementsmod.util;
 
 import net.fabricmc.fabric.api.loot.v3.LootTableEvents;
 import net.loos.elementsmod.item.ModItems;
+import net.minecraft.block.Blocks;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.LootTables;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
+import net.minecraft.loot.condition.SurvivesExplosionLootCondition;
 import net.minecraft.loot.entry.ItemEntry;
 import net.minecraft.loot.function.SetCountLootFunction;
 import net.minecraft.loot.provider.number.ConstantLootNumberProvider;
@@ -47,6 +49,17 @@ public class ModLootTableModifiers {
                 tableBuilder.pool(poolBuilder.build());
             }
 
+        });
+
+        LootTableEvents.MODIFY.register((key, tableBuilder, source, registries) -> {
+            if (LootTables.FISHING_TREASURE_GAMEPLAY.equals(key)) {
+                LootPool.Builder poolBuilder = LootPool.builder()
+                        .rolls(ConstantLootNumberProvider.create(1))
+                        .with(ItemEntry.builder(ModItems.AQUABLOOM_SEEDS))
+                        .conditionally(RandomChanceLootCondition.builder(0.25f));
+
+                tableBuilder.pool(poolBuilder);
+            }
         });
     }
 }
