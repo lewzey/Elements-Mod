@@ -44,6 +44,16 @@ public class ModEntitySpawns {
                 BiomeKeys.OCEAN
         ), SpawnGroup.WATER_AMBIENT, ModEntities.LUMINOUS_RAY, 70, 3, 5);
 
+
+        BiomeModifications.addSpawn(BiomeSelectors.includeByKey(
+                BiomeKeys.FOREST,
+                BiomeKeys.BIRCH_FOREST,
+                BiomeKeys.PLAINS,
+                BiomeKeys.MEADOW,
+                BiomeKeys.CHERRY_GROVE
+        ), SpawnGroup.CREATURE, ModEntities.BIRD, 50, 2, 5);
+
+        SpawnRestriction.register(ModEntities.BIRD, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, AnimalEntity::isValidNaturalSpawn);
         SpawnRestriction.register(ModEntities.BUTTERFLY, SpawnLocationTypes.ON_GROUND, Heightmap.Type.MOTION_BLOCKING_NO_LEAVES, AnimalEntity::isValidNaturalSpawn);
     }
 }

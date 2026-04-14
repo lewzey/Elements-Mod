@@ -15,6 +15,7 @@ import net.loos.elementsmod.item.ModItemGroups;
 import net.loos.elementsmod.item.ModItems;
 import net.loos.elementsmod.util.HammerUsageEvent;
 import net.loos.elementsmod.util.ModLootTableModifiers;
+import net.loos.elementsmod.world.gen.ModEntitySpawns;
 import net.loos.elementsmod.world.gen.ModWorldGeneration;
 import net.minecraft.loot.LootPool;
 import net.minecraft.loot.condition.RandomChanceLootCondition;
@@ -36,7 +37,6 @@ public class ElementsMod implements ModInitializer {
 		ModBlocks.registerModBlocks();
 		ModWorldGeneration.generateModWorldGen();
 		ModLootTableModifiers.modifyLootTables();
-
 		PlayerBlockBreakEvents.BEFORE.register((new HammerUsageEvent()));
 		FabricDefaultAttributeRegistry.register(ModEntities.BUTTERFLY, ButterflyEntity.createAttributes());
 		CompostingChanceRegistry.INSTANCE.add(ModItems.BLOOM_CROWN,0.5f);

@@ -52,7 +52,8 @@ public class BirdEntity extends AnimalEntity {
     @Override
     protected void initGoals() {
         this.goalSelector.add(0, new AnimalMateGoal(this, 1.0));
-        this.goalSelector.add(1, new TemptGoal(this, 1.25, Ingredient.ofItems(ModItems.AERIS_VAPOR), false));
+        this.goalSelector.add(1, new TemptGoal(this, 1.25,
+                Ingredient.ofItems(ModItems.AETHERIA_SEEDS, ModItems.AETHERIA_CROP), false));
         this.goalSelector.add(2, new FollowParentGoal(this, 1.10));
         this.goalSelector.add(3, new WanderAroundFarGoal(this, 1.0));
         this.goalSelector.add(4, new LookAtEntityGoal(this, PlayerEntity.class, 4.0f));
@@ -69,17 +70,14 @@ public class BirdEntity extends AnimalEntity {
 
     private void setupAnimationStates() {
         if (this.isFlying) {
-            // Stop others, start flying
             this.idleAnimationState.stop();
             this.walkAnimationState.stop();
             this.flyAnimationState.startIfNotRunning(this.age);
         } else if (this.getVelocity().horizontalLength() > 0.01) {
-            // Stop others, start walking
             this.idleAnimationState.stop();
             this.flyAnimationState.stop();
             this.walkAnimationState.startIfNotRunning(this.age);
         } else {
-            // Stop movement, start idle
             this.flyAnimationState.stop();
             this.walkAnimationState.stop();
             this.idleAnimationState.startIfNotRunning(this.age);
@@ -94,7 +92,6 @@ public class BirdEntity extends AnimalEntity {
             setupAnimationStates();
         }
 
-        // simple flying check - if off the ground, mark as flying
         this.isFlying = !this.isOnGround() && this.getVelocity().y != 0;
     }
 
@@ -109,7 +106,8 @@ public class BirdEntity extends AnimalEntity {
 
     @Override
     public boolean isBreedingItem(ItemStack stack) {
-        return stack.isOf(ModItems.AERIS_VAPOR);
+        return stack.isOf(ModItems.AETHERIA_SEEDS) ||
+                stack.isOf(ModItems.AETHERIA_CROP);
     }
 
     @Override
