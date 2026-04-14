@@ -22,7 +22,12 @@ Explore what possibilities the four elements can achieve!
 - **`Aeris Armour Set`** - A unique armour set with a powerful set bonus.
 - **`Aetheria Crops and Seeds!`** - Needed to craft the powerful items above!
 ### 🔥 Fire Element
-- **`Spark Stone Ore + Shard`**  – Can be found near lava pools and requires an iron pickaxe to mine!
+- **`Spark Stone Ore + Shard`**  – Can be found near levels containing lava pools and requires an iron pickaxe to mine.
+- **`Spark Stone Sword`**  – A fiery weapon infused with spark energy that deals increased damage and ignite enemies when paired with the full armour set!
+- **`Spark Stone Staff`**  – A blazing staff that releases fire-based attacks, allowing players to shoot flames at enemies!
+- **`Spark Stone Armour`**  – A powerful fire-forged armor set that grants fire resistance and enhanced strength when worn.
+- **`Spark Snake`**  – A snake that spawn in groups up to 6. These creatures are friendly until provoked, at which point they attack with firey bites!
+- **`Blazebud Crop`**  – A fire-themed plant grown from Blazebud seeds, producing a crop used to feed spark snakes found in the wild.
 
 ### 🌿 Grass Element
 - **`Grass Ore + Gem`**  – Can be found in random patches of dirt and requires an iron shovel to mine!
