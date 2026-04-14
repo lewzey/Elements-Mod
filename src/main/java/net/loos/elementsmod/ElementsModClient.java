@@ -29,6 +29,7 @@ public class ElementsModClient implements ClientModInitializer {
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AQUABLOOM_CROP, RenderLayer.getCutout());
 
         EntityRendererRegistry.register(ModEntities.SPARK_SNAKE, SparkSnakeRenderer::new);
+        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLAZEBUD_CROP, RenderLayer.getCutout());
 
         BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.AETHERIA_CROP, RenderLayer.getCutout());
 

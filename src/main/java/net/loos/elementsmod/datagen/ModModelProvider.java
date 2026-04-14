@@ -5,6 +5,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricModelProvider;
 import net.loos.elementsmod.block.ModBlocks;
 import net.loos.elementsmod.block.custom.AetheriaCropBlock;
 import net.loos.elementsmod.block.custom.AquabloomCropBlock;
+import net.loos.elementsmod.block.custom.BlazebudCropBlock;
 import net.loos.elementsmod.block.custom.FlutterbloomCropBlock;
 import net.loos.elementsmod.item.ModItems;
 import net.minecraft.data.client.*;
@@ -30,6 +31,7 @@ public class ModModelProvider extends FabricModelProvider {
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SPARK_STONE_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.SPARK_STONE_ORE);
+        blockStateModelGenerator.registerCrop(ModBlocks.BLAZEBUD_CROP, BlazebudCropBlock.AGE, 0,1,2,3,4,5,6);
 
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.AERIS_VAPOR_BLOCK);
         blockStateModelGenerator.registerSimpleCubeAll(ModBlocks.AERIS_BLOCK);
@@ -61,6 +63,7 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.SPARK_STONE_SWORD, Models.HANDHELD);
         itemModelGenerator.register(ModItems.SPARK_STAFF, Models.HANDHELD);
         itemModelGenerator.register(ModItems.SPARK_STICK, Models.GENERATED);
+        itemModelGenerator.register(ModItems.BLAZEBUD, Models.GENERATED);
 
         itemModelGenerator.registerArmor((ArmorItem) ModItems.SPARK_STONE_HELMET);
         itemModelGenerator.registerArmor((ArmorItem) ModItems.SPARK_STONE_CHESTPLATE);
